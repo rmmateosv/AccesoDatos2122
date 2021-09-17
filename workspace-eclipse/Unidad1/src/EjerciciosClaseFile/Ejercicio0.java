@@ -1,6 +1,8 @@
 package EjerciciosClaseFile;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Ejercicio0 {
@@ -29,11 +31,16 @@ public class Ejercicio0 {
 					break;
 				}
 				case 2: {
-					
+					//2.- Pedir por teclado una ruta de fichero o carpeta 
+					//y mostrar si lo que se ha introducido existe,
+					// si es un fichero o una carpeta, 
+					//la fecha de modificación y el tamaño.
+					datosElemento();
 					break;
 				}
 				case 3: {
-					
+					//Mostrar contenido carpeta
+					mostrarCarpeta();
 					break;
 				}
 				case 4: {
@@ -53,6 +60,68 @@ public class Ejercicio0 {
 			
 		} while (opcion != 0);
 		
+	}
+
+	private static void mostrarCarpeta() {
+		// TODO Auto-generated method stub
+		//Pedimos la ruta de la carpeta
+		System.out.println("Introduce la ruta de una carpeta");
+		String carpeta = t.nextLine();
+		
+		//Creamos objeto File al elemento
+		File f = new File(carpeta);
+		
+		//Comprobamos que existe y es carpeta
+		if(f.exists() && f.isDirectory()) {
+			//Obtenemos el contenido de la carpeta
+			String[] contenido = f.list();
+			//Mostramos el contenido
+			for(int i=0;i<contenido.length;i++) {
+				System.out.println(contenido[i]);
+				
+			}
+			
+		}
+		else {
+			System.out.println("El elemento introducido no existe o no es "
+					+ "una carpeta");
+		}
+
+	}
+
+	private static void datosElemento() {
+		// TODO Auto-generated method stub
+		//Pedimos la ruta del elemento
+		System.out.println("Introduce la ruta de un fichero o carpeta");
+		String elto = t.nextLine();
+		
+		//Creamos objeto File al elemento
+		File f = new File(elto);
+		
+		//Comprobar si existe
+		if(f.exists()) {
+			//Comprobar si es una carpeta o un fichero
+			if(f.isDirectory()) {
+				System.out.println("La ruta introducida es de una carpeta");
+			}
+			else {
+				System.out.println("La ruta introducida es de un fichero");
+				//Mostrar la fecha de modificación
+				//Creamos un objeto con el formato de la fecha
+				SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss");
+				//Crear un objeto fecha con la fecha de modificación del fichero
+				Date fechaM = new Date(f.lastModified());
+				//Mostra la fecha con el formato correcto
+				System.out.println("Fecha:" + formato.format(fechaM));
+				//Mostrar el tamaño
+				System.out.println("Tamaño:" + f.length());
+				
+			}
+			
+		}
+		else {
+			System.out.println("La ruta introducida no existe");
+		}
 	}
 
 	private static void mostrarRuta() {
