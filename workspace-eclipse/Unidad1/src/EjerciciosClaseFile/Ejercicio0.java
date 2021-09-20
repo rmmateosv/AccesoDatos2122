@@ -1,6 +1,7 @@
 package EjerciciosClaseFile;
 
 import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
@@ -44,21 +45,105 @@ public class Ejercicio0 {
 					break;
 				}
 				case 4: {
+					//Crear carpeta en la ruta por defecto (.)
+					crearCarpeta();
 					
 					break;
 				}
 				case 5: {
+					//Crear fichero en la ruta por defecto (.)
+					crearFichero();
+					
 					
 					break;
 				}
 				case 6: {
 					
+					//REnombrar Fichero
+					renombrarFichero();
 					break;
 				}
 				
 			}
 			
 		} while (opcion != 0);
+		
+	}
+
+	private static void renombrarFichero() {
+		// TODO Auto-generated method stub
+		//Pedimos nombre de fichero
+		System.out.println("Introduce el nombre del fichero");
+		String fichero = t.nextLine();
+		
+		//Creamos objeto File
+		File f = new File(fichero);
+		
+		//comprobamos si existe y es fichero
+		if(f.exists() && f.isFile()) {
+			//Pedimos el nuevo nombre
+			System.out.println("Introduce el nuevo nombre");
+			String nuevo = t.nextLine();
+			
+			if(!f.renameTo(new File(nuevo))) {
+				System.out.println("Error, no se ha renombrado");
+			}
+		}
+		else {
+			
+			
+		}
+	}
+
+	private static void crearFichero() {
+		// TODO Auto-generated method stub
+		//Pedimos nombre de fichero
+		System.out.println("Introduce el nombre del fichero");
+		String fichero = t.nextLine();
+		
+		//Creamos objeto File
+		File f = new File(fichero);
+		
+		//comprobamos si exsite
+		if(f.exists()) {
+			System.out.println("Error, el fichero ya existe");
+		}
+		else {
+			try {
+				if(!f.createNewFile()) {
+					System.out.println("Error, no se ha creado el fichero");
+				}
+			} 
+			
+			catch (IOException e) {
+				// TODO Auto-generated catch block
+				System.out.println("Error, se ha producido un error de E/S");
+				//e.printStackTrace();
+			}
+			
+		}
+	}
+
+	private static void crearCarpeta() {
+		// TODO Auto-generated method stub
+		//Pedimos nombre de la carpeta a crear
+		System.out.println("Introduce el nombre de la carpeta");
+		String carpeta = t.nextLine();
+		
+		//Crear objeto File
+		File c  = new File(carpeta);
+		
+		//Comprobamos si existe
+		if(c.exists()) {
+			System.out.println("Error, la carpeta ya existe");
+		}
+		else {
+			if(!c.mkdir()) {
+				System.out.println("Error, no se ha podido crear la carpeta");
+			}
+		
+			
+		}
 		
 	}
 
