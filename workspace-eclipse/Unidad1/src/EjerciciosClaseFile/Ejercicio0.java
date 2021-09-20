@@ -74,10 +74,36 @@ public class Ejercicio0 {
 		//Comprobamos que existe y es carpeta
 		if(f.exists() && f.isDirectory()) {
 			//Obtenemos el contenido de la carpeta
-			String[] contenido = f.list();
+			File[] contenido = f.listFiles();
 			//Mostramos el contenido
 			for(int i=0;i<contenido.length;i++) {
-				System.out.println(contenido[i]);
+				String tipo, propiedades;
+				if(contenido[i].isDirectory()) {
+					tipo = "c";
+				}
+				else {
+					tipo = "f";
+				}
+				if(contenido[i].canRead())
+					propiedades = "r";
+				else
+					propiedades = "-";
+				
+				if(contenido[i].canWrite())
+					propiedades += "w";
+				else
+					propiedades += "-";
+				
+				if(contenido[i].canExecute())
+					propiedades += "x";
+				else
+					propiedades += "-";
+				
+				System.out.println(contenido[i].getName() + 
+						"\t" + tipo + 
+						"\t" + propiedades);
+				
+				
 				
 			}
 			
@@ -131,15 +157,17 @@ public class Ejercicio0 {
 		// Podemos hacerlo de tres formas f, f1 y f2:
 		
 		//Con ruta relativa
-		File f  = new File("Ejercicio0.java");
+		File f  = new File("src\\EjerciciosClaseFile\\Ejercicio0.java");		
 		
 		//Con la carpeta actual
 		//El . hace referencia a la carpeta actual,
 				// a la carpeta en la que está el programa
-		File f1  = new File(".\\Ejercicio0.java");
+		File f1  = new File(".\\src\\EjerciciosClaseFile\\Ejercicio0.java");
 		
 		//Con separador portable
-		File f2  = new File("."+File.pathSeparator+"Ejercicio0.java");
+		File f2  = new File("."+File.pathSeparator+"src"+File.pathSeparator
+				+ "EjerciciosClaseFile"+File.pathSeparator+
+				"Ejercicio0.java");
 	
 		
 		System.out.println("La ruta absoluta de la carpeta acutal es:"+
