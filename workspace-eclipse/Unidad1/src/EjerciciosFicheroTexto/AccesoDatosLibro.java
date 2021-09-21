@@ -4,7 +4,10 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class AccesoDatosLibro {
 	private String nombreFichero;
@@ -32,13 +35,24 @@ public class AccesoDatosLibro {
 			fichero = new BufferedReader(new FileReader(nombreFichero));
 			
 			//Leer los datos del fichero
-			
-			while(fichero.readLine()!=null) {
+			String linea;
+			while((linea=fichero.readLine())!=null) {
+				//Dividimos la línea por ; para obtener los campos
+				//separados
+				String[] campos = linea.split(";");
+				
+				//Pasamos la fecha de String a objeto Date
+				SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+				Date fecha = formato.parse(campos[3]);
+				
 				//Crear libro con lo datos leídos
+				Libro l = new Libro(campos[0], campos[1], campos[2], 
+						fecha, Integer.parseInt(campos[4]));
+				
+				//Añadimos el libro al arraylist resultado
+				resultado.add(l);
 				
 			}
-			
-			
 			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -46,7 +60,10 @@ public class AccesoDatosLibro {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
 		finally {
 			//Cerrar el fichero
 			try {

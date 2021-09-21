@@ -53,12 +53,9 @@ public class Principal {
 
 	private static void mostrarLibros() {
 		// TODO Auto-generated method stub
-		//Declarar un array que va a contener los libros que hay
-		//en el fichero
-		ArrayList<Libro> libros = new ArrayList<>();
-
+		
 		//Rellenamos libros con los libros del fichero
-		libros = datos.obtenerLibros();
+		 ArrayList<Libro> libros = datos.obtenerLibros();
 		
 		//Mostrar libros
 		for(Libro l:libros) {
