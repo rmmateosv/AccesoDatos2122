@@ -1,5 +1,7 @@
 package EjerciciosFicheroTexto;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -28,7 +30,7 @@ public class Principal {
 					break;
 				}
 				case 2: {
-					
+					crearLibro();
 					break;
 				}
 				case 3: {
@@ -48,6 +50,40 @@ public class Principal {
 			}
 			
 		} while (opcion != 0);
+		
+	}
+
+	private static void crearLibro() {
+		// TODO Auto-generated method stub
+		SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+		
+		try {
+			Libro l  = new Libro();
+			System.out.println("Introduce ISBN");
+			l.setIsbn(t.nextLine());
+			System.out.println("Introduce Título");
+			l.setTitulo(t.nextLine());
+			System.out.println("Introduce Autor");
+			l.setAutor(t.nextLine());
+			System.out.println("Introduce Fecha Lanazamiento");
+			l.setFechaLanzamiento(formato.parse(t.nextLine()));
+			System.out.println("Introduce Nº Ejemplares");
+			l.setNumEjemplares(Integer.parseInt(t.nextLine()));
+			//Guardar el libro en el fichero
+			if(datos.crearLibro(l)) {
+				System.out.println("Libro creado");
+			}
+			else {
+				System.out.println("Error, al crear el libro");
+			}
+			
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			System.out.println("Error, fecha incorrecta");
+		}
+		
+		
+		
 		
 	}
 

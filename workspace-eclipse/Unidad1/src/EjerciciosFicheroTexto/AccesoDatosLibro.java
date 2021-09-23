@@ -62,7 +62,7 @@ public class AccesoDatosLibro {
 			e.printStackTrace();
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("Error, hay fechas incorrectas");
 		} 
 		finally {
 			//Cerrar el fichero
@@ -75,6 +75,15 @@ public class AccesoDatosLibro {
 				e.printStackTrace();
 			}
 		}
+		
+		return resultado;
+	}
+
+	public boolean crearLibro(Libro l) {
+		// TODO Auto-generated method stub
+		boolean resultado = false;
+		
+		
 		
 		return resultado;
 	}
