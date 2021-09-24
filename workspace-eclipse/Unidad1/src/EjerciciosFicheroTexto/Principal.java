@@ -34,7 +34,7 @@ public class Principal {
 					break;
 				}
 				case 3: {
-					
+					modificarLibro();
 					break;
 				}
 				case 4: {
@@ -53,6 +53,37 @@ public class Principal {
 		
 	}
 
+	private static void modificarLibro() {
+		// TODO Auto-generated method stub
+		
+		mostrarLibros();
+		
+		//Solicitamos el isbn del libro a modificar
+		System.out.println("Introduce el ISBN del libro a modificar:");
+		String isbn = t.nextLine();
+		
+		//Obtenemos el libro a modificar para ver si existe
+		Libro l = datos.obtenerLibro(isbn);
+		if(l==null) {
+			System.out.println("El libro seleccionado no existe");
+		}
+		else {
+			//Pedimos el nuevo nº de ejemplares
+			System.out.println("Introduce el nuevo nº de ejemplares");
+			l.setNumEjemplares(t.nextInt());
+			t.nextLine();
+			
+			//Modificamos el nº de ejemplaes del libro en el fichero
+			if(datos.modificarEjemplares(l)) {
+				System.out.println("Libro modificado");
+			}
+			else {
+				System.out.println("Error, no se ha modificado el libro");
+			}
+		}
+		
+	}
+
 	private static void crearLibro() {
 		// TODO Auto-generated method stub
 		SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
@@ -65,7 +96,7 @@ public class Principal {
 			l.setTitulo(t.nextLine());
 			System.out.println("Introduce Autor");
 			l.setAutor(t.nextLine());
-			System.out.println("Introduce Fecha Lanazamiento");
+			System.out.println("Introduce Fecha Lanazamiento (dd/mm/yyyy)");
 			l.setFechaLanzamiento(formato.parse(t.nextLine()));
 			System.out.println("Introduce Nº Ejemplares");
 			l.setNumEjemplares(Integer.parseInt(t.nextLine()));
