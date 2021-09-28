@@ -2,6 +2,7 @@ package EjerciciosFicheroTexto;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -193,8 +194,11 @@ public class AccesoDatosLibro {
 				if (campos[0].equals(l.getIsbn())) {
 					// Escribimos los datos del libro que ya tiene el
 					// nº de ejemplares cambiado
-					ficheroTmp.write(l.getIsbn() + ";" + l.getTitulo() + ";" + l.getAutor() + ";"
-							+ formato.format(l.getFechaLanzamiento()) + ";" + l.getNumEjemplares() + "\n");
+					ficheroTmp.write(l.getIsbn() + ";" + 
+							l.getTitulo() + ";" +
+							l.getAutor() + ";"
+							+ formato.format(l.getFechaLanzamiento()) + ";" + 
+							l.getNumEjemplares() + "\n");
 				} else {
 					// Escribimos en el fichero temporal la línea
 					// tal cual se ha leído
@@ -223,8 +227,101 @@ public class AccesoDatosLibro {
 
 			}
 		}
+		
+	
+		// Operaciones con ficheros: borrar libros.txt y renombrar libros.tmp
+		File fO = new File(nombreFichero);
+		if(fO.delete()) {
+			//REnombramos
+			File fTmp = new File("libros.tmp");
+			if(fTmp.renameTo(fO)) {
+				resultado = true;
+			}
+			else {
+				System.out.println("Error al renombar el fichero libros.tmp");
+			}
+			
+		}
+		else {
+			System.out.println("Error al borrar el fichero libros.txt");
+		}
 
 		return resultado;
+	}
+
+	public boolean borrarLibro(Libro l) {
+		// TODO Auto-generated method stub
+		boolean resultado = false;
+
+		// Declaramos fichero original (libros.txt)
+		BufferedReader ficheroO = null;
+		// Declaramos un fichero temporal donde se escriben los datos con
+		// las modificaciones
+		BufferedWriter ficheroTmp = null;
+
+		try {
+			// Abrimos ficheros
+			ficheroO = new BufferedReader(new FileReader(nombreFichero));
+			// Een el fichero temporal, debemos abrir de forma que no
+			// se añada información
+			ficheroTmp = new BufferedWriter(new FileWriter("libros.tmp", false));
+
+			// Leemos todas las líneas del fichero original
+			String linea;
+			while ((linea = ficheroO.readLine()) != null) {
+				// Obtenemos los campos de la línea
+				String[] campos = linea.split(";");
+
+				// Comprobar si el libro es el que hay que borrar
+				if (!campos[0].equals(l.getIsbn())) {
+					// Escribimos en el fichero temporal la línea
+					// tal cual se ha leído
+					ficheroTmp.write(linea + "\n");
+				}
+			}
+
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			System.out.println("No existe el fichero");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+
+			try {
+				if (ficheroO != null) {
+					ficheroO.close();
+				}
+				if(ficheroTmp != null) {
+					ficheroTmp.close();
+				}
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+
+			}
+		}
+		
+	
+		// Operaciones con ficheros: borrar libros.txt y renombrar libros.tmp
+		File fO = new File(nombreFichero);
+		if(fO.delete()) {
+			//REnombramos
+			File fTmp = new File("libros.tmp");
+			if(fTmp.renameTo(fO)) {
+				resultado = true;
+			}
+			else {
+				System.out.println("Error al renombar el fichero libros.tmp");
+			}
+			
+		}
+		else {
+			System.out.println("Error al borrar el fichero libros.txt");
+		}
+
+		return resultado;
+		
 	}
 
 }

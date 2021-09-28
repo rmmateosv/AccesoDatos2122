@@ -38,11 +38,11 @@ public class Principal {
 					break;
 				}
 				case 4: {
-					
+					borrarLibro();
 					break;
 				}
 				case 5: {
-					
+					buscarLibro();
 					break;
 				}
 				
@@ -50,6 +50,52 @@ public class Principal {
 			}
 			
 		} while (opcion != 0);
+		
+	}
+
+	private static void buscarLibro() {
+		// TODO Auto-generated method stub
+		mostrarLibros();
+		
+		//Solicitamos el isbn del libro a borrar
+		System.out.println("Introduce el ISBN del libro a buscar:");
+		String isbn = t.nextLine();
+		
+		Libro l = datos.obtenerLibro(isbn);
+		if(l!=null) {
+			l.mostrar();
+		}
+		else {
+			System.out.println("Error, el libro no existe");
+		}
+		
+		
+	}
+
+	private static void borrarLibro() {
+		// TODO Auto-generated method stub
+		mostrarLibros();
+		
+		//Solicitamos el isbn del libro a borrar
+		System.out.println("Introduce el ISBN del libro a borrar:");
+		String isbn = t.nextLine();
+		
+		//Obtenemos el libro a borrar para ver si existe
+		Libro l = datos.obtenerLibro(isbn);
+		if(l==null) {
+			System.out.println("El libro seleccionado no existe");
+		}
+		else {
+			
+			
+			//Borramos el libro en el fichero
+			if(datos.borrarLibro(l)) {
+				System.out.println("Libro borrado");
+			}
+			else {
+				System.out.println("Error, no se ha borrado el libro");
+			}
+		}
 		
 	}
 
@@ -72,6 +118,7 @@ public class Principal {
 			System.out.println("Introduce el nuevo nº de ejemplares");
 			l.setNumEjemplares(t.nextInt());
 			t.nextLine();
+			
 			
 			//Modificamos el nº de ejemplaes del libro en el fichero
 			if(datos.modificarEjemplares(l)) {
