@@ -21,6 +21,7 @@ public class Principal {
 			System.out.println("3-Modificar Número de Ejemplares");
 			System.out.println("4-Borrar Libro");
 			System.out.println("5-Buscar Libro por ISBN");
+			System.out.println("6-Buscar Libro por Autor");
 
 			opcion = t.nextInt();
 			t.nextLine();
@@ -46,11 +47,27 @@ public class Principal {
 				buscarLibro();
 				break;
 			}
+			case 6: {
+				buscarLibroPorAutor();
+				break;
+			}
 
 			}
 
 		} while (opcion != 0);
 
+	}
+
+	private static void buscarLibroPorAutor() {
+		// TODO Auto-generated method stub
+		// Solicitamos el nombre del autor
+		System.out.println("Introduce el nombre del autor:");
+		String autor = t.nextLine();
+		
+		ArrayList<Libro>  libros = datos.obtenerLibrosAutor(autor);
+		for(Libro l: libros) {
+			l.mostrar();
+		}
 	}
 
 	private static void buscarLibro() {

@@ -324,4 +324,60 @@ public class AccesoDatosLibro {
 		
 	}
 
+	public ArrayList<Libro> obtenerLibrosAutor(String autor) {
+		// TODO Auto-generated method stub
+		ArrayList<Libro> resultado = new ArrayList<>();
+
+		// Declaramos el flujo que va a menejar el fichero
+		BufferedReader fichero = null;
+		try {
+			// Abrimos el fichero para leer de él
+			fichero = new BufferedReader(new FileReader(nombreFichero));
+
+			// Leer los datos del fichero
+			String linea;
+			while ((linea = fichero.readLine()) != null) {
+				// Dividimos la línea por ; para obtener los campos
+				// separados
+				String[] campos = linea.split(";");
+				
+				//Comprobamos si el libro es del autor
+				if(campos[2].equalsIgnoreCase(autor)) {
+
+					// Pasamos la fecha de String a objeto Date
+					Date fecha = formato.parse(campos[3]);
+		
+					// Crear libro con lo datos leídos
+					Libro l = new Libro(campos[0], campos[1], campos[2], fecha, Integer.parseInt(campos[4]));
+		
+					// Añadimos el libro al arraylist resultado
+					resultado.add(l);
+				}
+
+			}
+
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			System.out.println("Error, no existe el fichero de libros");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			System.out.println("Error, hay fechas incorrectas");
+		} finally {
+			// Cerrar el fichero
+			try {
+				if (fichero != null) {
+					fichero.close();
+				}
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+		return resultado;
+	}
+
 }
