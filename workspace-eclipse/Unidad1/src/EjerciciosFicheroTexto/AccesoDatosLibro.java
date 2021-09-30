@@ -348,7 +348,8 @@ public class AccesoDatosLibro {
 					Date fecha = formato.parse(campos[3]);
 		
 					// Crear libro con lo datos leídos
-					Libro l = new Libro(campos[0], campos[1], campos[2], fecha, Integer.parseInt(campos[4]));
+					Libro l = new Libro(campos[0], campos[1], campos[2], 
+							fecha, Integer.parseInt(campos[4]));
 		
 					// Añadimos el libro al arraylist resultado
 					resultado.add(l);
