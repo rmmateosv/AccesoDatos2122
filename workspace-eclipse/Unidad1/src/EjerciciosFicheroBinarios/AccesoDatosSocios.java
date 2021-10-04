@@ -318,6 +318,98 @@ public class AccesoDatosSocios {
 		
 		return resultado;
 	}
+
+	public boolean borrarSocio(Socio s) {
+		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub
+		boolean resultado=false;
+		
+		//Declaramos fichero original y temporal
+		DataInputStream fOriginal = null;
+		DataOutputStream fTemporal = null;
+		
+		try {
+			fOriginal = new DataInputStream(new FileInputStream(nombreFichero));
+			fTemporal = new DataOutputStream(new FileOutputStream("socios.tmp",false));
+			
+			//Recorremos socios.bin
+			while(true) {
+				//Leemos datos de socio
+				Socio registro = new Socio();
+				
+				String dni="";
+				for(int i=0;i<9;i++) {
+					dni += fOriginal.readChar();
+				}				
+				registro.setDni(dni);
+				//Leemos el nombre. Al ser un String de tamaño variable,
+				//hay que leer todos los caracteres hasta encontrar el \n
+				String nombre="";
+				char letra;
+				while((letra=fOriginal.readChar())!='\n') {
+					nombre+=letra;
+				}
+				registro.setNombre(nombre);
+				
+				//Leemos el long de la fecha
+				registro.setFechaN(new Date(fOriginal.readLong()));
+				
+				//Leemos activo
+				registro.setActivo(fOriginal.readBoolean());
+				
+				//Si no es el socio a borrar, lo escribimos en temporal
+				if(!s.getDni().equalsIgnoreCase(registro.getDni())) {
+					fTemporal.writeChars(registro.getDni());
+					fTemporal.writeChars(registro.getNombre()+"\n");
+					fTemporal.writeLong(registro.getFechaN().getTime());
+					fTemporal.writeBoolean(registro.isActivo());
+				}
+				
+			}
+		} 
+		
+		catch (EOFException e) {
+			// TODO: handle exception
+		}
+		catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		finally {
+			try {
+				if(fOriginal!=null)
+					fOriginal.close();
+				
+				if(fTemporal!=null)
+					fTemporal.close();
+				
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		//Borrar fichero socios.bin
+		File fO = new File(nombreFichero);
+		if(fO.delete()) {
+			File fTmp = new File("socios.tmp");
+			if(!fTmp.renameTo(fO)) {
+				System.out.println("Error al renombrar fichero temporal");
+			}
+			else {
+				resultado = true;
+			}
+			
+		}
+		else {
+			System.out.println("Error al borrar socios.bin");
+		}
+		
+		return resultado;
+	}
 	
 	
 	
