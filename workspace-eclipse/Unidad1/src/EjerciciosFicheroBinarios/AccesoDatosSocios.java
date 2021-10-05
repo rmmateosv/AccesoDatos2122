@@ -359,6 +359,7 @@ public class AccesoDatosSocios {
 				
 				//Si no es el socio a borrar, lo escribimos en temporal
 				if(!s.getDni().equalsIgnoreCase(registro.getDni())) {
+			
 					fTemporal.writeChars(registro.getDni());
 					fTemporal.writeChars(registro.getNombre()+"\n");
 					fTemporal.writeLong(registro.getFechaN().getTime());

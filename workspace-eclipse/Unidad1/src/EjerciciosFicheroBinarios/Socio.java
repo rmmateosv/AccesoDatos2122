@@ -1,9 +1,14 @@
 package EjerciciosFicheroBinarios;
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Socio {
+public class Socio implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5705729624523763354L;
 	private String dni, nombre;
 	private Date fechaN;
 	private boolean activo;

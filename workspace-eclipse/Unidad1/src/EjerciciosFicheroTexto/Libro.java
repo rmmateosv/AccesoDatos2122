@@ -1,9 +1,14 @@
 package EjerciciosFicheroTexto;
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Libro {
+public class Libro implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2077981661327561318L;
 	private String isbn,	
 	titulo,
 	autor;
