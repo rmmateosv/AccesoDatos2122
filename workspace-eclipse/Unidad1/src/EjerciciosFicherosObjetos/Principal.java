@@ -1,5 +1,7 @@
 package EjerciciosFicherosObjetos;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -14,6 +16,8 @@ public class Principal {
 	static AccesoDatosPrestamos datosP = new AccesoDatosPrestamos("prestamos.obj");
 	static AccesoDatosLibro datosL = new AccesoDatosLibro("libros.txt");
 	static AccesoDatosSocios datosS = new AccesoDatosSocios("socios.bin");
+	
+	static SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -39,15 +43,15 @@ public class Principal {
 					break;
 				}
 				case 3: {
-					
+					devolverPrestamo();
 					break;
 				}
 				case 4: {
-					
+					borrarPrestamo();
 					break;
 				}
 				case 5: {
-					
+					mostrarPrestamosSocio();
 					break;
 				}
 				case 6: {
@@ -60,6 +64,114 @@ public class Principal {
 		} while (opcion != 0);
 		
 	}
+	private static void mostrarPrestamosSocio() {
+		ArrayList<Socio> socios = datosS.obtenerSocios();
+		for (Socio s: socios) {
+			s.mostrar();
+		}
+		System.out.println("Introduce dni del socio");
+		String dni = t.nextLine();
+		Socio s=datosS.obtenerSocio(dni);
+		if (s!=null) {
+			
+			ArrayList<Prestamo> prestamos= datosP.obtenerPrestamosSocio(s);
+			
+			if(!prestamos.isEmpty()) {
+				for (Prestamo p: prestamos) {
+					p.mostrar();
+				}
+			}
+			else {
+				System.out.println("Ese socio no tiene prestamos");
+			}									
+		}
+		else {
+			System.out.println("Ese socio no existe");
+		}
+		
+		
+	}
+	private static void borrarPrestamo() {
+		// TODO Auto-generated method stub
+		mostrarPrestamos();
+		try {
+			System.out.println("Introduce dni del socio");
+			String dni = t.nextLine();
+
+			Socio s = datosS.obtenerSocio(dni);
+			if (s != null) {
+				System.out.println("Introduce isbn del libro");
+				String isbn = t.nextLine();
+				Libro l = datosL.obtenerLibro(isbn);
+				if (l != null) {
+					System.out.println("Introduce la fecha en la que se realizó el préstamo en formato dd/MM/yyyy");
+
+					Prestamo p = new Prestamo();
+					p.setLibro(l);
+					p.setSocio(s);
+
+					p.setFechaP(formato.parse(t.nextLine()));
+
+					if (!datosP.borrarPrestamo(p)) {
+						System.out.println("Error, no se ha encontrado el préstamo");
+					} else {
+						System.out.println("Préstamo eliminado correctamente");
+					}
+				} else {
+					System.out.println("Ese socio no tiene un libro con ese isbn");
+				}
+			} else {
+				System.out.println("Error, el socio no existe");
+			}
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	private static void devolverPrestamo() {
+		// TODO Auto-generated method stub
+		mostrarPrestamos();
+		System.out.println("Introduce dni del socio que va a realizar la devolución");
+		String dni = t.nextLine();
+		try {
+			Socio s = datosS.obtenerSocio(dni);
+			if (s != null) {
+				System.out.println("Introduce isbn del libro a devolver");
+				String isbn = t.nextLine();
+				Libro l = datosL.obtenerLibro(isbn);
+				if (l != null) {
+
+					Prestamo p = new Prestamo();
+					p.setLibro(l);
+					p.setSocio(s);
+					System.out.println("Introduce la fecha en la que se realizó el préstamo en formato dd/MM/yyyy");
+					
+					p.setFechaP(formato.parse(t.nextLine()));
+
+					if (!datosP.devolverPrestamo(p)) {
+						System.out.println("Error, no se ha encontrado el préstamo");
+					} else {
+						// Aumentar los ejemplares
+						l.setNumEjemplares(l.getNumEjemplares() + 1);
+						if (datosL.modificarEjemplares(l)) {
+							System.out.println("Préstamo devuelto correctamente");
+						} else {
+							System.out.println("Error al devolver el préstamo");
+						}
+					}
+				} else {
+					System.out.println("Ese socio no tiene un libro con ese isbn");
+				}
+			} else {
+				System.out.println("Error, el socio no existe");
+			}
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
 
 	private static void mostrarPrestamos() {
 		// TODO Auto-generated method stub
