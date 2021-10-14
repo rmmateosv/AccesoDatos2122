@@ -1,6 +1,7 @@
 package EjerciciosFicherosObjetos;
 
 import java.io.EOFException;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -29,8 +30,18 @@ public class AccesoDatosPrestamos {
 		ObjectOutputStream fichero = null;
 		
 		try {
-			//Abrimos fichero de objeto. Si no existe se crea. Se deben añadir datos
-			fichero = new ObjectOutputStream(new FileOutputStream(nombreFichero,true));
+			
+			File f = new File(nombreFichero);
+			if(f.exists()) {
+				//Abrimos fichero de objeto. Si no existe se crea. Se deben añadir datos
+				fichero = new MiObjectOutputStream(new FileOutputStream(nombreFichero,true));
+			}
+			else {
+				//Abrimos fichero de objeto. Si no existe se crea. Se deben añadir datos
+				fichero = new ObjectOutputStream(new FileOutputStream(nombreFichero,true));
+				
+			}	
+			
 			
 			//Creamos el préstamo
 			Prestamo p = new Prestamo();

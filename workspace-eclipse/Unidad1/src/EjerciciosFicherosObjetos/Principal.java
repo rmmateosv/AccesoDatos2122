@@ -8,6 +8,7 @@ import EjerciciosFicheroBinarios.Socio;
 import EjerciciosFicheroTexto.AccesoDatosLibro;
 import EjerciciosFicheroTexto.Libro;
 
+
 public class Principal {
 	static Scanner t = new java.util.Scanner(System.in);
 	static AccesoDatosPrestamos datosP = new AccesoDatosPrestamos("prestamos.obj");
@@ -96,6 +97,14 @@ public class Principal {
 				if(l.getNumEjemplares()>0) {
 					if(!datosP.crearPrestamo(s,l)) {
 						System.out.println("Error, al registrar el préstamo");
+					}
+					else {
+						//Disminuir el número de ejemplares
+						l.setNumEjemplares(l.getNumEjemplares()-1);
+						if(!datosL.modificarEjemplares(l)) {
+							System.out.println("Se ha producido un error al actualizar "
+									+ "el número de ejemplares del libro");
+						}
 					}
 				}
 				else {
