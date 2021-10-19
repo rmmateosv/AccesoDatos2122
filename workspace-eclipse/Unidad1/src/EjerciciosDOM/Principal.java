@@ -1,8 +1,10 @@
 package EjerciciosDOM;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import EjerciciosFicherosObjetos.AccesoDatosPrestamos;
+import EjerciciosFicherosObjetos.Prestamo;
 
 public class Principal {
 	
@@ -54,6 +56,17 @@ public class Principal {
 			}
 
 		} while (opcion != 0);
+		//¡¡¡PASAR EL ÁRBOL DE MEMORIA A FICHERO XML!!!
+		datosB.guardarArbol();
+	}
+
+	private static void importarPrestamos() {
+		// TODO Auto-generated method stub
+		ArrayList<Prestamo> prestamos = datosP.obtenerPrestamos();
+		if(!prestamos.isEmpty())
+			if(!datosB.importar(prestamos)) {
+				System.out.println("Error al importar los préstamos");
+			}
 	}
 
 }
