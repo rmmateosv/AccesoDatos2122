@@ -343,7 +343,7 @@ public class AccesoDatosEmpleado {
 					// Posicionar delante de baja
 					fichero.seek(fichero.getFilePointer() + 210);
 					// Ponemos baja a true
-					fichero.writeBoolean(true);;
+					fichero.writeBoolean(true);
 					return true;
 				} else {
 					fichero.seek(fichero.getFilePointer() + 211);
