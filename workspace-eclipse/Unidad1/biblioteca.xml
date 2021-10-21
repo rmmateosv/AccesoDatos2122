@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><biblioteca><nombre>IES Augustóbriga</nombre><fecha>2021-10-21</fecha><prestamos><prestamo fecha="2021-10-07" id="1"><socio>aa</socio><libro>El quijote</libro></prestamo><prestamo fecha="2021-10-07" id="2"><socio>ccc</socio><libro>aa</libro></prestamo></prestamos></biblioteca>

@@ -19,7 +19,7 @@ public class Principal {
 			System.out.println("Introduce una opcíon:");
 			System.out.println("0-Salir");
 			System.out.println("1-Importar Prestamos");
-			System.out.println("2-Mostrar Prestamos");
+			System.out.println("2-Mostrar Biblioteca");
 			System.out.println("3-Crear Préstamo");
 			System.out.println("4-Modificar fecha biblioteca");
 			System.out.println("5-Modificar Socio de un préstamo");
@@ -34,7 +34,7 @@ public class Principal {
 				break;
 			}
 			case 2: {
-				
+				mostrarBiblioteca();
 				break;
 			}
 			case 3: {
@@ -58,6 +58,17 @@ public class Principal {
 		} while (opcion != 0);
 		//¡¡¡PASAR EL ÁRBOL DE MEMORIA A FICHERO XML!!!
 		datosB.guardarArbol();
+	}
+
+	private static void mostrarBiblioteca() {
+		// TODO Auto-generated method stub
+		Biblioteca b = datosB.obtenerBiblioteca();
+		if(b!=null) {
+			b.mostrar();
+		}
+		else {
+			System.out.println("Error, no existen datos");
+		}
 	}
 
 	private static void importarPrestamos() {

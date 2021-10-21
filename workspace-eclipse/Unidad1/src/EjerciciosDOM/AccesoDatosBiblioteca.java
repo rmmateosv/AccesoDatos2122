@@ -61,7 +61,7 @@ public class AccesoDatosBiblioteca {
 		// TODO Auto-generated method stub
 		boolean resultado = false;
 		
-		if(arbol!=null) {
+		if(arbol==null) {
 			
 			try {
 				//Creamos árbol vacío
@@ -119,7 +119,7 @@ public class AccesoDatosBiblioteca {
 					libro.appendChild(tLibro);
 				}
 				
-				
+				resultado = true;
 				
 			} catch (ParserConfigurationException e) {
 				// TODO Auto-generated catch block
@@ -157,6 +157,13 @@ public class AccesoDatosBiblioteca {
 		else {
 			System.out.println("Error, el árbol está vacío, no se puede generar fichero");
 		}
+	}
+
+	public Biblioteca obtenerBiblioteca() {
+		// TODO Auto-generated method stub
+		Biblioteca resultado = null;
+		
+		return resultado;
 	}
 	
 	
