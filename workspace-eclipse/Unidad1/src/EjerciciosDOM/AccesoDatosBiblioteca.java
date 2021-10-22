@@ -216,6 +216,79 @@ public class AccesoDatosBiblioteca {
 		}
 		return resultado;
 	}
+
+	public int obtenerIdPrestamo() {
+		// TODO Auto-generated method stub
+		int resultado = 0;
+		
+		if(arbol!=null) {
+			//Nos posicionamos en el elemento prestamos
+			Element prestamos = (Element) arbol.getElementsByTagName("prestamos").item(0);
+			//Obtenemos el último hijo de préstamos
+			Element ultimoHijo = (Element)prestamos.getLastChild();
+			//Sumamos 1 al valor del último id de préstamo
+			resultado = Integer.parseInt(ultimoHijo.getAttribute("id"))+1;
+			
+		}
+		return resultado;
+	}
+
+	public boolean crearPrestamo(PrestamoXML p) {
+		// TODO Auto-generated method stub
+		boolean resultado = false;
+		if(arbol!=null) {
+			//Añadimos préstamo a nodo préstamos
+			//Nos posicionamos en el elemento prestamos
+			Element prestamos = (Element) arbol.getElementsByTagName("prestamos").item(0);
+			//Añadimos otro hijo
+			Element prestamo = arbol.createElement("prestamo");
+			prestamo.setAttribute("id", String.valueOf(p.getId()));
+			prestamo.setAttribute("fecha", formato.format(p.getFecha()));
+			
+			prestamos.appendChild(prestamo);
+			
+			Element socio = arbol.createElement("socio");
+			prestamo.appendChild(socio);
+			Text nombreSocio = arbol.createTextNode(p.getSocio());
+			socio.appendChild(nombreSocio);
+			
+			Element libro = arbol.createElement("libro");
+			prestamo.appendChild(libro);
+			Text nombreLibro = arbol.createTextNode(p.getTitulo());
+			libro.appendChild(nombreLibro);
+			
+			//Modificamos el elemento fecha
+			Element fecha = (Element) arbol.getElementsByTagName("fecha").item(0);
+			fecha.setTextContent(formato.format(new Date()));
+			
+			//fecha.getChildNodes().item(0).setNodeValue(formato.format(new Date()));
+			
+			resultado=true;
+		}
+		return resultado;
+	}
+
+	public boolean modificarSocio(int id, String nombre) {
+		// TODO Auto-generated method stub
+		boolean resultado = false;
+		
+		if(arbol!=null) {
+			NodeList n = arbol.getElementsByTagName("prestamo");
+			for(int i=0;i<n.getLength();i++) {
+				Element p = (Element) n.item(i);
+				
+				if(Integer.parseInt(p.getAttribute("id"))==id) {
+					//Modificamos el texto del hijo 0 que es el nombre
+					//OPCION1: p.getChildNodes().item(0).setTextContent(nombre);
+					
+					//OPCION2: 
+					p.getChildNodes().item(0).getChildNodes().item(0).setNodeValue(nombre);
+					return true;
+				}
+			}
+		}
+		return resultado;
+	}
 	
 	
 }

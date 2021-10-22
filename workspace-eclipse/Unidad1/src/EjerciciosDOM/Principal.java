@@ -1,6 +1,7 @@
 package EjerciciosDOM;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Scanner;
 
 import EjerciciosFicherosObjetos.AccesoDatosPrestamos;
@@ -21,9 +22,8 @@ public class Principal {
 			System.out.println("1-Importar Prestamos");
 			System.out.println("2-Mostrar Biblioteca");
 			System.out.println("3-Crear Préstamo");
-			System.out.println("4-Modificar fecha biblioteca");
-			System.out.println("5-Modificar Socio de un préstamo");
-			System.out.println("6-Borrar Prestamo");
+			System.out.println("4-Modificar Socio de un préstamo");
+			System.out.println("5-Borrar Prestamo");
 
 			opcion = t.nextInt();
 			t.nextLine();
@@ -38,11 +38,11 @@ public class Principal {
 				break;
 			}
 			case 3: {
-				
+				crearPrestamo();
 				break;
 			}
 			case 4: {
-				
+				modificarSocio();
 				break;
 			}
 			case 5: {
@@ -58,6 +58,41 @@ public class Principal {
 		} while (opcion != 0);
 		//¡¡¡PASAR EL ÁRBOL DE MEMORIA A FICHERO XML!!!
 		datosB.guardarArbol();
+	}
+
+	private static void modificarSocio() {
+		// TODO Auto-generated method stub
+		mostrarBiblioteca();
+		System.out.println("Introduce el id del socio a modificar");		
+		int id = t.nextInt();t.nextLine();
+		
+		System.out.println("Introduce el nombre del socio");
+		String nombre = t.nextLine();
+		
+		if(!datosB.modificarSocio(id,nombre)) {
+			System.out.println("Error al modificar el socio");
+		}
+	}
+
+	private static void crearPrestamo() {
+		// TODO Auto-generated method stub
+		PrestamoXML p = new PrestamoXML();
+		
+		int id = datosB.obtenerIdPrestamo();
+		if(id!=0) {
+			p.setId(id);
+			p.setFecha(new Date());
+			System.out.println("Nombre del socio");		
+			p.setSocio(t.nextLine());
+			System.out.println("Título del libro");
+			p.setTitulo(t.nextLine());
+			if(!datosB.crearPrestamo(p)) {
+				System.out.println("Error al crear el préstamo");
+			}
+		}
+		else {
+			System.out.println("Error, no se pueden crear préstamos");
+		}
 	}
 
 	private static void mostrarBiblioteca() {
