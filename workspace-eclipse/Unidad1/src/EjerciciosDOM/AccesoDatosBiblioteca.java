@@ -2,6 +2,7 @@ package EjerciciosDOM;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -19,8 +20,10 @@ import javax.xml.transform.TransformerFactoryConfigurationError;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
+import org.w3c.dom.DOMException;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
 import org.w3c.dom.Text;
 import org.xml.sax.SAXException;
 
@@ -162,7 +165,55 @@ public class AccesoDatosBiblioteca {
 	public Biblioteca obtenerBiblioteca() {
 		// TODO Auto-generated method stub
 		Biblioteca resultado = null;
-		
+		if(arbol!=null) {		
+			try {
+				resultado = new Biblioteca();
+				//Nombre de la biblioteca
+				NodeList n = arbol.getElementsByTagName("nombre");
+				resultado.setNombre(n.item(0).getTextContent());
+				//Fecha
+				n = arbol.getElementsByTagName("fecha");
+				resultado.setFecha(formato.parse(n.item(0).getTextContent()));
+				
+				//Rellenamos los préstamos
+				
+				/*
+				OPCIÓN 1
+				n = arbol.getElementsByTagName("prestamos");
+				NodeList prestamos = n.item(0).getChildNodes();*/
+				
+				//OPCIÓN 2
+				NodeList prestamos = arbol.getElementsByTagName("prestamo");
+				
+				
+				for(int i=0;i<prestamos.getLength();i++) {
+					PrestamoXML p = new PrestamoXML();
+					Element prestamo = (Element) prestamos.item(i); 
+					p.setId(Integer.parseInt(prestamo.getAttribute("id")));
+					p.setFecha(formato.parse(prestamo.getAttribute("fecha")));
+					//Nombre del socio
+					p.setSocio(prestamo.getChildNodes().item(0).getChildNodes().item(0).getNodeValue());
+					//Título del libro
+					p.setTitulo(prestamo.getChildNodes().item(1).getChildNodes().item(0).getNodeValue());
+					
+					//Añadir p a la lista de préstamos de la biblioteca
+					resultado.getPrestamos().add(p);
+					
+				}
+				
+				
+			} catch (DOMException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+		else {
+			System.out.println("No hay datos, debes importar el fichero");
+		}
 		return resultado;
 	}
 	
