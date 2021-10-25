@@ -289,6 +289,23 @@ public class AccesoDatosBiblioteca {
 		}
 		return resultado;
 	}
+
+	public boolean borrarPrestamo(int id) {
+		// TODO Auto-generated method stub
+		boolean resultado = false;
+		if(arbol!=null) {
+			NodeList hijosPrestamo = arbol.getElementsByTagName("prestamo");
+			for(int i=0;i<hijosPrestamo.getLength();i++) {
+				Element prestamo = (Element) hijosPrestamo.item(i);
+				if(id == Integer.parseInt(prestamo.getAttribute("id"))) {
+					//Hay que borrar el nodo desde el padre (Nodo prestamos)
+					prestamo.getParentNode().removeChild(prestamo);
+					return true;
+				}
+			}
+		}
+		return resultado;
+	}
 	
 	
 }

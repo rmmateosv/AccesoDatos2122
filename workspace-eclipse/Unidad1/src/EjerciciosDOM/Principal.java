@@ -46,7 +46,7 @@ public class Principal {
 				break;
 			}
 			case 5: {
-				
+				borrarPrestamo();
 				break;
 			}
 			case 6: {
@@ -58,6 +58,16 @@ public class Principal {
 		} while (opcion != 0);
 		//¡¡¡PASAR EL ÁRBOL DE MEMORIA A FICHERO XML!!!
 		datosB.guardarArbol();
+	}
+
+	private static void borrarPrestamo() {
+		// TODO Auto-generated method stub
+		mostrarBiblioteca();
+		System.out.println("Introduce el id del prestamo a borrar");		
+		int id = t.nextInt();t.nextLine();
+		if(!datosB.borrarPrestamo(id)) {
+			System.out.println("Error,no se ha borrado el préstamo");
+		}
 	}
 
 	private static void modificarSocio() {
