@@ -11,14 +11,14 @@ import javax.xml.bind.annotation.XmlType;
 public class PrestamoXML {
 	private int id;
 	private Date fecha;
-	private String socio, titulo;
+	private String socio, libro;
 	
 	public void mostrar(){
 		SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
 		System.out.println("Id:" +id +
 				"\tFecha:"+formato.format(fecha)+
 				"\tSocio:" + socio +
-				"\tTitulo:" + titulo);
+				"\tLibro:" + libro);
 		
 	}
 	public PrestamoXML() {
@@ -29,7 +29,7 @@ public class PrestamoXML {
 		this.id = id;
 		this.fecha = fecha;
 		this.socio = socio;
-		this.titulo = titulo;
+		this.libro = titulo;
 	}
 	@XmlAttribute
 	public int getId() {
@@ -53,11 +53,11 @@ public class PrestamoXML {
 		this.socio = socio;
 	}
 	@XmlElement
-	public String getTitulo() {
-		return titulo;
+	public String getLibro() {
+		return libro;
 	}
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
+	public void setLibro(String titulo) {
+		this.libro = titulo;
 	}
 	
 	

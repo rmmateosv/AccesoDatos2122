@@ -5,7 +5,9 @@ import java.util.Date;
 import java.util.Scanner;
 
 import EjerciciosFicheroBinarios.AccesoDatosSocios;
+import EjerciciosFicheroBinarios.Socio;
 import EjerciciosFicheroTexto.AccesoDatosLibro;
+import EjerciciosFicheroTexto.Libro;
 import EjerciciosFicherosObjetos.AccesoDatosPrestamos;
 import EjerciciosFicherosObjetos.Prestamo;
 
@@ -96,13 +98,40 @@ public class Principal {
 		if(id!=0) {
 			p.setId(id);
 			p.setFecha(new Date());
-			System.out.println("Nombre del socio");		
-			p.setSocio(t.nextLine());
-			System.out.println("Título del libro");
-			p.setTitulo(t.nextLine());
-			if(!datosB.crearPrestamo(p)) {
-				System.out.println("Error al crear el préstamo");
+
+			ArrayList<Libro> libros = datosL.obtenerLibros();
+			for(Libro l: libros) {
+				l.mostrar();
 			}
+			System.out.println("Isbn:");
+			String isbn = t.nextLine();
+			Libro l = datosL.obtenerLibro(isbn);
+			if(l!=null) {
+				ArrayList<Socio> socios = datosS.obtenerSocios();
+				for(Socio s:socios) {
+					s.mostrar();
+				}
+				System.out.println("Dni socio:");
+				String dni = t.nextLine();
+				Socio s = datosS.obtenerSocio(dni);
+				if(s!=null) {
+					p.setLibro(l.getTitulo());
+					p.setSocio(s.getNombre());
+					if(!datosB.crearPrestamo(p)) {
+						System.out.println("Error al crear el préstamo");
+					}
+				}
+				else {
+					System.out.println("Error, socio no existe");
+				}
+				
+			}
+			else {
+				System.out.println("Error, libro no existe");
+			}
+			
+			
+			
 		}
 		else {
 			System.out.println("Error, no se pueden crear préstamos");

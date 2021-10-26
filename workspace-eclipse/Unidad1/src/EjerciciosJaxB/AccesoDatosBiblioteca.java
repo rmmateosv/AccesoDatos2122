@@ -24,7 +24,7 @@ public class AccesoDatosBiblioteca {
 	public void marshal() {
 		try {
 			if(biblioteca!=null) {
-				JAXBContext contexto = JAXBContext.newInstance("Biblioteca.class");
+				JAXBContext contexto = JAXBContext.newInstance(Biblioteca.class);
 				Marshaller marshal = contexto.createMarshaller();
 				marshal.marshal(biblioteca, new File(nombreFichero));
 			}
@@ -39,7 +39,7 @@ public class AccesoDatosBiblioteca {
 		if(fichero.exists()) {
 			JAXBContext contexto;
 			try {
-				contexto = JAXBContext.newInstance("Biblioteca.class");
+				contexto = JAXBContext.newInstance(Biblioteca.class);
 				Unmarshaller unmarshal = contexto.createUnmarshaller();
 				resultado = (Biblioteca) unmarshal.unmarshal(fichero);
 			} catch (JAXBException e) {
@@ -63,11 +63,12 @@ public class AccesoDatosBiblioteca {
 				PrestamoXML pXML = new PrestamoXML();
 				pXML.setSocio(p.getSocio().getNombre());
 				pXML.setFecha(p.getFechaP());
-				pXML.setTitulo(p.getLibro().getTitulo());				
+				pXML.setLibro(p.getLibro().getTitulo());				
 				pXML.setId(contador);
 				contador++;
-				biblioteca.getPrestamos().add(pXML);
+				biblioteca.getPrestamos().add(pXML);				
 			}
+			resultado = true;
 		}
 		else {
 			System.out.println("Error, ya existe el fichero, no se puede volver a importar");
@@ -75,5 +76,33 @@ public class AccesoDatosBiblioteca {
 		
 		return resultado;
 	}
+
+	public Biblioteca obtenerBiblioteca() {
+		// TODO Auto-generated method stub
+		return biblioteca;
+	}
+
+	public int obtenerIdPrestamo() {
+		// TODO Auto-generated method stub
+		int resultado = 0;
+		if(biblioteca!=null) {
+			//El nuevo id, será uno más del último id de préstamo
+			//Obtenemos el array list de prestamos
+			ArrayList<PrestamoXML> lista = biblioteca.getPrestamos();
+			//Obtenemos el último préstamo
+			PrestamoXML p = lista.get(lista.size()-1);
+			//Sumamos 1 al id del último préstamo
+			resultado = p.getId() +1;
+		}
+		return resultado;
+	}
+
+	public boolean crearPrestamo(PrestamoXML p) {
+		// TODO Auto-generated method stub		
+		biblioteca.getPrestamos().add(p);
+		return true;
+	}
+
+	
 	
 }
