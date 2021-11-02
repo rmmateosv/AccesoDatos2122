@@ -103,6 +103,36 @@ public class AccesoDatosBiblioteca {
 		return true;
 	}
 
+	public boolean modificarSocio(int id, String nombre) {
+		// TODO Auto-generated method stub
+		boolean resultado = false;
+		if(biblioteca!=null) {
+			for(PrestamoXML p:biblioteca.getPrestamos()) {
+				//Comprobamos si es el préstamo buscado
+				if(p.getId()==id) {
+					p.setSocio(nombre);
+					return true;
+				}
+			}
+		}
+		return resultado;
+	}
+
+	public boolean borrarPrestamo(int id) {
+		// TODO Auto-generated method stub
+		boolean resultado = false;
+		if(biblioteca!=null) {
+			for(PrestamoXML p:biblioteca.getPrestamos()) {
+				//Comprobamos si es el préstamo buscado
+				if(p.getId()==id) {
+					biblioteca.getPrestamos().remove(p);
+					return true;
+				}
+			}
+		}
+		return resultado;
+	}
+
 	
 	
 }

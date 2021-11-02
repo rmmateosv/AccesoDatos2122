@@ -79,14 +79,22 @@ public class Principal {
 	private static void modificarSocio() {
 		// TODO Auto-generated method stub
 		mostrarBiblioteca();
-		System.out.println("Introduce el id del socio a modificar");		
+		System.out.println("Introduce el id del préstamo a modificar");		
 		int id = t.nextInt();t.nextLine();
 		
-		System.out.println("Introduce el nombre del socio");
-		String nombre = t.nextLine();
-		
-		if(!datosB.modificarSocio(id,nombre)) {
-			System.out.println("Error al modificar el socio");
+		for(Socio s:datosS.obtenerSocios()) {
+			s.mostrar();
+		}
+		System.out.println("Introduce el nif del nuevo socio");
+		String nif = t.nextLine();
+		Socio s = datosS.obtenerSocio(nif);
+		if(s!=null) {
+			if(!datosB.modificarSocio(id,s.getNombre())) {
+				System.out.println("Error al modificar el socio");
+			}
+		}
+		else {
+			System.out.println("Error, no existe el socio");
 		}
 	}
 
