@@ -2,7 +2,7 @@ drop database if exists biblioteca;
 create database biblioteca;
 
 use biblioteca;
-
+--
 create table libro(
 	isbn varchar(50) primary key,	
 	titulo varchar(255) not null,
