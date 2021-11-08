@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Principal {
 	static Scanner t = new java.util.Scanner(System.in);
+	static AccesoDatos ad = new AccesoDatos();
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -22,7 +23,7 @@ public class Principal {
 			
 			switch (opcion) {
 				case 1: {
-					
+					crearBiblioteca();
 					break;
 				}
 				case 2: {
@@ -49,7 +50,12 @@ public class Principal {
 			}
 			
 		} while (opcion != 0);
-		
+		ad.cerrar();
+	}
+
+	private static void crearBiblioteca() {
+		// TODO Auto-generated method stub
+		ad.ejecutarScript();
 	}
 
 }
