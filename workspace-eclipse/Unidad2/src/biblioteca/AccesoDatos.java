@@ -15,6 +15,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
+import EjerciciosFicheroBinarios.Socio;
 import EjerciciosFicheroTexto.Libro;
 
 public class AccesoDatos {
@@ -232,5 +233,93 @@ public class AccesoDatos {
 		
 		return resultado;
 	}
+
+	public Socio obtenerSocio(String dni) {
+		// TODO Auto-generated method stub
+		Socio resultado = null;
+		
+		try {
+			PreparedStatement sentencia = conexion.prepareStatement(
+					"select * from socio where dni = ?");
+			sentencia.setString(1, dni);
+			ResultSet r = sentencia.executeQuery();
+			if(r.next()) {
+				resultado = new Socio(r.getString(1),
+						r.getString(2),
+						r.getDate(3),
+						r.getBoolean(4));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return resultado;
+	}
+
+	public boolean crearSocio(Socio s) {
+		// TODO Auto-generated method stub
+		boolean resultado = false;
+		
+		try {
+			PreparedStatement sentencia = conexion.prepareStatement(
+					"insert into socio values (?,?,?,true)");
+			sentencia.setString(1, s.getDni());
+			sentencia.setString(2, s.getNombre());
+			sentencia.setDate(3, new Date(s.getFechaN().getTime()));
+			int numFilas = sentencia.executeUpdate();
+			if(numFilas==1) {
+				resultado = true;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public ArrayList<Socio> obtenerSocios() {
+		// TODO Auto-generated method stub
+		ArrayList<Socio> resultado = new ArrayList<Socio>();
+		
+		Statement sentencia;
+		try {
+			sentencia = conexion.createStatement();
+			ResultSet r = sentencia.executeQuery("select * from socio");
+			while(r.next()) {
+				Socio s = new Socio(r.getString(1),
+						r.getString(2),						
+						r.getDate(3),
+						r.getBoolean(4));
+				resultado.add(s);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
+		return resultado;
+	}
+
+	public String registrarPrestamo(Socio s, Libro l) {
+		// TODO Auto-generated method stub
+		String resultado = null;
+		//Chequeamos que el socio esté activo
+		if(s.isActivo()) {
+			//Chequeamos que hay ejemplares
+			if(l.getNumEjemplares()>0) {
+				//Chequeamos que el socio 
+				//no tiene más de dos préstamos sin devolver
+			}
+			else {
+				resultado = "Error, no hay ejemplares para prestar";
+			}
+		}
+		else {
+			resultado = "Error, socio no está activo";
+		}
+		return resultado;
+	}
+
+	
 
 }
