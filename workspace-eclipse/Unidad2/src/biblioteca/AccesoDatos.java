@@ -13,6 +13,7 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 import EjerciciosFicheroTexto.Libro;
 
@@ -198,6 +199,31 @@ public class AccesoDatos {
 						r.getInt(5));				
 			}
 			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		return resultado;
+	}
+
+	public ArrayList<Libro> obtenerLibros() {
+		// TODO Auto-generated method stub
+		ArrayList<Libro> resultado = new ArrayList<Libro>();
+		
+		Statement sentencia;
+		try {
+			sentencia = conexion.createStatement();
+			ResultSet r = sentencia.executeQuery("select * from libro");
+			while(r.next()) {
+				Libro l = new Libro(r.getString(1),
+						r.getString(2),
+						r.getString(3),
+						r.getDate(4),
+						r.getInt(5));
+				resultado.add(l);
+			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

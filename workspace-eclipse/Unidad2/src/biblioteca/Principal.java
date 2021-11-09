@@ -22,7 +22,7 @@ public class Principal {
 			System.out.println("2-Mostrar Metadatos");
 			System.out.println("3-Importar Libros");
 			System.out.println("4-Crear Libro");
-			System.out.println("5-Opción 5");
+			System.out.println("5-Mostrar Libros");
 			System.out.println("6-Opción 6");
 			
 			opcion = t.nextInt();t.nextLine();
@@ -45,7 +45,7 @@ public class Principal {
 					break;
 				}
 				case 5: {
-					
+					mostrarLibros();
 					break;
 				}
 				case 6: {
@@ -57,6 +57,14 @@ public class Principal {
 			
 		} while (opcion != 0);
 		ad.cerrar();
+	}
+
+	private static void mostrarLibros() {
+		// TODO Auto-generated method stub
+		ArrayList<Libro> libros = ad.obtenerLibros();
+		for(Libro l:libros) {
+			l.mostrar();
+		}
 	}
 
 	private static void crearLibro() {
