@@ -158,7 +158,7 @@ public class AccesoDatos {
 		// TODO Auto-generated method stub
 		boolean resultado = false;
 		if(conexion!=null) {
-			try {
+			try {				
 				PreparedStatement sentencia = conexion.prepareStatement(
 						"insert into libro values (?,?,?,?,?)");
 				//Rellenamos los parámetros -> ?
@@ -178,6 +178,32 @@ public class AccesoDatos {
 				e.printStackTrace();
 			}
 		}
+		return resultado;
+	}
+
+	public Libro obtenerLibro(String isbn) {
+		// TODO Auto-generated method stub
+		Libro resultado = null;
+		try {
+			PreparedStatement sentencia = conexion.prepareStatement(
+					"select * from libro where isbn = ?");
+			sentencia.setString(1, isbn);
+			
+			ResultSet r = sentencia.executeQuery();
+			if(r.next()) {
+				resultado = new Libro(r.getString(1),
+						r.getString(2),
+						r.getString(3),
+						r.getDate(4),
+						r.getInt(5));				
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
 		return resultado;
 	}
 

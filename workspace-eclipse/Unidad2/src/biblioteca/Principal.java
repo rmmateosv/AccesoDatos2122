@@ -1,5 +1,7 @@
 package biblioteca;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -19,7 +21,7 @@ public class Principal {
 			System.out.println("1-Crear BD Biblioteca (ejecutar script)");
 			System.out.println("2-Mostrar Metadatos");
 			System.out.println("3-Importar Libros");
-			System.out.println("4-Opción 4");
+			System.out.println("4-Crear Libro");
 			System.out.println("5-Opción 5");
 			System.out.println("6-Opción 6");
 			
@@ -39,7 +41,7 @@ public class Principal {
 					break;
 				}
 				case 4: {
-					
+					crearLibro();
 					break;
 				}
 				case 5: {
@@ -55,6 +57,40 @@ public class Principal {
 			
 		} while (opcion != 0);
 		ad.cerrar();
+	}
+
+	private static void crearLibro() {
+		// TODO Auto-generated method stub
+		SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yy");		
+		try {
+			
+			System.out.println("Isbn");
+			String isbn = t.nextLine();			
+			Libro l = ad.obtenerLibro(isbn);
+			//Chequear que el libro no exista aún
+			if(l==null) {
+				l = new Libro();
+				l.setIsbn(isbn);
+				System.out.println("Título");
+				l.setTitulo(t.nextLine());
+				System.out.println("Autor");
+				l.setAutor(t.nextLine());
+				System.out.println("Fecha Lanzamiento (dd/mm/yy)");
+				l.setFechaLanzamiento(formato.parse(t.nextLine()));
+				System.out.println("Nº de ejemplares");
+				l.setNumEjemplares(t.nextInt());t.nextLine();
+				if(!ad.crearLibro(l)) {
+					System.out.println("Error al crear el libro");
+				}
+			}
+			else {
+				System.out.println("Error, el libro ya existe");
+			}
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			System.out.println("Error, fecha incorrecta");
+		}
+		
 	}
 
 	private static void importarLibros() {
