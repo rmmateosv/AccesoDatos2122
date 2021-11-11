@@ -309,6 +309,46 @@ public class AccesoDatos {
 			if(l.getNumEjemplares()>0) {
 				//Chequeamos que el socio 
 				//no tiene más de dos préstamos sin devolver
+				int numP = obtenerNumPendientes(s);
+				if(numP==-1 || numP>=2) {
+					resultado = "El socio tiene 2 o más préstamos sin devolver"
+							+ " o no se ha podido averiguar los préstamos pendientes";
+				}
+				else {
+					try {
+						//Iniciar transacción
+						conexion.setAutoCommit(false);
+						PreparedStatement sentencia = conexion.prepareStatement(
+								"insert into prestamo values(?,?,curdate(),"
+								+ "date_add(curdate(), interval 15 DAY),false)");
+						sentencia.setString(1, s.getDni());
+						sentencia.setString(2, l.getIsbn());
+						
+						int numFilas = sentencia.executeUpdate();
+						if(numFilas==1) {
+							//Restar 1 al nº de ejmplares
+							sentencia = conexion.prepareStatement(
+									"update libro set numEjemplares = numEjemplares - 1 "
+									+ "where isbn = ?");
+							sentencia.setString(1, l.getIsbn());
+							numFilas = sentencia.executeUpdate();
+							if(numFilas==1) {
+								conexion.commit();
+								resultado =  "Préstamo regristrado";
+							}
+						}
+						
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						try {
+							conexion.rollback();
+						} catch (SQLException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+						e.printStackTrace();
+					}
+				}
 			}
 			else {
 				resultado = "Error, no hay ejemplares para prestar";
@@ -316,6 +356,34 @@ public class AccesoDatos {
 		}
 		else {
 			resultado = "Error, socio no está activo";
+		}
+		try {
+			conexion.setAutoCommit(true);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public int obtenerNumPendientes(Socio s) {
+		// TODO Auto-generated method stub
+		int resultado = -1;
+		
+		try {
+			PreparedStatement sentencia = conexion.prepareStatement(
+					"select count(*) "
+					+ "from prestamo "
+					+ "where socio = ? and "
+					+ "devuelto = false");
+			sentencia.setString(1, s.getDni());
+			ResultSet r = sentencia.executeQuery();
+			if(r.next()) {
+				resultado = r.getInt(1);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		return resultado;
 	}

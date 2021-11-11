@@ -26,6 +26,7 @@ public class Principal {
 			System.out.println("5-Mostrar Libros");
 			System.out.println("6-Crear Socio");
 			System.out.println("7-Mostrar Socios");
+			System.out.println("8-Prestar Libro");
 			
 			
 			opcion = t.nextInt();t.nextLine();
