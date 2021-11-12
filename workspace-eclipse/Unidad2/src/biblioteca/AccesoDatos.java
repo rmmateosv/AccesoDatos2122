@@ -17,6 +17,7 @@ import java.util.ArrayList;
 
 import EjerciciosFicheroBinarios.Socio;
 import EjerciciosFicheroTexto.Libro;
+import EjerciciosFicherosObjetos.Prestamo;
 
 public class AccesoDatos {
 	private String usuario = "root", clave = "root", url = "jdbc:mysql://localhost:3306/biblioteca";
@@ -385,6 +386,35 @@ public class AccesoDatos {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return resultado;
+	}
+
+	public ArrayList<Prestamo> obtenerPrestamos() {
+		// TODO Auto-generated method stub
+		ArrayList<Prestamo> resultado = new ArrayList<>();
+		try {
+			Statement sentencia = conexion.createStatement();
+			ResultSet r = sentencia.executeQuery("select * "
+					+ "from prestamo p inner join socio s "
+					+ "on p.socio = s.dni "
+					+ "inner join libro l "
+					+ "on p.libro = l.isbn ");
+			while(r.next()) {
+				Socio s = new Socio(r.getString("socio"),r.getString("nombre"),
+						r.getDate(8),r.getBoolean(9));
+				
+				Libro l = new Libro(r.getString(2), r.getString(11), 
+						r.getString(12), r.getDate(13), r.getInt(14));
+				
+				Prestamo p = new Prestamo(r.getString(1), r.getString(2), 
+						null, null, false)
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		return resultado;
 	}
 

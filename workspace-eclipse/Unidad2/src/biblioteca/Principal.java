@@ -8,6 +8,7 @@ import java.util.Scanner;
 import EjerciciosFicheroBinarios.Socio;
 import EjerciciosFicheroTexto.AccesoDatosLibro;
 import EjerciciosFicheroTexto.Libro;
+import EjerciciosFicherosObjetos.Prestamo;
 
 public class Principal {
 	static Scanner t = new java.util.Scanner(System.in);
@@ -27,6 +28,7 @@ public class Principal {
 			System.out.println("6-Crear Socio");
 			System.out.println("7-Mostrar Socios");
 			System.out.println("8-Prestar Libro");
+			System.out.println("9-Mostrar Préstamo");
 			
 			
 			opcion = t.nextInt();t.nextLine();
@@ -64,11 +66,22 @@ public class Principal {
 				case 8:
 					crearPrestamo();
 					break;
+				case 9:
+					mostrarPrestamos();
+					break;
 				
 			}
 			
 		} while (opcion != 0);
 		ad.cerrar();
+	}
+
+	private static void mostrarPrestamos() {
+		// TODO Auto-generated method stub
+		ArrayList<Prestamo> prestamos = ad.obtenerPrestamos();
+		for(Prestamo p: prestamos) {
+			p.mostrar();
+		}
 	}
 
 	private static void crearPrestamo() {
