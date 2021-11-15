@@ -160,21 +160,20 @@ public class AccesoDatos {
 	public boolean crearLibro(Libro l) {
 		// TODO Auto-generated method stub
 		boolean resultado = false;
-		if(conexion!=null) {
-			try {				
-				PreparedStatement sentencia = conexion.prepareStatement(
-						"insert into libro values (?,?,?,?,?)");
-				//Rellenamos los parámetros -> ?
+		if (conexion != null) {
+			try {
+				PreparedStatement sentencia = conexion.prepareStatement("insert into libro values (?,?,?,?,?)");
+				// Rellenamos los parámetros -> ?
 				sentencia.setString(1, l.getIsbn());
 				sentencia.setString(2, l.getTitulo());
 				sentencia.setString(3, l.getAutor());
 				sentencia.setDate(4, new Date(l.getFechaLanzamiento().getTime()));
 				sentencia.setInt(5, l.getNumEjemplares());
-				
-				//Ejecutamos
+
+				// Ejecutamos
 				int numFilas = sentencia.executeUpdate();
-				if(numFilas==1) {
-					resultado=true;
+				if (numFilas == 1) {
+					resultado = true;
 				}
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
@@ -188,88 +187,72 @@ public class AccesoDatos {
 		// TODO Auto-generated method stub
 		Libro resultado = null;
 		try {
-			PreparedStatement sentencia = conexion.prepareStatement(
-					"select * from libro where isbn = ?");
+			PreparedStatement sentencia = conexion.prepareStatement("select * from libro where isbn = ?");
 			sentencia.setString(1, isbn);
-			
+
 			ResultSet r = sentencia.executeQuery();
-			if(r.next()) {
-				resultado = new Libro(r.getString(1),
-						r.getString(2),
-						r.getString(3),
-						r.getDate(4),
-						r.getInt(5));				
+			if (r.next()) {
+				resultado = new Libro(r.getString(1), r.getString(2), r.getString(3), r.getDate(4), r.getInt(5));
 			}
-			
+
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
+
 		return resultado;
 	}
 
 	public ArrayList<Libro> obtenerLibros() {
 		// TODO Auto-generated method stub
 		ArrayList<Libro> resultado = new ArrayList<Libro>();
-		
+
 		Statement sentencia;
 		try {
 			sentencia = conexion.createStatement();
 			ResultSet r = sentencia.executeQuery("select * from libro");
-			while(r.next()) {
-				Libro l = new Libro(r.getString(1),
-						r.getString(2),
-						r.getString(3),
-						r.getDate(4),
-						r.getInt(5));
+			while (r.next()) {
+				Libro l = new Libro(r.getString(1), r.getString(2), r.getString(3), r.getDate(4), r.getInt(5));
 				resultado.add(l);
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
+
 		return resultado;
 	}
 
 	public Socio obtenerSocio(String dni) {
 		// TODO Auto-generated method stub
 		Socio resultado = null;
-		
+
 		try {
-			PreparedStatement sentencia = conexion.prepareStatement(
-					"select * from socio where dni = ?");
+			PreparedStatement sentencia = conexion.prepareStatement("select * from socio where dni = ?");
 			sentencia.setString(1, dni);
 			ResultSet r = sentencia.executeQuery();
-			if(r.next()) {
-				resultado = new Socio(r.getString(1),
-						r.getString(2),
-						r.getDate(3),
-						r.getBoolean(4));
+			if (r.next()) {
+				resultado = new Socio(r.getString(1), r.getString(2), r.getDate(3), r.getBoolean(4));
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		return resultado;
 	}
 
 	public boolean crearSocio(Socio s) {
 		// TODO Auto-generated method stub
 		boolean resultado = false;
-		
+
 		try {
-			PreparedStatement sentencia = conexion.prepareStatement(
-					"insert into socio values (?,?,?,true)");
+			PreparedStatement sentencia = conexion.prepareStatement("insert into socio values (?,?,?,true)");
 			sentencia.setString(1, s.getDni());
 			sentencia.setString(2, s.getNombre());
 			sentencia.setDate(3, new Date(s.getFechaN().getTime()));
 			int numFilas = sentencia.executeUpdate();
-			if(numFilas==1) {
+			if (numFilas == 1) {
 				resultado = true;
 			}
 		} catch (SQLException e) {
@@ -282,63 +265,58 @@ public class AccesoDatos {
 	public ArrayList<Socio> obtenerSocios() {
 		// TODO Auto-generated method stub
 		ArrayList<Socio> resultado = new ArrayList<Socio>();
-		
+
 		Statement sentencia;
 		try {
 			sentencia = conexion.createStatement();
 			ResultSet r = sentencia.executeQuery("select * from socio");
-			while(r.next()) {
-				Socio s = new Socio(r.getString(1),
-						r.getString(2),						
-						r.getDate(3),
-						r.getBoolean(4));
+			while (r.next()) {
+				Socio s = new Socio(r.getString(1), r.getString(2), r.getDate(3), r.getBoolean(4));
 				resultado.add(s);
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}		
+		}
 		return resultado;
 	}
 
 	public String registrarPrestamo(Socio s, Libro l) {
 		// TODO Auto-generated method stub
 		String resultado = null;
-		//Chequeamos que el socio esté activo
-		if(s.isActivo()) {
-			//Chequeamos que hay ejemplares
-			if(l.getNumEjemplares()>0) {
-				//Chequeamos que el socio 
-				//no tiene más de dos préstamos sin devolver
+		// Chequeamos que el socio esté activo
+		if (s.isActivo()) {
+			// Chequeamos que hay ejemplares
+			if (l.getNumEjemplares() > 0) {
+				// Chequeamos que el socio
+				// no tiene más de dos préstamos sin devolver
 				int numP = obtenerNumPendientes(s);
-				if(numP==-1 || numP>=2) {
+				if (numP == -1 || numP >= 2) {
 					resultado = "El socio tiene 2 o más préstamos sin devolver"
 							+ " o no se ha podido averiguar los préstamos pendientes";
-				}
-				else {
+				} else {
 					try {
-						//Iniciar transacción
+						// Iniciar transacción
 						conexion.setAutoCommit(false);
-						PreparedStatement sentencia = conexion.prepareStatement(
-								"insert into prestamo values(?,?,curdate(),"
-								+ "date_add(curdate(), interval 15 DAY),false)");
+						PreparedStatement sentencia = conexion
+								.prepareStatement("insert into prestamo values(?,?,curdate(),"
+										+ "date_add(curdate(), interval 15 DAY),false)");
 						sentencia.setString(1, s.getDni());
 						sentencia.setString(2, l.getIsbn());
-						
+
 						int numFilas = sentencia.executeUpdate();
-						if(numFilas==1) {
-							//Restar 1 al nº de ejmplares
+						if (numFilas == 1) {
+							// Restar 1 al nº de ejmplares
 							sentencia = conexion.prepareStatement(
-									"update libro set numEjemplares = numEjemplares - 1 "
-									+ "where isbn = ?");
+									"update libro set numEjemplares = numEjemplares - 1 " + "where isbn = ?");
 							sentencia.setString(1, l.getIsbn());
 							numFilas = sentencia.executeUpdate();
-							if(numFilas==1) {
+							if (numFilas == 1) {
 								conexion.commit();
-								resultado =  "Préstamo regristrado";
+								resultado = "Préstamo regristrado";
 							}
 						}
-						
+
 					} catch (SQLException e) {
 						// TODO Auto-generated catch block
 						try {
@@ -350,12 +328,10 @@ public class AccesoDatos {
 						e.printStackTrace();
 					}
 				}
-			}
-			else {
+			} else {
 				resultado = "Error, no hay ejemplares para prestar";
 			}
-		}
-		else {
+		} else {
 			resultado = "Error, socio no está activo";
 		}
 		try {
@@ -370,16 +346,13 @@ public class AccesoDatos {
 	public int obtenerNumPendientes(Socio s) {
 		// TODO Auto-generated method stub
 		int resultado = -1;
-		
+
 		try {
 			PreparedStatement sentencia = conexion.prepareStatement(
-					"select count(*) "
-					+ "from prestamo "
-					+ "where socio = ? and "
-					+ "devuelto = false");
+					"select count(*) " + "from prestamo " + "where socio = ? and " + "devuelto = false");
 			sentencia.setString(1, s.getDni());
 			ResultSet r = sentencia.executeQuery();
-			if(r.next()) {
+			if (r.next()) {
 				resultado = r.getInt(1);
 			}
 		} catch (SQLException e) {
@@ -394,30 +367,164 @@ public class AccesoDatos {
 		ArrayList<Prestamo> resultado = new ArrayList<>();
 		try {
 			Statement sentencia = conexion.createStatement();
-			ResultSet r = sentencia.executeQuery("select * "
-					+ "from prestamo p inner join socio s "
-					+ "on p.socio = s.dni "
-					+ "inner join libro l "
-					+ "on p.libro = l.isbn ");
-			while(r.next()) {
-				Socio s = new Socio(r.getString("socio"),r.getString("nombre"),
-						r.getDate(8),r.getBoolean(9));
-				
-				Libro l = new Libro(r.getString(2), r.getString(11), 
-						r.getString(12), r.getDate(13), r.getInt(14));
-				
-				Prestamo p = new Prestamo(r.getString(1), r.getString(2), 
-						null, null, false)
+			ResultSet r = sentencia.executeQuery("select * " + "from prestamo p inner join socio s "
+					+ "on p.socio = s.dni " + "inner join libro l " + "on p.libro = l.isbn ");
+			while (r.next()) {
+				Socio s = new Socio(r.getString("socio"), r.getString("nombre"), r.getDate(8), r.getBoolean(9));
+
+				Libro l = new Libro(r.getString(2), r.getString(11), r.getString(12), r.getDate(13), r.getInt(14));
+
+				Prestamo p = new Prestamo(s, l, r.getDate(3), r.getDate(4), r.getBoolean(5));
+
+				resultado.add(p);
 			}
-			
+
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		return resultado;
 	}
 
-	
+	public ArrayList<Prestamo> obtenerPrestamos(Socio s, boolean pendientes) {
+		// TODO Auto-generated method stub
+		ArrayList<Prestamo> resultado = new ArrayList<>();
+		try {
+			PreparedStatement sentencia;
+			if (pendientes) {
+				sentencia = conexion.prepareStatement("select * " + "from prestamo p inner join libro l "
+						+ "on p.libro = l.isbn " + "where socio = ? and devuelto = false " + "order by fechaP desc");
+			} else {
+				sentencia = conexion.prepareStatement("select * " + "from prestamo p inner join libro l "
+						+ "on p.libro = l.isbn " + "where socio = ? " + "order by fechaP desc");
+			}
+
+			sentencia.setString(1, s.getDni());
+			ResultSet r = sentencia.executeQuery();
+			while (r.next()) {
+				Libro l = new Libro(r.getString("isbn"), r.getString("titulo"), r.getString("autor"),
+						r.getDate("fechaLanzamiento"), r.getInt("numEjemplares"));
+
+				Prestamo p = new Prestamo(s, l, r.getDate(3), r.getDate(4), r.getBoolean(5));
+
+				resultado.add(p);
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return resultado;
+	}
+
+	public Prestamo obtenerPrestamo(Socio s, String isbn) {
+		// TODO Auto-generated method stub
+		Prestamo resultado = null;
+		try {
+			PreparedStatement sentencia = conexion
+					.prepareStatement("select * " + "from prestamo p inner join libro l " + "on p.libro = l.isbn "
+							+ "where socio = ? and " + "libro = ? and devuelto = false " + "order by fechaP desc");
+			sentencia.setString(1, s.getDni());
+			sentencia.setString(2, isbn);
+			ResultSet r = sentencia.executeQuery();
+			if (r.next()) {
+				Libro l = new Libro(r.getString("isbn"), r.getString("titulo"), r.getString("autor"),
+						r.getDate("fechaLanzamiento"), r.getInt("numEjemplares"));
+
+				resultado = new Prestamo(s, l, r.getDate(3), r.getDate(4), r.getBoolean(5));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public boolean devolverPrestamo(Prestamo p) {
+		// TODO Auto-generated method stub
+		boolean resultado = false;
+
+		try {
+			// Iniciamos transacción
+			conexion.setAutoCommit(false);
+			PreparedStatement sentencia = conexion.prepareStatement(
+					"update prestamo set devuelto = true " + "where libro = ? and " + "socio = ? and " + "fechaP = ?");
+			sentencia.setString(1, p.getLibro().getIsbn());
+			sentencia.setString(2, p.getSocio().getDni());
+			sentencia.setDate(3, new Date(p.getFechaP().getTime()));
+			int filas = sentencia.executeUpdate();
+			if (filas == 1) {
+				// Aumentamos el nº de ejemplares
+				sentencia = conexion
+						.prepareStatement("update libro set numEjemplares = numEjemplares + 1 " + "where isbn = ?");
+				sentencia.setString(1, p.getLibro().getIsbn());
+				filas = sentencia.executeUpdate();
+				if (filas == 1) {
+					conexion.commit();
+					conexion.setAutoCommit(true);
+					resultado = true;
+				}
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			try {
+				conexion.rollback();
+				conexion.setAutoCommit(true);
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			e.printStackTrace();
+		}
+
+		return resultado;
+	}
+
+	public boolean borrarSocio(Socio s, boolean prestamos) {
+		// TODO Auto-generated method stub
+		boolean resultado = false;
+		PreparedStatement sentencia;
+		try {
+			int filas=0;
+			conexion.setAutoCommit(false);
+			if (prestamos) {
+				// Borrar prestamo
+
+				sentencia = conexion.prepareStatement(
+						"delete from prestamo where socio = ?");
+
+				sentencia.setString(1, s.getDni());
+				filas = sentencia.executeUpdate();
+			}
+			// borrar socio
+			if((prestamos && filas > 0) || !prestamos) {
+				sentencia = conexion.prepareStatement(
+						"delete from socio where dni = ?");
+
+				sentencia.setString(1, s.getDni());
+				filas = sentencia.executeUpdate();
+				if(filas==1) {
+					resultado = true;
+					conexion.commit();
+					conexion.setAutoCommit(true);
+				}
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			try {
+				conexion.rollback();
+				conexion.setAutoCommit(true);
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			e.printStackTrace();
+			
+		}
+
+		return resultado;
+	}
 
 }
