@@ -33,6 +33,7 @@ public class Principal {
 			System.out.println("10-Mostrar Préstamos pendientes de un socio");
 			System.out.println("11-Devolver Préstamos");
 			System.out.println("12- Borrar Socio");
+			System.out.println("13- Estadística Socio");
 
 			opcion = t.nextInt();
 			t.nextLine();
@@ -82,11 +83,30 @@ public class Principal {
 			case 12:
 				borrarSocio();
 				break;
+			case 13:
+				estadistica();
+				break;
 
 			}
 
 		} while (opcion != 0);
 		ad.cerrar();
+	}
+
+	private static void estadistica() {
+		// TODO Auto-generated method stub
+		//Estructura de obtener datos
+		//DNI,Nombre socio, Nº  Préstamos, Nº Prestamos sin devolver,
+		//Fecha Úlitmo Préstamo, Fecha del Primer Préstamo
+		ArrayList<Object[]> datos = ad.obtenerDatos();
+		for(Object[] o : datos) {
+			System.out.println("DNI" +o[0] 
+			+"\tSocio"+o[1]
+			+"\tNºPréstamos"+o[2]
+			+"\tNoDevueltos"+o[3]
+			+"\tÚlitmo Préstamo"+o[4]
+			+"\tPrimer Préstamo"+o[5]);
+		}
 	}
 
 	private static void borrarSocio() {

@@ -1304,3 +1304,31 @@ org.eclipse.core.runtime.CoreException: Launch configuration Principal (7) refer
 2021-11-15 10:15:30,867 [Worker-113: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad2\src\main\resources
 2021-11-15 10:15:30,868 [Worker-113: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2021-11-15 10:15:30,868 [Worker-113: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad2\src\test\resources
+2021-11-15 10:20:01,759 [Worker-106: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-11-15 10:20:01,760 [Worker-106: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad2\src\main\resources
+2021-11-15 10:20:01,764 [Worker-106: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-11-15 10:20:01,764 [Worker-106: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad2\src\test\resources
+2021-11-16 10:54:16,336 [Worker-121: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-11-16 10:54:16,337 [Worker-121: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad2\src\main\resources
+2021-11-16 10:54:16,337 [Worker-121: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-11-16 10:54:16,338 [Worker-121: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad2\src\test\resources
+2021-11-16 11:04:05,617 [Worker-134: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-11-16 11:04:05,619 [Worker-134: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad2\src\main\resources
+2021-11-16 11:04:05,620 [Worker-134: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-11-16 11:04:05,620 [Worker-134: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad2\src\test\resources
+2021-11-16 11:04:51,236 [Worker-133: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-11-16 11:04:51,237 [Worker-133: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad2\src\main\resources
+2021-11-16 11:04:51,239 [Worker-133: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-11-16 11:04:51,239 [Worker-133: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad2\src\test\resources
+2021-11-16 11:05:30,670 [Worker-131: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-11-16 11:05:30,671 [Worker-131: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad2\src\main\resources
+2021-11-16 11:05:30,671 [Worker-131: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-11-16 11:05:30,672 [Worker-131: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad2\src\test\resources
+2021-11-16 11:07:51,727 [Worker-136: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-11-16 11:07:51,728 [Worker-136: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad2\src\main\resources
+2021-11-16 11:07:51,729 [Worker-136: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-11-16 11:07:51,729 [Worker-136: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad2\src\test\resources
+2021-11-16 11:14:46,262 [Worker-135: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-11-16 11:14:46,262 [Worker-135: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad2\src\main\resources
+2021-11-16 11:14:46,263 [Worker-135: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-11-16 11:14:46,263 [Worker-135: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad2\src\test\resources

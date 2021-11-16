@@ -527,4 +527,28 @@ public class AccesoDatos {
 		return resultado;
 	}
 
+	public ArrayList<Object[]> obtenerDatos() {
+		// TODO Auto-generated method stub
+		ArrayList<Object[]> resultado = new ArrayList<>();
+		Statement sentencia;
+		try {
+			sentencia = conexion.createStatement();
+			ResultSet r = sentencia.executeQuery(
+					"select p.socio, s.nombre, count(*), "
+					+ "(select count(*) from prestamo where devuelto = false and socio = p.socio), "
+					+ "max(p.fechaP), min(p.fechaP) "
+					+ "from prestamo p inner join socio s "
+					+ "	on p.socio = s.dni "
+					+ "group by p.socio");
+			while(r.next()) {
+				
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return resultado;
+	}
+
 }
