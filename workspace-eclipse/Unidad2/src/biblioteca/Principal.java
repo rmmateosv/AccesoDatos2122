@@ -94,18 +94,19 @@ public class Principal {
 	}
 
 	private static void estadistica() {
+		
 		// TODO Auto-generated method stub
 		//Estructura de obtener datos
 		//DNI,Nombre socio, Nº  Préstamos, Nº Prestamos sin devolver,
 		//Fecha Úlitmo Préstamo, Fecha del Primer Préstamo
 		ArrayList<Object[]> datos = ad.obtenerDatos();
 		for(Object[] o : datos) {
-			System.out.println("DNI" +o[0] 
-			+"\tSocio"+o[1]
-			+"\tNºPréstamos"+o[2]
-			+"\tNoDevueltos"+o[3]
-			+"\tÚlitmo Préstamo"+o[4]
-			+"\tPrimer Préstamo"+o[5]);
+			System.out.println("DNI:" +o[0] 
+			+"\tSocio:"+o[1]
+			+"\tNºPréstamos:"+o[2]
+			+"\tNoDevueltos:"+o[3]
+			+"\tÚlitmo Préstamo:"+formato.format(o[4])
+			+"\tPrimer Préstamo:"+formato.format(o[5]));
 		}
 	}
 
@@ -154,7 +155,7 @@ public class Principal {
 			System.out.println("Isbn");
 			String isbn = t.nextLine();
 			Prestamo p = ad.obtenerPrestamo(s, isbn);
-			if (p != null && !p.isDevuelto()) {
+			if (p != null && !p.isDevuelto()) {				
 				if (!ad.devolverPrestamo(p)) {
 					System.out.println("Error, al devolver el préstamo");
 				}

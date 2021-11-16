@@ -30,3 +30,27 @@ create table prestamo(
 	foreign key (libro) references libro(isbn)
 		on update cascade on delete restrict
 )engine Innodb;
+
+-- Modificar tabla socio
+alter table socio add (fechaSancion date null);
+delimiter //
+create procedure sancionar(pDni varchar(9))
+begin
+	-- Chequear que existe socio
+    declare socio varchar(9);
+    
+    select dni into socio from socio where dni = pDni;
+    if(socio is null) then
+		select "Error Socio no existe";
+	else
+		update socio set fechaSancion = adddate(curdate(), interval 15 day) 
+        where dni = socio;
+        select "Sanción registrada";
+    end if;
+    
+    
+end//
+-- drop procedure sancionar//
+-- call sancionar("1a")//
+
+

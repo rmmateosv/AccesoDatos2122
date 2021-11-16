@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.Date;
@@ -462,6 +463,16 @@ public class AccesoDatos {
 				sentencia.setString(1, p.getLibro().getIsbn());
 				filas = sentencia.executeUpdate();
 				if (filas == 1) {
+					// Sancionamos si es necesario
+					if(p.getFechaD().getTime()<new java.util.Date().getTime()) {
+						CallableStatement proc = conexion.prepareCall(
+								"call sancionar(?)");
+						proc.setString(1, p.getSocio().getDni());
+						ResultSet r = proc.executeQuery();
+						if(r.next()) {
+							System.out.println(r.getString(1));
+						}
+					}
 					conexion.commit();
 					conexion.setAutoCommit(true);
 					resultado = true;
@@ -541,7 +552,11 @@ public class AccesoDatos {
 					+ "	on p.socio = s.dni "
 					+ "group by p.socio");
 			while(r.next()) {
-				
+				Object[] o = {r.getString(1), r.getString(2),r.getInt(3),
+						r.getInt(4), 
+						new java.util.Date(r.getDate(5).getTime()),
+						new java.util.Date(r.getDate(6).getTime())}; 
+				resultado.add(o);
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
