@@ -53,4 +53,26 @@ end//
 -- drop procedure sancionar//
 -- call sancionar("1a")//
 
+-- Devuelve 1 si está está sancionado y 0 si no lo está
+create function estaSancionado(pDni varchar(9))
+	returns int deterministic
+begin
+	declare vSocio varchar(9);
+    declare vFechaSancion date;
+    
+    select dni, fechaSancion 
+		into vSocio, vFechaSancion
+		from socio
+        where dni = pDni;
+	if(vSocio is not null) then
+		if(vFechaSancion is null or vFechaSancion < curdate()) then
+			return 0;
+		end if;
+    end if;
+    return 1;
+end//
+-- drop function estaSancionado//
+-- select estaSancionado('1a')//
+
+
 
