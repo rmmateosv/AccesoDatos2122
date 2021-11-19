@@ -24,7 +24,7 @@ create table prestamo(
     fechap date not null,
     fechad date not null,
     devuelto boolean not null default false,
-    primary key(socio,libro),
+    primary key(socio,libro, fechap),
     foreign key (socio) references socio(dni)
 		on update cascade on delete restrict,
 	foreign key (libro) references libro(isbn)

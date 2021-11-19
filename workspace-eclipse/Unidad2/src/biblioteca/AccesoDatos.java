@@ -14,6 +14,7 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.sql.Types;
 import java.util.ArrayList;
 
 import EjerciciosFicheroBinarios.Socio;
@@ -287,50 +288,55 @@ public class AccesoDatos {
 		String resultado = null;
 		// Chequeamos que el socio esté activo
 		if (s.isActivo()) {
-			// Chequeamos que hay ejemplares
-			if (l.getNumEjemplares() > 0) {
-				// Chequeamos que el socio
-				// no tiene más de dos préstamos sin devolver
-				int numP = obtenerNumPendientes(s);
-				if (numP == -1 || numP >= 2) {
-					resultado = "El socio tiene 2 o más préstamos sin devolver"
-							+ " o no se ha podido averiguar los préstamos pendientes";
-				} else {
-					try {
-						// Iniciar transacción
-						conexion.setAutoCommit(false);
-						PreparedStatement sentencia = conexion
-								.prepareStatement("insert into prestamo values(?,?,curdate(),"
-										+ "date_add(curdate(), interval 15 DAY),false)");
-						sentencia.setString(1, s.getDni());
-						sentencia.setString(2, l.getIsbn());
-
-						int numFilas = sentencia.executeUpdate();
-						if (numFilas == 1) {
-							// Restar 1 al nº de ejmplares
-							sentencia = conexion.prepareStatement(
-									"update libro set numEjemplares = numEjemplares - 1 " + "where isbn = ?");
-							sentencia.setString(1, l.getIsbn());
-							numFilas = sentencia.executeUpdate();
-							if (numFilas == 1) {
-								conexion.commit();
-								resultado = "Préstamo regristrado";
-							}
-						}
-
-					} catch (SQLException e) {
-						// TODO Auto-generated catch block
+			// Comprobamos si no está sancionado
+			if (!socioSancionado(s)) {
+				// Chequeamos que hay ejemplares
+				if (l.getNumEjemplares() > 0) {
+					// Chequeamos que el socio
+					// no tiene más de dos préstamos sin devolver
+					int numP = obtenerNumPendientes(s);
+					if (numP == -1 || numP >= 2) {
+						resultado = "El socio tiene 2 o más préstamos sin devolver"
+								+ " o no se ha podido averiguar los préstamos pendientes";
+					} else {
 						try {
-							conexion.rollback();
-						} catch (SQLException e1) {
+							// Iniciar transacción
+							conexion.setAutoCommit(false);
+							PreparedStatement sentencia = conexion
+									.prepareStatement("insert into prestamo values(?,?,curdate(),"
+											+ "date_add(curdate(), interval 15 DAY),false)");
+							sentencia.setString(1, s.getDni());
+							sentencia.setString(2, l.getIsbn());
+
+							int numFilas = sentencia.executeUpdate();
+							if (numFilas == 1) {
+								// Restar 1 al nº de ejmplares
+								sentencia = conexion.prepareStatement(
+										"update libro set numEjemplares = numEjemplares - 1 " + "where isbn = ?");
+								sentencia.setString(1, l.getIsbn());
+								numFilas = sentencia.executeUpdate();
+								if (numFilas == 1) {
+									conexion.commit();
+									resultado = "Préstamo regristrado";
+								}
+							}
+
+						} catch (SQLException e) {
 							// TODO Auto-generated catch block
-							e1.printStackTrace();
+							try {
+								conexion.rollback();
+							} catch (SQLException e1) {
+								// TODO Auto-generated catch block
+								e1.printStackTrace();
+							}
+							e.printStackTrace();
 						}
-						e.printStackTrace();
 					}
+				} else {
+					resultado = "Error, no hay ejemplares para prestar";
 				}
 			} else {
-				resultado = "Error, no hay ejemplares para prestar";
+				resultado = "Error, el socio está sancionado";
 			}
 		} else {
 			resultado = "Error, socio no está activo";
@@ -341,6 +347,33 @@ public class AccesoDatos {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return resultado;
+	}
+
+	private boolean socioSancionado(Socio s) {
+		// TODO Auto-generated method stub
+		boolean resultado = true;
+		
+		
+		try {
+			//Llamada a funcion estaSancionado
+			CallableStatement funcion = conexion.prepareCall(
+					"{? = call estaSancionado(?)}");
+			funcion.registerOutParameter(1, Types.INTEGER);
+			funcion.setString(2, s.getDni());
+			// Ejecutamos función
+			funcion.executeUpdate();
+			//Recuperamos el valor devuelto por la función
+			int devuelto = funcion.getInt(1);
+			if (devuelto == 0) {
+				resultado = false;
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		return resultado;
 	}
 
@@ -464,12 +497,11 @@ public class AccesoDatos {
 				filas = sentencia.executeUpdate();
 				if (filas == 1) {
 					// Sancionamos si es necesario
-					if(p.getFechaD().getTime()<new java.util.Date().getTime()) {
-						CallableStatement proc = conexion.prepareCall(
-								"call sancionar(?)");
+					if (p.getFechaD().getTime() < new java.util.Date().getTime()) {
+						CallableStatement proc = conexion.prepareCall("call sancionar(?)");
 						proc.setString(1, p.getSocio().getDni());
 						ResultSet r = proc.executeQuery();
-						if(r.next()) {
+						if (r.next()) {
 							System.out.println(r.getString(1));
 						}
 					}
@@ -498,25 +530,23 @@ public class AccesoDatos {
 		boolean resultado = false;
 		PreparedStatement sentencia;
 		try {
-			int filas=0;
+			int filas = 0;
 			conexion.setAutoCommit(false);
 			if (prestamos) {
 				// Borrar prestamo
 
-				sentencia = conexion.prepareStatement(
-						"delete from prestamo where socio = ?");
+				sentencia = conexion.prepareStatement("delete from prestamo where socio = ?");
 
 				sentencia.setString(1, s.getDni());
 				filas = sentencia.executeUpdate();
 			}
 			// borrar socio
-			if((prestamos && filas > 0) || !prestamos) {
-				sentencia = conexion.prepareStatement(
-						"delete from socio where dni = ?");
+			if ((prestamos && filas > 0) || !prestamos) {
+				sentencia = conexion.prepareStatement("delete from socio where dni = ?");
 
 				sentencia.setString(1, s.getDni());
 				filas = sentencia.executeUpdate();
-				if(filas==1) {
+				if (filas == 1) {
 					resultado = true;
 					conexion.commit();
 					conexion.setAutoCommit(true);
@@ -532,7 +562,7 @@ public class AccesoDatos {
 				e1.printStackTrace();
 			}
 			e.printStackTrace();
-			
+
 		}
 
 		return resultado;
@@ -544,25 +574,20 @@ public class AccesoDatos {
 		Statement sentencia;
 		try {
 			sentencia = conexion.createStatement();
-			ResultSet r = sentencia.executeQuery(
-					"select p.socio, s.nombre, count(*), "
+			ResultSet r = sentencia.executeQuery("select p.socio, s.nombre, count(*), "
 					+ "(select count(*) from prestamo where devuelto = false and socio = p.socio), "
-					+ "max(p.fechaP), min(p.fechaP) "
-					+ "from prestamo p inner join socio s "
-					+ "	on p.socio = s.dni "
+					+ "max(p.fechaP), min(p.fechaP) " + "from prestamo p inner join socio s " + "	on p.socio = s.dni "
 					+ "group by p.socio");
-			while(r.next()) {
-				Object[] o = {r.getString(1), r.getString(2),r.getInt(3),
-						r.getInt(4), 
-						new java.util.Date(r.getDate(5).getTime()),
-						new java.util.Date(r.getDate(6).getTime())}; 
+			while (r.next()) {
+				Object[] o = { r.getString(1), r.getString(2), r.getInt(3), r.getInt(4),
+						new java.util.Date(r.getDate(5).getTime()), new java.util.Date(r.getDate(6).getTime()) };
 				resultado.add(o);
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		return resultado;
 	}
 
