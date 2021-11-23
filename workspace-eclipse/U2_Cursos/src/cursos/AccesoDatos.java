@@ -110,14 +110,17 @@ public class AccesoDatos {
 		return resultado;
 	}
 
-	public ArrayList<String> obtenerAlumnos() {
+	public ArrayList<String> obtenerAlumnos(String patron) {
 		// TODO Auto-generated method stub
 		ArrayList<String> resultado = new ArrayList<>();
 		 
 		try {
-			Statement sentencia = conexion.createStatement();
-			ResultSet r = sentencia.executeQuery("select * from usuario "
-					+ "where perfil = 'Alumno'");
+			PreparedStatement sentencia = 
+					conexion.prepareStatement("select * from usuario "
+							+ "where usuario like %?%"
+							+ "perfil = 'Alumno'");
+			sentencia.setString(1, patron);
+			ResultSet r = sentencia.executeQuery();
 			while(r.next()) {
 				resultado.add(r.getString(1));
 			}

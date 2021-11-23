@@ -140,9 +140,10 @@ public class Principal {
 
 	private static void mostrarAlumnos() {
 		// TODO Auto-generated method stub
-		ArrayList<String> alumnos = ad.obtenerAlumnos();
+		System.out.println("Introduce el nombre o parte del nombre");
+		ArrayList<String> alumnos = ad.obtenerAlumnos(t.nextLine());
 		for(String nombre:alumnos) {
-			System.out.println("Alumno:" + nombre);
+			System.  out.println("Alumno:" + nombre);
 		}
 	}
 
