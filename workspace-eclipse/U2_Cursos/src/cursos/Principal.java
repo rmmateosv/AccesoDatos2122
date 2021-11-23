@@ -117,25 +117,111 @@ public class Principal {
 					break;
 				}
 				case 3: {
-					
+					borrarAlumno();
 					break;
 				}
 				case 4: {
-					
+					crearCurso();
 					break;
 				}
 				case 5: {
-					
+					mostrarCursos();
 					break;
 				}
 				case 6: {
-					
+					modificarCurso();
 					break;
 				}
 				
 			}
 			
 		} while (opcion != 0);
+	}
+
+	private static void modificarCurso() {
+		// TODO Auto-generated method stub
+		mostrarCursos();
+		System.out.println("Introduce el id del curso a modificar");
+		int id = t.nextInt();t.nextLine();
+		Curso c = ad.obtenerCurso(id);
+		if(c!=null) {
+			System.out.println("Nuevo Nombre");
+			c.setNombre(t.nextLine());
+			System.out.println("Nuevas Horas:");
+			c.setHoras(t.nextInt()); t.nextLine();
+			System.out.println("Nuevo Nivel: 1-Principiante, 2-Medio, 3-Avanzado");
+			int nivel = t.nextInt();t.nextLine();
+			switch (nivel) {
+				case 1:{
+					c.setNivel("Principiante");break;}
+				case 2:{
+					c.setNivel("Medio");break;}
+				case 3:{
+					c.setNivel("Avanzado");break;}
+				
+			}
+			if(!ad.modificarCurso(c)) {
+				System.out.println("Error al modificar el curso");
+			}
+		}
+		else {
+			System.out.println("Error, el curso no existe");
+		}
+	}
+
+	private static void mostrarCursos() {
+		// TODO Auto-generated method stub
+		ArrayList<Curso> cursos = ad.obtenerCursos();
+		for(Curso c: cursos) {
+			c.mostrar();
+		}
+	}
+
+	private static void crearCurso() {
+		// TODO Auto-generated method stub
+		Curso c = new Curso();
+		System.out.println("Nombre");
+		c.setNombre(t.nextLine());
+		System.out.println("Horas:");
+		c.setHoras(t.nextInt()); t.nextLine();
+		System.out.println("Nivel: 1-Principiante, 2-Medio, 3-Avanzado");
+		int nivel = t.nextInt();t.nextLine();
+		switch (nivel) {
+			case 1:{
+				c.setNivel("Principiante");break;}
+			case 2:{
+				c.setNivel("Medio");break;}
+			case 3:{
+				c.setNivel("Avanzado");break;}
+			
+		}
+		if(!ad.crearCurso(c)) {
+			System.out.println("Error al crear el curso");
+		}
+		else {
+			System.out.println("Se ha creado el curso:");
+			c.mostrar();
+		}
+		
+	
+		
+	}
+
+	private static void borrarAlumno() {
+		// TODO Auto-generated method stub
+		ArrayList<String> alumnos = ad.obtenerAlumnos("%");
+		for(String nombre:alumnos) {
+			System.  out.println("Alumno:" + nombre);
+		}
+		System.out.println("Introduce el alumno a borrar");
+		String alumno = t.nextLine();
+		if(ad.existeAlumno(alumno)) {
+			if(!ad.borrarAlumno(alumno)) {
+				System.out.println("Error, al borrar alumno");
+			}
+		}
+		
+		
 	}
 
 	private static void mostrarAlumnos() {
@@ -152,7 +238,7 @@ public class Principal {
 		System.out.println("Nombre Usuario a crear:");
 		String usuario = t.nextLine();
 		//Chequear si hay otro usuario con el mismo nombre
-		if(!ad.existeAlumno(usuario)) {
+		if(!ad.existeUsuario(usuario)) {
 			if(!ad.crearAlumno(usuario)) {
 				System.out.println("Error al dar de alta el alumno");
 			}
