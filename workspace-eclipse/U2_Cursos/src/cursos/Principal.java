@@ -104,6 +104,8 @@ public class Principal {
 			System.out.println("4-Crear Curso");
 			System.out.println("5-Mostrar Cursos");
 			System.out.println("6-Modificar Curso");
+			System.out.println("7-Poner nota");
+			System.out.println("8-Estadística");
 			
 			opcion = t.nextInt();t.nextLine();
 			
