@@ -1,12 +1,17 @@
 package biblioteca;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Scanner;
+
+import EjerciciosFicheroTexto.AccesoDatosLibro;
+import EjerciciosFicheroTexto.Libro;
 
 public class Pricipal {
 	static Scanner t = new java.util.Scanner(System.in);
 	static AccesoDatos ad = new AccesoDatos();
 	static SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yy");
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int opcion = 0;
@@ -22,49 +27,66 @@ public class Pricipal {
 			System.out.println("10-Mostrar Préstamos pendientes de un socio");
 			System.out.println("11-Devolver Préstamos");
 			System.out.println("12- Borrar Socio");
-			
-			opcion = t.nextInt();t.nextLine();
-			
+
+			opcion = t.nextInt();
+			t.nextLine();
+
 			switch (opcion) {
-				case 1: {
-					crearBiblioteca();
-					break;
-				}
-				case 2: {
-					
-					break;
-				}
-				case 3: {
-					
-					break;
-				}
-				case 4: {
-					
-					break;
-				}
-				case 5: {
-					
-					break;
-				}
-				case 6: {
-					
-					break;
-				}
-				
+			case 1: {
+				crearBiblioteca();
+				break;
 			}
-			
+			case 2: {
+				importarLibros();
+				break;
+			}
+			case 3: {
+
+				break;
+			}
+			case 4: {
+
+				break;
+			}
+			case 5: {
+
+				break;
+			}
+			case 6: {
+
+				break;
+			}
+
+			}
+
 		} while (opcion != 0);
 		ad.cerrar();
 	}
+
+	private static void importarLibros() {
+		// TODO Auto-generated method stub
+		if (ad.getColeccion() != null) {
+			ArrayList<Libro> libros = new AccesoDatosLibro("libros.txt").obtenerLibros();
+			for (Libro l : libros) {
+				if (!ad.crearLibro(l))
+					;
+				{
+					System.out.println("Error al crear el libro" + l.getIsbn());
+				}
+			}
+		} else {
+			System.out.println("Error, no existe la colección biblioteca");
+		}
+	}
+
 	private static void crearBiblioteca() {
 		// TODO Auto-generated method stub
-		//Chequear que no existe antes de crear
-		if(ad.getColeccion()==null) {
-			if(!ad.crearBiblioteca()) {
+		// Chequear que no existe antes de crear
+		if (ad.getColeccion() == null) {
+			if (!ad.crearBiblioteca()) {
 				System.out.println("Error, no se puede crear la colección");
 			}
-		}
-		else {
+		} else {
 			System.out.println("Error, ya existe la colección");
 		}
 	}
