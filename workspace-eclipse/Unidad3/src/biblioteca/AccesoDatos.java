@@ -8,6 +8,8 @@ import org.xmldb.api.DatabaseManager;
 import org.xmldb.api.base.Collection;
 import org.xmldb.api.base.Database;
 import org.xmldb.api.base.Resource;
+import org.xmldb.api.base.ResourceIterator;
+import org.xmldb.api.base.ResourceSet;
 import org.xmldb.api.base.XMLDBException;
 import org.xmldb.api.modules.CollectionManagementService;
 import org.xmldb.api.modules.XPathQueryService;
@@ -140,11 +142,87 @@ public class AccesoDatos {
 					+ "<autor>"+l.getAutor()+"</autor>"
 					+ "<numEjem>"+l.getNumEjemplares()+"</numEjem>"
 					+ "</libro> into /libros");
+			resultado = true;
 			
 		} catch (XMLDBException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return resultado;
+	}
+
+	public void mostrarLibros() {
+		// TODO Auto-generated method stub
+		try {
+			XPathQueryService consulta = 
+					(XPathQueryService) 
+					coleccion.getService("XPathQueryService", "1.0");
+			//Ejecutamos consulta XPATH
+			ResourceSet r = consulta.query("/libros/libro");
+			//Obtenemos los nodos devueltos en la consulta
+			ResourceIterator libros = r.getIterator();
+			//Recorremos cada nodo para pintarlo
+			while(libros.hasMoreResources()) {
+				//Pintamos el nodo				
+				System.out.println(libros.nextResource().getContent());
+			}
+		} catch (XMLDBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+	public void mostrarLibro(String isbn) {
+		// TODO Auto-generated method stub
+		try {
+			XPathQueryService consulta = 
+					(XPathQueryService) 
+					coleccion.getService("XPathQueryService", "1.0");
+			//Ejecutamos consulta XPATH
+			ResourceSet r = 
+			consulta.query("/libros/libro[@isbn='"+isbn+"']");
+			//Obtenemos los nodos devueltos en la consulta
+			ResourceIterator libros = r.getIterator();
+			//Recorremos cada nodo para pintarlo
+			if(libros.hasMoreResources()) {
+				//Pintamos el nodo				
+				System.out.println(libros.nextResource().getContent());
+			}
+		} catch (XMLDBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public boolean crearSocio(String nif, String nombre) {
+		// TODO Auto-generated method stub
+		boolean resultado = false;
+		
+		try {
+			//Chequear si existe socios.xml
+			Resource r = coleccion.getResource("socios.xml");
+			if(r==null) {
+				//Crear socios.xml a partir del fichero que 
+				//hay en el proyecto y que tiene sólo el nodo raíz
+				File f = new File("socios.xml");
+				r = coleccion.createResource("socios.xml", "XMLResource");
+				//Asignamos el contenido del objeto File al recuros
+				r.setContent(f);
+				//Alamacenamos el recurso en la colección
+				coleccion.storeResource(r);				
+			}
+			
+			//Insertar el nuevo socio
+			XPathQueryService consulta = 
+					(XPathQueryService)
+					coleccion.getService("XPathQueryService", "1.0");
+			
+		} catch (XMLDBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		return resultado;
 	}
 	
