@@ -217,6 +217,12 @@ public class AccesoDatos {
 			XPathQueryService consulta = 
 					(XPathQueryService)
 					coleccion.getService("XPathQueryService", "1.0");
+			consulta.query("update insert "
+					+ "<socio nif='"+nif+"'>"
+					+ "<nombre>"+nombre+"</nombre>"
+					+ "<fechaSancion></fechaSancion>"
+					+ "</socio> into /socios");
+			resultado = true;
 			
 		} catch (XMLDBException e) {
 			// TODO Auto-generated catch block
@@ -224,6 +230,47 @@ public class AccesoDatos {
 		}
 		
 		return resultado;
+	}
+
+	public boolean existeSocio(String nif) {
+		// TODO Auto-generated method stub
+		boolean resultado = false;
+		try {
+			XPathQueryService consulta = 
+					(XPathQueryService)
+					coleccion.getService("XPathQueryService", "1.0");
+			ResourceSet r = 
+					consulta.query("/socios/socio[@nif='"+nif+"']");
+			ResourceIterator socios = r.getIterator();
+			if(socios.hasMoreResources()) {
+				resultado = true;
+			}
+		} catch (XMLDBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public void mostrarSocios() {
+		// TODO Auto-generated method stub
+		try {
+			XPathQueryService consulta = 
+					(XPathQueryService) 
+					coleccion.getService("XPathQueryService", "1.0");
+			//Ejecutamos consulta XPATH
+			ResourceSet r = consulta.query("/socios/socio");
+			//Obtenemos los nodos devueltos en la consulta
+			ResourceIterator socios = r.getIterator();
+			//Recorremos cada nodo para pintarlo
+			while(socios.hasMoreResources()) {
+				//Pintamos el nodo				
+				System.out.println(socios.nextResource().getContent());
+			}
+		} catch (XMLDBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	
