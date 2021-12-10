@@ -71,51 +71,51 @@ public class Pricipal {
 
 	private static void crearPrestamo() {
 		// TODO Auto-generated method stub
-		if(ad.getColeccion()!=null) {
+		if (ad.getColeccion() != null) {
 			ad.mostrarSocios();
 			System.out.println("NIf:");
 			String nif = t.nextLine();
-			if(ad.existeSocio(nif)) {
-				//Ver si está sancionado
-				if(!ad.SocioSancionado(nif)) {
-					if(ad.o!!!!!)
-					ad.mostrarLibros();
-					System.out.println("Isbn");
-					String isbn = t.nextLine();
-					if(ad.existeLibro(isbn)) {
-						if(ad.obtenerEjemplaresLibro(isbn)>0) {
-							if(!ad.crearPrestamo(nif,isbn)) {
-								System.out.println("Error, al registrar el préstamo");
+			if (ad.existeSocio(nif)) {
+				// Ver si está sancionado
+				if (!ad.SocioSancionado(nif)) {
+					if (ad.obtenerNumPrestamos(nif) < 2) {
+						ad.mostrarLibros();
+						System.out.println("Isbn");
+						String isbn = t.nextLine();
+						if (ad.existeLibro(isbn)) {
+							if (ad.obtenerEjemplaresLibro(isbn) > 0) {
+								if (!ad.crearPrestamo(nif, isbn)) {
+									System.out.println("Error, al registrar el préstamo");
+								}
+							} else {
+								System.out.println("Error, no hay ejemplares suficientes");
 							}
-						}
-						else {
-							System.out.println("Error, no hay ejemplares suficientes");
+						} else {
+							System.out.println("Error, el libro no existe");
 						}
 					}
+
 					else {
-						System.out.println("Error, el libro no existe");
+						System.out.println("Error, el socio ya tiene 2 préstamos");
 					}
-				}
+				} 
 				else {
 					System.out.println("Error, el socio está sancionado");
 				}
-			}
-			else {
+			} else {
 				System.out.println("Error, socio no existe");
 			}
-			 
-		}
-		else {
+
+		} else {
 			System.out.println("Error, no existe la biblioteca");
 		}
 	}
 
 	private static void mostrarSocios() {
 		// TODO Auto-generated method stub
-		if(ad.getColeccion()!=null) {
+		if (ad.getColeccion() != null) {
 			ad.mostrarSocios();
-		}
-		else {
+		} else {
 			System.out.println("Error, no existe la colección");
 		}
 	}
@@ -133,8 +133,7 @@ public class Pricipal {
 				if (!ad.crearSocio(nif, nombre)) {
 					System.out.println("Error al crear el socio");
 				}
-			}
-			else {
+			} else {
 				System.out.println("Error, ya existe un socio con ese dni");
 			}
 

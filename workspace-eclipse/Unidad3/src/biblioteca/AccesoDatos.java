@@ -2,7 +2,9 @@ package biblioteca;
 
 import java.io.File;
 import java.lang.reflect.InvocationTargetException;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.xmldb.api.DatabaseManager;
 import org.xmldb.api.base.Collection;
@@ -271,6 +273,139 @@ public class AccesoDatos {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+
+	public boolean SocioSancionado(String nif) {
+		// TODO Auto-generated method stub
+		boolean resultado = false;
+		try {
+			XPathQueryService consulta = 
+					(XPathQueryService)
+					coleccion.getService("XPathQueryService", "1.0");
+			ResourceSet r = 
+	consulta.query("/socios/socio[@nif='"+nif+"']/fechaSancion/text()");
+			ResourceIterator datos = r.getIterator();
+			if(datos.hasMoreResources()) {
+				//Obtenemos la fecha del XML
+				String fecha = datos.nextResource().getContent().toString();
+				//Pasamos fecha a objeto Date para saber si es
+				//anterior a la fecha actual
+				Date fechaSancion = formato.parse(fecha);
+				if(new Date().getTime()>fechaSancion.getTime()) {
+					resultado = true;
+				}
+			}
+			
+		} catch (XMLDBException | ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public int obtenerNumPrestamos(String nif) {
+		// TODO Auto-generated method stub
+		int resultado = 0;
+		
+		/*try {
+			XPathQueryService consulta = 
+					(XPathQueryService) 
+					coleccion.getService("XPathQueryService", "1.0");
+			ResourceSet r = consulta.query("");
+		} catch (XMLDBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		*/
+		return resultado;
+	}
+
+	public boolean existeLibro(String isbn) {
+		// TODO Auto-generated method stub
+		boolean resultado = false;
+		try {
+			XPathQueryService consulta = 
+					(XPathQueryService)
+					coleccion.getService("XPathQueryService", "1.0");
+			ResourceSet r = 
+					consulta.query("/libros/libro[@isbn='"+isbn+"']");
+			ResourceIterator libros = r.getIterator();
+			if(libros.hasMoreResources()) {
+				resultado = true;
+			}
+		} catch (XMLDBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public int obtenerEjemplaresLibro(String isbn) {
+		// TODO Auto-generated method stub
+		int resultado = 0;
+		try {
+			XPathQueryService consulta = 
+					(XPathQueryService)
+					coleccion.getService("XPathQueryService", "1.0");
+			ResourceSet r = 
+				consulta.query("/libros/libro[@isbn='"+isbn+"']/numEjem/text()");
+			ResourceIterator libros = r.getIterator();
+			if(libros.hasMoreResources()) {
+				resultado = 
+	Integer.parseInt(libros.nextResource().getContent().toString());
+			}
+		} catch (XMLDBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public boolean crearPrestamo(String nif, String isbn) {
+		// TODO Auto-generated method stub
+		boolean resultado = false;
+		
+		//Chequear si existe socios.xml
+		try {
+			Resource r = coleccion.getResource("prestamos.xml");
+			if(r==null) {
+				//Crear socios.xml a partir del fichero que 
+				//hay en el proyecto y que tiene sólo el nodo raíz
+				File f = new File("prestamos.xml");
+				r = coleccion.createResource("prestamos.xml", "XMLResource");
+				//Asignamos el contenido del objeto File al recuros
+				r.setContent(f);
+				//Alamacenamos el recurso en la colección
+				coleccion.storeResource(r);				
+			}
+			int id = obtenerIdPrestamos();
+		} catch (XMLDBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return resultado;
+	}
+
+	private int obtenerIdPrestamos() {
+		// TODO Auto-generated method stub
+		int resultado = 1;
+		try {
+			XPathQueryService consulta = 
+					(XPathQueryService)
+					coleccion.getService("XPathQueryService", "1.0");
+			ResourceSet r = consulta.query("");
+			ResourceIterator datos = r.getIterator();
+			if(datos.hasMoreResources()) {
+				resultado=Integer.parseInt(
+				datos.nextResource().getContent().toString()) + 1;
+			}
+		} catch (XMLDBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultado;
 	}
 	
 	
