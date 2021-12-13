@@ -4,6 +4,7 @@ import java.io.File;
 import java.lang.reflect.InvocationTargetException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 import org.xmldb.api.DatabaseManager;
@@ -15,6 +16,8 @@ import org.xmldb.api.base.ResourceSet;
 import org.xmldb.api.base.XMLDBException;
 import org.xmldb.api.modules.CollectionManagementService;
 import org.xmldb.api.modules.XPathQueryService;
+
+
 
 import EjerciciosFicheroTexto.Libro;
 
@@ -291,7 +294,7 @@ public class AccesoDatos {
 				//Pasamos fecha a objeto Date para saber si es
 				//anterior a la fecha actual
 				Date fechaSancion = formato.parse(fecha);
-				if(new Date().getTime()>fechaSancion.getTime()) {
+				if(fechaSancion.getTime()>=new Date().getTime()) {
 					resultado = true;
 				}
 			}
@@ -307,17 +310,21 @@ public class AccesoDatos {
 		// TODO Auto-generated method stub
 		int resultado = 0;
 		
-		/*try {
+		try {
 			XPathQueryService consulta = 
 					(XPathQueryService) 
 					coleccion.getService("XPathQueryService", "1.0");
-			ResourceSet r = consulta.query("");
+			ResourceSet r = consulta.query("count(/prestamos/prestamo[socio='"+nif+"'])");
+			ResourceIterator datos = r.getIterator();
+			if(datos.hasMoreResources()) {
+				return Integer.parseInt(datos.nextResource().getContent().toString());
+			}
 		} catch (XMLDBException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
-		*/
+		
 		return resultado;
 	}
 
@@ -362,9 +369,9 @@ public class AccesoDatos {
 		return resultado;
 	}
 
-	public boolean crearPrestamo(String nif, String isbn) {
+	public int crearPrestamo(String nif, String isbn, int numEjem) {
 		// TODO Auto-generated method stub
-		boolean resultado = false;
+		int resultado = 0;
 		
 		//Chequear si existe socios.xml
 		try {
@@ -379,7 +386,28 @@ public class AccesoDatos {
 				//Alamacenamos el recurso en la colección
 				coleccion.storeResource(r);				
 			}
-			int id = obtenerIdPrestamos();
+			resultado = obtenerIdPrestamos();
+			//Sumamos 15 días a la fecha de hoy para obtener la 
+			//fecha de devolución
+			Calendar c = Calendar.getInstance();
+			c.setTime(new Date());
+			c.add(Calendar.DATE, 15);	
+			XPathQueryService consulta = 
+					(XPathQueryService) 
+					coleccion.getService("XPathQueryService", "1.0");
+			consulta.query("update insert <prestamo id = '"+resultado+"'>"
+					+ "<libro>"+isbn+"</libro>"
+					+ "<socio>"+nif+"</socio>"
+					+ "<fechaP>"+formato.format(new Date())+"</fechaP>"
+					+ "<fechaD>"+formato.format(c.getTime())+"</fechaD>"
+					+ "<devuelto>false</devuelto>"
+					+ "</prestamo> into /prestamos");
+			
+			//Decrementar número de ejemplares
+			consulta.query("update replace "
+					+ "/libros/libro[@isbn='"+isbn+"']/numEjem with "
+					+ "<numEjem>"+String.valueOf(numEjem-1)+"</numEjem>");
+			
 		} catch (XMLDBException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -395,13 +423,92 @@ public class AccesoDatos {
 			XPathQueryService consulta = 
 					(XPathQueryService)
 					coleccion.getService("XPathQueryService", "1.0");
-			ResourceSet r = consulta.query("");
+			ResourceSet r = 
+					consulta.query("data(/prestamos/prestamo/@id)[last()]");
 			ResourceIterator datos = r.getIterator();
 			if(datos.hasMoreResources()) {
 				resultado=Integer.parseInt(
 				datos.nextResource().getContent().toString()) + 1;
 			}
 		} catch (XMLDBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public void mostrarPrestamoSocios(String nif) {
+		// TODO Auto-generated method stub
+		try {
+			XPathQueryService consulta = 
+					(XPathQueryService) 
+					coleccion.getService("XPathQueryService", "1.0");
+			ResourceSet r = 
+			consulta.query("/prestamos/prestamo[socio='"+nif+"']");
+			ResourceIterator datos = r.getIterator();
+			while(datos.hasMoreResources()) {
+				System.out.println(datos.nextResource().getContent().toString());
+			}
+		} catch (XMLDBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+	public boolean existePrestamoSocio(int id, String nif) {
+		// TODO Auto-generated method stub
+		boolean resultado = false;
+		try {
+			XPathQueryService consulta =  
+					(XPathQueryService)
+					coleccion.getService("XPathQueryService", "1.0");
+			ResourceSet r = consulta.query("/prestamos/prestamo[socio='"+nif+
+					"' and  @id='"+id+"']");
+			ResourceIterator datos = r.getIterator();
+			if(datos.hasMoreResources()) {
+				resultado = true;
+			}
+		} catch (XMLDBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public boolean devolverPrestamo(int id, String nif) {
+		// TODO Auto-generated method stub
+		boolean resultado = false;
+		
+		try {
+			//Ponemos devuelto a true
+			XPathQueryService consulta = 
+					(XPathQueryService)
+					coleccion.getService("XPathQueryService", "1.0");
+			consulta.query("update replace "
+					+ "/prestamos/prestamo[@id='"+id+"']/devuelto with "
+					+ "<devuelto>true</devuelto>");
+			
+			//Sancionar si es necesario
+			//Obtener fecha de devolución
+			ResourceSet r = consulta.query("/prestamos/prestamo[@id='"+id+"']/fechaD");
+			ResourceIterator datos = r.getIterator();
+			if(datos.hasMoreResources()) {
+				Date fechaD = formato.parse(datos.nextResource().getContent().toString());
+				
+				if(fechaD.getTime()<new Date().getTime()) {
+					//Sancionar una semana
+					
+					consulta.query("update replace "
+					+ "/socios/socio[@nif='"+nif+"']/fechaSancion with "
+					+ "<fechaSancion>"+formato.format(fechaS)+"</fechaSancion>");
+				}
+			}
+			
+		} catch (XMLDBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

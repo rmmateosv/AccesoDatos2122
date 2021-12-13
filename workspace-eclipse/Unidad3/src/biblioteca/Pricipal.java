@@ -25,10 +25,10 @@ public class Pricipal {
 			System.out.println("5-Crear Socio");
 			System.out.println("6-Mostrar Socios");
 			System.out.println("7-Prestar Libro");
-			System.out.println("9-Mostrar Préstamos");
-			System.out.println("10-Mostrar Préstamos pendientes de un socio");
-			System.out.println("11-Devolver Préstamos");
-			System.out.println("12- Borrar Socio");
+			System.out.println("8-Mostrar Préstamos");
+			System.out.println("9-Mostrar Préstamos pendientes de un socio");
+			System.out.println("10-Devolver Préstamos");
+			System.out.println("11- Borrar Socio");
 
 			opcion = t.nextInt();
 			t.nextLine();
@@ -62,11 +62,44 @@ public class Pricipal {
 				crearPrestamo();
 				break;
 			}
+			case 10: {
+				devolverPrestamo();
+				break;
+			}
 
 			}
 
 		} while (opcion != 0);
 		ad.cerrar();
+	}
+
+	private static void devolverPrestamo() {
+		// TODO Auto-generated method stub
+		if(ad.getColeccion()!=null) {
+			mostrarSocios();
+			System.out.println("Introduce nif");
+			String nif = t.nextLine();
+			if(ad.existeSocio(nif)) {
+				ad.mostrarPrestamoSocios(nif);
+				System.out.println("Id del préstamo a devolver:");
+				int id = t.nextInt(); t.nextLine();
+				if(ad.existePrestamoSocio(id,nif)) {
+					if(!ad.devolverPrestamo(id,nif)) {
+						System.out.println("Error al devolver el préstamo");
+					}
+				}
+				else {
+					System.out.println("Error, préstamo no existe o no es del socio");
+				}
+				
+			}
+			else {
+				System.out.println("Error, socio no existe");
+			}
+		}
+		else {
+			System.out.println("Error, no está creada la biblioteca");
+		}
 	}
 
 	private static void crearPrestamo() {
@@ -83,10 +116,15 @@ public class Pricipal {
 						System.out.println("Isbn");
 						String isbn = t.nextLine();
 						if (ad.existeLibro(isbn)) {
-							if (ad.obtenerEjemplaresLibro(isbn) > 0) {
-								if (!ad.crearPrestamo(nif, isbn)) {
-									System.out.println("Error, al registrar el préstamo");
+							int numEjem = ad.obtenerEjemplaresLibro(isbn);
+							if ( numEjem> 0) {
+								int id = ad.crearPrestamo(nif, isbn,numEjem);
+								if (id == 0) {
+									System.out.println("Error al crear el préstamo");
+								} else {
+									System.out.println("Se ha creado el préstamo con id " + id);
 								}
+
 							} else {
 								System.out.println("Error, no hay ejemplares suficientes");
 							}
@@ -98,8 +136,7 @@ public class Pricipal {
 					else {
 						System.out.println("Error, el socio ya tiene 2 préstamos");
 					}
-				} 
-				else {
+				} else {
 					System.out.println("Error, el socio está sancionado");
 				}
 			} else {
