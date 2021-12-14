@@ -491,19 +491,37 @@ public class AccesoDatos {
 			
 			//Sancionar si es necesario
 			//Obtener fecha de devolución
-			ResourceSet r = consulta.query("/prestamos/prestamo[@id='"+id+"']/fechaD");
+			ResourceSet r = consulta.query("/prestamos/prestamo[@id='"+id+"']/fechaD/text()");
 			ResourceIterator datos = r.getIterator();
 			if(datos.hasMoreResources()) {
 				Date fechaD = formato.parse(datos.nextResource().getContent().toString());
 				
 				if(fechaD.getTime()<new Date().getTime()) {
 					//Sancionar una semana
-					
+					Calendar c = Calendar.getInstance();
+					c.setTime(new Date());
+					c.add(Calendar.DAY_OF_MONTH,7);					
 					consulta.query("update replace "
 					+ "/socios/socio[@nif='"+nif+"']/fechaSancion with "
-					+ "<fechaSancion>"+formato.format(fechaS)+"</fechaSancion>");
+					+ "<fechaSancion>"+formato.format(c.getTime())+"</fechaSancion>");
 				}
 			}
+			
+			//Incrementar el nº de ejemplares del libro
+			//Obtener el isbn del préstamo
+			r = consulta.query("/prestamos/prestamo[@id='"+id+"']/libro/text()");
+			datos = r.getIterator();
+			if(datos.hasMoreResources()) {
+				String isbn = datos.nextResource().getContent().toString();
+				//Otenemos el número de ejemplares
+				int ejem = obtenerEjemplaresLibro(isbn);
+				//Actualizamos nº de ejemplares
+				consulta.query("update replace "
+						+ "/libros/libro[@isbn='"+isbn+"']/numEjem "
+								+ "with <numEjem>"+String.valueOf(ejem+1)+"</numEjem>");
+				resultado = true;
+			}
+			
 			
 		} catch (XMLDBException e) {
 			// TODO Auto-generated catch block
@@ -513,6 +531,24 @@ public class AccesoDatos {
 			e.printStackTrace();
 		}
 		return resultado;
+	}
+
+	public void borrarSocio(String nif) {
+		// TODO Auto-generated method stub
+		try {
+			XPathQueryService consulta = 
+					(XPathQueryService)
+					coleccion.getService("XPathQueryService", "1.0");
+			//Borrar préstamos del socio
+			consulta.query("update delete "
+					+ "/prestamos/prestamo[socio='"+nif+"']");
+			//Borrar socio
+			consulta.query("update delete "
+					+ "/socios/socio[@nif='"+nif+"']");
+		} catch (XMLDBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	

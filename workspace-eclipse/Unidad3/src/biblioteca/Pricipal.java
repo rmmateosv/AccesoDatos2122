@@ -66,11 +66,24 @@ public class Pricipal {
 				devolverPrestamo();
 				break;
 			}
+			case 11:{
+				borrarSocio();
+			}
 
 			}
 
 		} while (opcion != 0);
 		ad.cerrar();
+	}
+
+	private static void borrarSocio() {
+		// TODO Auto-generated method stub
+		mostrarSocios();
+		System.out.println("Nif:");
+		String nif = t.nextLine();
+		if(ad.existeSocio(nif)) {
+			ad.borrarSocio(nif);
+		}
 	}
 
 	private static void devolverPrestamo() {
@@ -86,7 +99,7 @@ public class Pricipal {
 				if(ad.existePrestamoSocio(id,nif)) {
 					if(!ad.devolverPrestamo(id,nif)) {
 						System.out.println("Error al devolver el préstamo");
-					}
+					} 
 				}
 				else {
 					System.out.println("Error, préstamo no existe o no es del socio");
