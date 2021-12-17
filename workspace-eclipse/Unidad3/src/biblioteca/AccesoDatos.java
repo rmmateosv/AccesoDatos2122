@@ -550,6 +550,54 @@ public class AccesoDatos {
 			e.printStackTrace();
 		}
 	}
+
+	public void mostrarPrestamos() {
+		// TODO Auto-generated method stub
+		try {
+			XPathQueryService consulta = 
+					(XPathQueryService)
+					coleccion.getService("XPathQueryService", "1.0");
+			ResourceSet r = 
+					consulta.query("for $p in /prestamos/prestamo,\r\n"
+							+ "	$l in /libros/libro[@isbn=$p/libro],\r\n"
+							+ "	$s in /socios/socio[@nif=$p/socio]\r\n"
+							+ "return <prestamo id = \"{$p/@id}\">\r\n"
+							+ "	<socio nif=\"{$s/@nif}\">{$s/nombre/text()}</socio>\r\n"
+							+ "	<libro isbn=\"{$l/@isbn}\">{$l/titulo/text()}</libro>\r\n"
+							+ "</prestamo>");
+			ResourceIterator datos = r.getIterator();
+			while(datos.hasMoreResources()) {
+				System.out.println(datos.nextResource().getContent().toString());
+			}
+			
+		} catch (XMLDBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public void mostrarPrestamos(String nif) {
+		// TODO Auto-generated method stub
+		try {
+			XPathQueryService consulta = 
+					(XPathQueryService)
+					coleccion.getService("XPathQueryService", "1.0");
+			ResourceSet r = 
+					consulta.query("for $p in /prestamos/prestamo,\r\n"
+							+ "	$l in /libros/libro[@isbn=$p/libro],\r\n"
+							+ "	$s in /socios/socio[@nif=$p/socio]\r\n"
+							+ "where $s/@nif=\""+nif+"\" and $p/devuelto=\"false\"\r\n"
+							+ "return <libro fechaP=\"{$p/fechaP}\" fechaD=\"{$p/fechaD}\" devuelto=\"{$p/devuelto}\">{$l/titulo/text()}</libro>");
+			ResourceIterator datos = r.getIterator();
+			while(datos.hasMoreResources()) {
+				System.out.println(datos.nextResource().getContent().toString());
+			}
+			
+		} catch (XMLDBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	
 	
 }

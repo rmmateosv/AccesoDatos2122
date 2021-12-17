@@ -62,6 +62,14 @@ public class Pricipal {
 				crearPrestamo();
 				break;
 			}
+			case 8: {
+				mostrarPrestamos();
+				break;
+			}
+			case 9: {
+				mostrarPrestamosSocio();
+				break;
+			}
 			case 10: {
 				devolverPrestamo();
 				break;
@@ -74,6 +82,20 @@ public class Pricipal {
 
 		} while (opcion != 0);
 		ad.cerrar();
+	}
+
+	private static void mostrarPrestamosSocio() {
+		// TODO Auto-generated method stub
+		ad.mostrarSocios();
+		
+		System.out.println("Nif");
+		String nif = t.nextLine();
+		ad.mostrarPrestamos(nif);
+	}
+
+	private static void mostrarPrestamos() {
+		// TODO Auto-generated method stub
+		ad.mostrarPrestamos();
 	}
 
 	private static void borrarSocio() {
