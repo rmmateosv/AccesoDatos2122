@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Principal {
 	static Scanner t = new java.util.Scanner(System.in);
-	static AccesoDatos fichero = new AccesoDatos("cesta.bin",);
+	static AccesoDatos ad = new AccesoDatos("cesta.bin");
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -22,7 +22,7 @@ public class Principal {
 			
 			switch (opcion) {
 				case 1: {
-					
+					anadirProducto();
 					break;
 				}
 				case 2: {
@@ -50,6 +50,35 @@ public class Principal {
 			
 		} while (opcion != 0);
 		
+	}
+	private static void anadirProducto() {
+		// TODO Auto-generated method stub
+		System.out.println("Código de registro:");
+		int codigoR = t.nextInt();t.nextLine();
+		//Comprobar si existe
+		Producto p = ad.obtenerProducto(codigoR);
+		if(p==null) {
+			p = new Producto();
+			p.setCodigoR(codigoR);
+			System.out.println("Codigo producto");
+			p.setCodigoP(t.nextLine());
+			System.out.println("Nombre");
+			p.setNombre(t.nextLine());
+			System.out.println("Cantidad");
+			p.setCantidad(t.nextInt()); t.nextLine();
+			System.out.println("Importe");
+			p.setImporte(t.nextFloat()); t.nextLine();
+			
+			if(!ad.crearProducto(p)) {
+				System.out.println("Error al crear el producto");
+			}
+			else {
+				//Mostrar todos los productos
+			}
+		}
+		else {
+			System.out.println("Error, producto no existe");
+		}
 	}
 
 }

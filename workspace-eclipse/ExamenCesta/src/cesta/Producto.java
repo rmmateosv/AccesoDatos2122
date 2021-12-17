@@ -6,7 +6,7 @@ public class Producto {
 	private int cantidad;
 	private float importe;
 	public Producto() {
-		super();
+		
 	}
 	public Producto(int codigoR, String codigoP, String nombre, int cantidad, float importe) {
 		super();
