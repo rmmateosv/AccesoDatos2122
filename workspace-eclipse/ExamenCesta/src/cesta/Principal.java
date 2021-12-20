@@ -1,5 +1,6 @@
 package cesta;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Principal {
@@ -74,6 +75,10 @@ public class Principal {
 			}
 			else {
 				//Mostrar todos los productos
+				ArrayList<Producto> productos= ad.obtenerProductos();
+				for(Producto p1 : productos) {
+					p1.mostrar();
+				}
 			}
 		}
 		else {

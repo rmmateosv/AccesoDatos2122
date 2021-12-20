@@ -19,8 +19,8 @@ public class Producto {
 	
 	public void mostrar() {
 		System.out.println("codigoRegistro:" + codigoR + 
-		"\tcodigoProducto:" + codigoP +
-		"\tnombre:" + nombre +
+		"\tcodigoProducto:" + codigoP.trim() +
+		"\tnombre:" + nombre.trim() +
 		"\tcantidad:" + cantidad +
 		"\tprecio:" + importe);
 	}

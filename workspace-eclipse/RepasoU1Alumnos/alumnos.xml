@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instituto>
+	<nombre>Augustóbriga</nombre>
+	<alumnos>
+		<alumno expediente="123">
+			<nombre>Alfonso Díaz</nombre>
+			<fechaN>2000-02-01</fechaN>
+			<notas>
+				<nota asig="AD" nota="10"/>
+				<nota asig="PMDM" nota="9"/>
+				<nota asig="PSP" nota="7"/>
+			</notas>
+		</alumno>
+		<alumno expediente="121">
+			<nombre>María Jiménez</nombre>
+			<fechaN>2001-08-31</fechaN>
+			<notas>
+				<nota asig="AD" nota="5"/>
+				<nota asig="PMDM" nota="6"/>
+				<nota asig="PSP" nota="3"/>
+			</notas>
+		</alumno>
+	</alumnos>
+</instituto>

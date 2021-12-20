@@ -4,6 +4,7 @@ import java.io.EOFException;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
+import java.util.ArrayList;
 import java.util.RandomAccess;
 
 public class AccesoDatos {
@@ -66,6 +67,99 @@ public class AccesoDatos {
 		catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			System.out.println("Aún no hay productos");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		finally {
+			if(fichero!=null) {
+				try {
+					fichero.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+		return resultado;
+	}
+
+	public boolean crearProducto(Producto p) {
+		// TODO Auto-generated method stub
+		boolean resultado = false;
+		RandomAccessFile fichero = null;
+		try {
+			fichero = new RandomAccessFile(nombreFichero, "rw");
+			//nos ponemos al final del fichero para 
+			//añadir el nuevo producto
+			fichero.seek(fichero.getFilePointer()+fichero.length());
+			
+			fichero.writeInt(p.getCodigoR());
+			//Escribimos el producto
+			//Hacemos que sea de 10 caracteres
+			StringBuffer texto = new StringBuffer(p.getCodigoP());
+			texto.setLength(10);
+			fichero.writeChars(texto.toString());
+			
+			texto = new StringBuffer(p.getNombre());
+			texto.setLength(100);
+			fichero.writeChars(texto.toString());
+			
+			fichero.writeInt(p.getCantidad());
+			fichero.writeFloat(p.getImporte());
+			resultado = true;
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		finally {
+			if(fichero!=null) {
+				try {
+					fichero.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+		return resultado;
+	}
+
+	public ArrayList<Producto> obtenerProductos() {
+		// TODO Auto-generated method stub
+		ArrayList<Producto> resultado = new ArrayList<Producto>();
+		RandomAccessFile fichero = null;
+		
+		try {
+			fichero = new RandomAccessFile(nombreFichero, "r");
+			while(true) {
+				Producto p = new Producto();
+				p.setCodigoR(fichero.readInt());
+				p.setCodigoP("");
+				for(int i=0; i<10;i++) {
+					p.setCodigoP(p.getCodigoP()+fichero.readChar());
+				}
+				p.setNombre("");
+				for(int i=0; i<100;i++) {
+					p.setNombre(p.getNombre()+fichero.readChar());
+				}
+				p.setCantidad(fichero.readInt());
+				p.setImporte(fichero.readFloat());
+				
+				resultado.add(p);
+			}
+		} 
+		
+		catch (EOFException e) {
+			// TODO: handle exception
+		}
+		catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
