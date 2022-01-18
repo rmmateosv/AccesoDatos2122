@@ -9,8 +9,11 @@ import org.xmldb.api.DatabaseManager;
 import org.xmldb.api.base.Collection;
 import org.xmldb.api.base.Database;
 import org.xmldb.api.base.Resource;
+import org.xmldb.api.base.ResourceIterator;
+import org.xmldb.api.base.ResourceSet;
 import org.xmldb.api.base.XMLDBException;
 import org.xmldb.api.modules.CollectionManagementService;
+import org.xmldb.api.modules.XPathQueryService;
 
 public class AccesoDatos {
 	String url="xmldb:exist://localhost:8080/exist/xmlrpc/db/Tareas", 
@@ -104,5 +107,44 @@ public class AccesoDatos {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+
+	public void mostrarDepartamentos() {
+		// TODO Auto-generated method stub
+		try {
+			XPathQueryService servicio = 
+					(XPathQueryService) 
+					coleccion.getService("XPathQueryService", "1.0");
+			ResourceSet r = servicio.query("/departamentos/departamento");
+			ResourceIterator i = r.getIterator();
+			while(i.hasMoreResources()) {
+				System.out.println(i.nextResource().getContent());
+			}
+		} catch (XMLDBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public boolean existeDpto(String dpto) {
+		// TODO Auto-generated method stub
+		boolean resultado = false;
+		
+		try {
+			XPathQueryService servicio = 
+					(XPathQueryService) 
+					coleccion.getService("XPathQueryService", "1.0");
+			ResourceSet r = 
+			servicio.query("/departamentos[departamento='"+dpto+"']");
+			ResourceIterator i = r.getIterator();
+			if(i.hasMoreResources()) {
+				resultado = true;
+			}
+		} catch (XMLDBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return resultado;
 	}
 }

@@ -1,11 +1,12 @@
 package Tareas;
 
+import java.text.SimpleDateFormat;
 import java.util.Scanner;
 
 public class Principal {
 	static Scanner t = new java.util.Scanner(System.in);
 	static AccesoDatos datos = new AccesoDatos();
-
+	static SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		if (datos.getColeccion() != null) {
@@ -26,7 +27,7 @@ public class Principal {
 
 				switch (opcion) {
 				case 1: {
-
+					altaEmpleado();
 					break;
 				}
 				case 2: {
@@ -55,6 +56,28 @@ public class Principal {
 		} else {
 			System.out.println("Error, no existe colección");
 		}
+	}
+
+	private static void altaEmpleado() {
+		// TODO Auto-generated method stub
+		datos.mostrarDepartamentos();
+		System.out.println("Introduce dpto:");
+		String dpto = t.nextLine();
+		//Chequear que existe
+		if(datos.existeDpto(dpto)) {
+			System.out.println("Nombre:");
+			String nombre = t.nextLine();
+			System.out.println("Salario:");
+			Float salario = t.nextFloat(); t.nextLine();
+			
+			if(!datos.altaEmpleado(dpto,nombre,salario)) {
+				System.out.println("Error al crear el empleado");
+			}
+		}
+		else{
+			System.out.println("Error, departamento no existe");
+		}
+		
 	}
 
 }
