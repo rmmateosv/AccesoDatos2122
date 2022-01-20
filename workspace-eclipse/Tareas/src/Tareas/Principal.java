@@ -1,6 +1,8 @@
 package Tareas;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Principal {
@@ -68,11 +70,19 @@ public class Principal {
 			System.out.println("Nombre:");
 			String nombre = t.nextLine();
 			System.out.println("Salario:");
-			Float salario = t.nextFloat(); t.nextLine();
-			
-			if(!datos.altaEmpleado(dpto,nombre,salario)) {
-				System.out.println("Error al crear el empleado");
+			Float salario = t.nextFloat(); t.nextLine();			
+			try {
+				System.out.println("Introduce fecha (yyyy-MM-dd)");
+				String fecha = t.nextLine();
+				Date f = formato.parse(fecha);
+				if(!datos.altaEmpleado(dpto,nombre,salario, fecha)) {
+					System.out.println("Error al crear el empleado");
+				}
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				System.out.println("Error en la fecha");
 			}
+			
 		}
 		else{
 			System.out.println("Error, departamento no existe");

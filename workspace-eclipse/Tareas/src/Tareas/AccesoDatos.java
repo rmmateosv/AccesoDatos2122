@@ -147,4 +147,54 @@ public class AccesoDatos {
 		
 		return resultado;
 	}
+
+	public boolean altaEmpleado(String dpto, String nombre, Float salario, String fecha) {
+		// TODO Auto-generated method stub
+		boolean resultado = false;
+		
+		int id = obtenerIdEmpleado();
+		
+		//Consulta de insert
+		try {
+			XPathQueryService servicio =
+					(XPathQueryService)
+					coleccion.getService("XPathQueryService", "1.0");
+			servicio.query("update insert "
+					+ "<empleado id='"+id+"' departamento = '"+dpto+"'>"
+					+ "<nombre>"+nombre+"</nombre>"
+					+ "<fecha_contratacion>"+fecha+"</fecha_contratacion>"
+					+ "<salario>"+salario+"</salario>"
+					+ "</empleado>"
+					+ "into /empleados");
+			resultado = true;
+			
+			
+		} catch (XMLDBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	private int obtenerIdEmpleado() {
+		// TODO Auto-generated method stub
+		int id = 1;
+		//Hacemos una consulta para obtener el id
+		try {
+			XPathQueryService servicio =
+					(XPathQueryService)
+					coleccion.getService("XPathQueryService", "1.0");
+			ResourceSet r = servicio.query("data(/empleados/empleado/@id)[last()]");
+			ResourceIterator i = r.getIterator();
+			if(i.hasMoreResources()) {
+				id = Integer.parseInt(i.nextResource().getContent().toString()) + 1;
+			}
+			
+		} catch (XMLDBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return id;
+	}
 }
