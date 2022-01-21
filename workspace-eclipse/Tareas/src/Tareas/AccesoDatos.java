@@ -197,4 +197,94 @@ public class AccesoDatos {
 		
 		return id;
 	}
+
+	public void mostrarEmpleados() {
+		// TODO Auto-generated method stub
+		try {
+			XPathQueryService servicio = 
+					(XPathQueryService)
+					coleccion.getService("XPathQueryService", "1.0");
+			ResourceSet r = servicio.query("for $e in /empleados/empleado\r\n"
+					+ "	return <empleado id='{$e/@id}' departamento='{$e/@departamento}' nombre='{$e/nombre/text()}'/>");
+			ResourceIterator i = r.getIterator();
+			while(i.hasMoreResources()) {
+				System.out.println(i.nextResource().getContent());
+			}
+		} catch (XMLDBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public boolean existeEmpleado(int id) {
+		// TODO Auto-generated method stub
+boolean resultado = false;
+		
+		try {
+			XPathQueryService servicio = 
+					(XPathQueryService) 
+					coleccion.getService("XPathQueryService", "1.0");
+			ResourceSet r = 
+			servicio.query("/empleados/empleado[@id='"+id+"']");
+			ResourceIterator i = r.getIterator();
+			if(i.hasMoreResources()) {
+				resultado = true;
+			}
+		} catch (XMLDBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return resultado;
+	}
+
+	public boolean altaTarea(int idEmp, String desc, String fecha) {
+		// TODO Auto-generated method stub
+		boolean resultado = false;
+		int id = obtenerIdTarea();
+		//Consulta de insert
+		try {
+			XPathQueryService servicio =
+					(XPathQueryService)
+					coleccion.getService("XPathQueryService", "1.0");
+			servicio.query("update insert "
+					+"<tarea id='"+id+"'>"
+					+ "<fecha>"+fecha+"</fecha>"
+					+ "<descripcion>"+desc+"</descripcion>"
+					+ "<empleado>"+idEmp+"</empleado>"
+					+ "<realizado>false</realizado>"					
+					+ "</tarea>"
+					+ "into /tareas");
+			resultado = true;
+			
+			
+		} catch (XMLDBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return resultado;
+	}
+
+	private int obtenerIdTarea() {
+		// TODO Auto-generated method stub
+		int id = 1;
+		//Hacemos una consulta para obtener el id
+		try {
+			XPathQueryService servicio =
+					(XPathQueryService)
+					coleccion.getService("XPathQueryService", "1.0");
+			ResourceSet r = servicio.query("data(/tareas/tarea/@id)[last()]");
+			ResourceIterator i = r.getIterator();
+			if(i.hasMoreResources()) {
+				id = Integer.parseInt(i.nextResource().getContent().toString()) + 1;
+			}
+			
+		} catch (XMLDBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return id;
+	}
 }

@@ -33,7 +33,7 @@ public class Principal {
 					break;
 				}
 				case 2: {
-
+					altaTarea();
 					break;
 				}
 				case 3: {
@@ -57,6 +57,23 @@ public class Principal {
 			datos.cerrar();
 		} else {
 			System.out.println("Error, no existe colección");
+		}
+	}
+
+	private static void altaTarea() {
+		// TODO Auto-generated method stub
+		datos.mostrarEmpleados();
+		System.out.println("Introduce id de empleado");
+		int id = t.nextInt(); t.nextLine();
+		if(datos.existeEmpleado(id)) {
+			System.out.println("Descripcion tarea");
+			String desc = t.nextLine();
+			if(!datos.altaTarea(id,desc,formato.format(new Date()))) {
+				System.out.println("Error al dar de alta la tarea");
+			}
+		}
+		else {
+			System.out.println("Error, no existe empleado");
 		}
 	}
 
