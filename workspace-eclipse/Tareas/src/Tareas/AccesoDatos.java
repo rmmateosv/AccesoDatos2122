@@ -135,7 +135,7 @@ public class AccesoDatos {
 					(XPathQueryService) 
 					coleccion.getService("XPathQueryService", "1.0");
 			ResourceSet r = 
-			servicio.query("/departamentos[departamento='"+dpto+"']");
+			servicio.query("/departamentos/departamento[.='"+dpto+"']");
 			ResourceIterator i = r.getIterator();
 			if(i.hasMoreResources()) {
 				resultado = true;
@@ -286,5 +286,104 @@ boolean resultado = false;
 		}
 		
 		return id;
+	}
+
+	public void mostrarTareas() {
+		// TODO Auto-generated method stub
+		try {
+			XPathQueryService servicio = 
+					(XPathQueryService)
+					coleccion.getService("XPathQueryService", "1.0");
+			ResourceSet r = servicio.query("/tareas/tarea[realizado='false']");
+			ResourceIterator i = r.getIterator();
+			while(i.hasMoreResources()) {
+				System.out.println(i.nextResource().getContent());
+			}
+		} catch (XMLDBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+		
+	
+
+	public boolean existeTareaAbierta(int id) {
+		// TODO Auto-generated method stub
+boolean resultado = false;
+		
+		try {
+			XPathQueryService servicio = 
+					(XPathQueryService) 
+					coleccion.getService("XPathQueryService", "1.0");
+			ResourceSet r = 
+			servicio.query("/tareas/tarea[@id='"+id+"' and realizado='false']");
+			ResourceIterator i = r.getIterator();
+			if(i.hasMoreResources()) {
+				resultado = true;
+			}
+		} catch (XMLDBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return resultado;
+	}
+
+	public boolean finalizarTarea(int id) {
+		// TODO Auto-generated method stub
+		boolean resultado = false;
+		try {
+			XPathQueryService servicio = 
+					(XPathQueryService)
+					coleccion.getService("XPathQueryService", "1.0");
+			servicio.query("update replace "
+					+ "/tareas/tarea[@id='"+id+"']/realizado "
+					+ "with <realizado>true</realizado>");
+			resultado = true;
+		} catch (XMLDBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public void mostrarTareas(int emp) {
+		// TODO Auto-generated method stub
+		try {
+			XPathQueryService servicio = 
+					(XPathQueryService)
+					coleccion.getService("XPathQueryService", "1.0");
+			ResourceSet r = servicio.query("for $t in /tareas/tarea[empleado='"+emp+"'],\r\n"
+					+ "    $e in /empleados/empleado[@id=$t/empleado]\r\n"
+					+ "	return <tarea id='{$t/@id}' realizado='{$t/realizado/text()}' nombre='{$e/nombre/text()}' fecha='{$t/fecha/text()}'>\r\n"
+					+ "	{$t/descripcion}\r\n"
+					+ "	</tarea>");
+			ResourceIterator i = r.getIterator();
+			while(i.hasMoreResources()) {
+				System.out.println(i.nextResource().getContent());
+			}
+		} catch (XMLDBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public boolean borrarTarea(int id) {
+		// TODO Auto-generated method stub
+		boolean resultado = false;
+		try {
+			XPathQueryService servicio = 
+					(XPathQueryService)
+					coleccion.getService("XPathQueryService", "1.0");
+			servicio.query("update delete "
+					+ "/tareas/tarea[@id='"+id+"']");
+			resultado = true;
+		} catch (XMLDBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultado;
 	}
 }

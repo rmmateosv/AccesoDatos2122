@@ -37,15 +37,15 @@ public class Principal {
 					break;
 				}
 				case 3: {
-
+					finalizarTarea();
 					break;
 				}
 				case 4: {
-
+					mostrarTareasEmpleado();
 					break;
 				}
 				case 5: {
-
+					borrarTarea();
 					break;
 				}
 				case 6: {
@@ -57,6 +57,44 @@ public class Principal {
 			datos.cerrar();
 		} else {
 			System.out.println("Error, no existe colección");
+		}
+	}
+
+	private static void borrarTarea() {
+		// TODO Auto-generated method stub
+		datos.mostrarTareas();
+		System.out.println("Id tarea:");
+		int id = t.nextInt();t.nextLine();
+		if(datos.existeTareaAbierta(id)) {
+			if(!datos.borrarTarea(id)) {
+				System.out.println("Error al finalizar la tarea");
+			}
+		}
+		else {
+			System.out.println("Error, la tarea no existe o está finalizada");
+		}
+	}
+
+	private static void mostrarTareasEmpleado() {
+		// TODO Auto-generated method stub
+		datos.mostrarEmpleados();
+		System.out.println("Empleado");
+		int emp = t.nextInt(); t.nextLine();
+		datos.mostrarTareas(emp);
+	}
+
+	private static void finalizarTarea() {
+		// TODO Auto-generated method stub
+		datos.mostrarTareas();
+		System.out.println("Id tarea:");
+		int id = t.nextInt();t.nextLine();
+		if(datos.existeTareaAbierta(id)) {
+			if(!datos.finalizarTarea(id)) {
+				System.out.println("Error al finalizar la tarea");
+			}
+		}
+		else {
+			System.out.println("Error, la tarea no existe o está finalizada");
 		}
 	}
 
