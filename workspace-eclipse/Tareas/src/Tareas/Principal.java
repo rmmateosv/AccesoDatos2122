@@ -11,6 +11,7 @@ public class Principal {
 	static SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
 		if (datos.getColeccion() != null) {
 			int opcion = 0;
 

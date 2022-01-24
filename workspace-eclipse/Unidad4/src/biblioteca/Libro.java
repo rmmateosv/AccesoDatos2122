@@ -1,0 +1,132 @@
+package biblioteca;
+
+import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+
+@Entity
+@Table
+public class Libro implements Serializable{
+	/**
+	 * 
+	 */
+	
+	private static final long serialVersionUID = 2077981661327561318L;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column
+	private int id;
+	
+	@Column(nullable = false, unique = true)
+	private String isbn;	
+	@Column(nullable = false)
+	private String titulo;
+	@Column(nullable = false)
+	private String autor;
+	@Column(nullable = false)
+	@Temporal(TemporalType.DATE)
+	private Date fechaLanzamiento;
+	@Column(nullable = false)
+	private int numEjemplares;
+	
+	public Libro() {
+		
+	}
+
+	
+	public Libro(int id, String isbn, String titulo, String autor, Date fechaLanzamiento, int numEjemplares) {
+		super();
+		this.id = id;
+		this.isbn = isbn;
+		this.titulo = titulo;
+		this.autor = autor;
+		this.fechaLanzamiento = fechaLanzamiento;
+		this.numEjemplares = numEjemplares;
+	}
+
+
+	public Libro(String isbn, String titulo, String autor, Date fechaLanzamiento, int numEjemplares) {
+		
+		this.isbn = isbn;
+		this.titulo = titulo;
+		this.autor = autor;
+		this.fechaLanzamiento = fechaLanzamiento;
+		this.numEjemplares = numEjemplares;
+	}
+	
+	public void mostrar() {
+		SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+	
+		System.out.println("ISBN:" + isbn + 
+				"\tTitulo:" + titulo + 
+				"\tAutor:" + autor +
+				"\tFecha:" + formato.format(fechaLanzamiento) +
+				"\tEjemplares:" + numEjemplares);
+	}
+	
+	
+
+	public int getId() {
+		return id;
+	}
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+	public String getIsbn() {
+		return isbn;
+	}
+
+	public void setIsbn(String isbn) {
+		this.isbn = isbn;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public String getAutor() {
+		return autor;
+	}
+
+	public void setAutor(String autor) {
+		this.autor = autor;
+	}
+
+	public Date getFechaLanzamiento() {
+		return fechaLanzamiento;
+	}
+
+	public void setFechaLanzamiento(Date fechaLanzamiento) {
+		this.fechaLanzamiento = fechaLanzamiento;
+	}
+
+	public int getNumEjemplares() {
+		return numEjemplares;
+	}
+
+	public void setNumEjemplares(int numEjemplares) {
+		this.numEjemplares = numEjemplares;
+	}
+	
+	
+	
+}
