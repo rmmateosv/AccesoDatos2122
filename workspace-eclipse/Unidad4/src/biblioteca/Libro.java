@@ -2,13 +2,16 @@ package biblioteca;
 
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -40,6 +43,20 @@ public class Libro implements Serializable{
 	@Column(nullable = false)
 	private int numEjemplares;
 	
+	//RElación 1 libro muchos préstamos
+	@OneToMany(cascade = CascadeType.ALL,mappedBy = "clave.libro")
+	private ArrayList<Prestamo> prestamos = new ArrayList<>();
+	
+	public ArrayList<Prestamo> getPrestamos() {
+		return prestamos;
+	}
+
+
+	public void setPrestamos(ArrayList<Prestamo> prestamos) {
+		this.prestamos = prestamos;
+	}
+
+
 	public Libro() {
 		
 	}
