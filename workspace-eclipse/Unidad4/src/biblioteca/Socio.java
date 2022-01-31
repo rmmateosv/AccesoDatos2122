@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -31,25 +32,36 @@ public class Socio implements Serializable{
 	private Date fechaN;
 	@Column(nullable = false)
 	private boolean activo;
+	@Column(nullable = true)
+	@Temporal(TemporalType.DATE)
+	private Date fechaSancion;
 	
+	public Date getFechaSancion() {
+		return fechaSancion;
+	}
+	public void setFechaSancion(Date fechaSancion) {
+		this.fechaSancion = fechaSancion;
+	}
 	//Relación uno a muchos entre socio y préstamo
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "clave.socio")
-	private ArrayList<Prestamo> prestamos  = new ArrayList<>();
+	private List<Prestamo> prestamos  = new ArrayList<>();
 	
 	
 	
-	public ArrayList<Prestamo> getPrestamos() {
+	public List<Prestamo> getPrestamos() {
 		return prestamos;
 	}
-	public void setPrestamos(ArrayList<Prestamo> prestamos) {
+	public void setPrestamos(List<Prestamo> prestamos) {
 		this.prestamos = prestamos;
 	}
-	public Socio(String dni, String nombre, Date fechaN, boolean activo) {
-		
+	
+	public Socio(String dni, String nombre, Date fechaN, boolean activo, Date fechaSancion) {
+		super();
 		this.dni = dni;
 		this.nombre = nombre;
 		this.fechaN = fechaN;
 		this.activo = activo;
+		this.fechaSancion = fechaSancion;
 	}
 	public Socio() {
 		

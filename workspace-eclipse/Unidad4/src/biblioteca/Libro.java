@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -45,14 +46,14 @@ public class Libro implements Serializable{
 	
 	//RElación 1 libro muchos préstamos
 	@OneToMany(cascade = CascadeType.ALL,mappedBy = "clave.libro")
-	private ArrayList<Prestamo> prestamos = new ArrayList<>();
+	private List<Prestamo> prestamos = new ArrayList<>();
 	
-	public ArrayList<Prestamo> getPrestamos() {
+	public List<Prestamo> getPrestamos() {
 		return prestamos;
 	}
 
 
-	public void setPrestamos(ArrayList<Prestamo> prestamos) {
+	public void setPrestamos(List<Prestamo> prestamos) {
 		this.prestamos = prestamos;
 	}
 
@@ -82,7 +83,7 @@ public class Libro implements Serializable{
 		this.numEjemplares = numEjemplares;
 	}
 	
-	public void mostrar() {
+	public void mostrar(boolean mostrarPrestamos) {
 		SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
 	
 		System.out.println("ISBN:" + isbn + 
@@ -90,6 +91,12 @@ public class Libro implements Serializable{
 				"\tAutor:" + autor +
 				"\tFecha:" + formato.format(fechaLanzamiento) +
 				"\tEjemplares:" + numEjemplares);
+		if(mostrarPrestamos) {
+			System.out.println("Préstamos del libro:");
+			for(int i=0;i<prestamos.size();i++) {
+				prestamos.get(i).mostrar();
+			}
+		}
 	}
 	
 	

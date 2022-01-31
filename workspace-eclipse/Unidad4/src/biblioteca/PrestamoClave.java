@@ -1,5 +1,6 @@
 package biblioteca;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -9,12 +10,12 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 
-public class PrestamoClave {
+public class PrestamoClave implements Serializable{
 	@ManyToOne
 	@JoinColumn(name="socio", referencedColumnName = "dni")
 	private Socio socio;
 	@ManyToOne
-	@JoinColumn(referencedColumnName = "id")
+	@JoinColumn(name="libro",referencedColumnName = "id")
 	private Libro libro;
 	@Column(nullable = false)
 	@Temporal(TemporalType.DATE)
