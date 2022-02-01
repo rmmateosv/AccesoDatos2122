@@ -200,6 +200,8 @@ private static void estadistica() {
 			if (l != null) {
 				String mensaje = ad.registrarPrestamo(s, l);
 				System.out.println(mensaje);
+				System.out.println("Datos del socio:");
+				s.mostrar(true);
 			} else {
 				System.out.println("Error, libro no existe");
 			}
