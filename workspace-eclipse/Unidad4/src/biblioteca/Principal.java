@@ -139,15 +139,26 @@ private static void estadistica() {
 		String dni = t.nextLine();
 		Socio s = ad.obtenerSocio(dni);
 		if (s != null) {
-			ArrayList<Prestamo> prestamos = ad.obtenerPrestamos(s,true);
-			for (Prestamo p : prestamos) {
-				p.mostrar();
+			
+			for (Prestamo p : s.getPrestamos()) {
+				if(!p.isDevuelto())
+				{
+					p.mostrar();
+				}
 			}
 			System.out.println("Isbn");
 			String isbn = t.nextLine();
-			Prestamo p = ad.obtenerPrestamo(s, isbn);
-			if (p != null && !p.isDevuelto()) {				
-				if (!ad.devolverPrestamo(p)) {
+			Prestamo pBuscado = null;
+			for (Prestamo p : s.getPrestamos()) {
+				//comprobamos si el isbn del libro es el buscado
+				if(isbn.equals(p.getClave().getLibro().getIsbn())
+						&& !p.isDevuelto()) {
+					pBuscado = p;
+					break;
+				}
+			}
+			if (pBuscado != null) {				
+				if (!ad.devolverPrestamo(pBuscado)) {
 					System.out.println("Error, al devolver el préstamo");
 				}
 			} else {
@@ -164,11 +175,17 @@ private static void estadistica() {
 		String dni = t.nextLine();
 		Socio s = ad.obtenerSocio(dni);
 		if (s != null) {
-			ArrayList<Prestamo> prestamos = ad.obtenerPrestamos(s,true);
-			if (prestamos.isEmpty()) {
-				System.out.println("El socio no tiene préstamos sin devolver");
-			} else {
-				for (Prestamo p : prestamos) {
+			
+			//No pendientes los préstamos
+			for(Prestamo p:s.getPrestamos()) {
+				if(p.isDevuelto()) {
+					p.mostrar();
+				}
+			}
+			System.out.println("Préstamos pendientes:");
+			//Solamente préstamos pendientes
+			for(Prestamo p:s.getPrestamos()) {
+				if(!p.isDevuelto()) {
 					p.mostrar();
 				}
 			}
@@ -180,7 +197,7 @@ private static void estadistica() {
 
 	private static void mostrarPrestamos() {
 		// TODO Auto-generated method stub
-		ArrayList<Prestamo> prestamos = ad.obtenerPrestamos();
+		List<Prestamo> prestamos = ad.obtenerPrestamos();
 		for (Prestamo p : prestamos) {
 			p.mostrar();
 		}
@@ -200,6 +217,8 @@ private static void estadistica() {
 			if (l != null) {
 				String mensaje = ad.registrarPrestamo(s, l);
 				System.out.println(mensaje);
+				//Recargar el socio para que muestre los préstamos
+				s=ad.obtenerSocio(s.getDni());
 				System.out.println("Datos del socio:");
 				s.mostrar(true);
 			} else {

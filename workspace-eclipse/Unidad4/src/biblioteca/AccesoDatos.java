@@ -161,7 +161,7 @@ public class AccesoDatos {
 						if(numPresPte<2) {
 							Calendar c = Calendar.getInstance();
 							c.setTime(new Date());
-							c.add(15, Calendar.DAY_OF_YEAR);
+							c.add(Calendar.DAY_OF_YEAR,15);
 							Prestamo p = 
 							new Prestamo(new PrestamoClave(s,l, new Date()),
 									c.getTime(), false);
@@ -171,7 +171,8 @@ public class AccesoDatos {
 							conexion.getTransaction().begin();
 							conexion.persist(p);
 							conexion.getTransaction().commit();
-							conexion.clear();							
+							conexion.clear();	
+							resultado = "Préstamo registrado";
 						}
 						else {
 							resultado = "El socio tiene 2 o más préstamos sin devolver";
@@ -190,6 +191,19 @@ public class AccesoDatos {
 		} catch (Exception e) {
 			// TODO: handle exception
 			conexion.getTransaction().rollback();
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public List<Prestamo> obtenerPrestamos() {
+		// TODO Auto-generated method stub
+		List<Prestamo> resultado = new ArrayList<Prestamo>();
+		try {
+			Query consulta = conexion.createQuery("from Prestamo");
+			resultado = consulta.getResultList();
+		} catch (Exception e) {
+			// TODO: handle exception
 			e.printStackTrace();
 		}
 		return resultado;
