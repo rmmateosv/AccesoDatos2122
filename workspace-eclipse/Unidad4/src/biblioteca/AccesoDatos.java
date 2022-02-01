@@ -92,4 +92,19 @@ public class AccesoDatos {
 		return resultado;
 	}
 
+	public Socio obtenerSocio(String dni) {
+		// TODO Auto-generated method stub
+		Socio resultado = null;
+		try {
+			//Para obtener un registro a partir de su clave primaria,
+			//usamos el método find		
+			resultado = conexion.find(Socio.class, dni);
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
 }
