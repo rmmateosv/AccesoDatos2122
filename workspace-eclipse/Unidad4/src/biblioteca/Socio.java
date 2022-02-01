@@ -67,12 +67,26 @@ public class Socio implements Serializable{
 		
 	}
 	
-	public void mostrar() {
+	public void mostrar(boolean mostrarPrestamos) {
 		SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+		String fechaS;
+		if(fechaSancion == null) {
+			fechaS = "";
+		}
+		else {
+			fechaS= formato.format(fechaSancion);
+		}
 		System.out.println("DNI:" +  dni +
 				"\tNombre:" + nombre +
 				"\tfechaN:" + formato.format(fechaN) + 
-				"\tActivo:" + activo);
+				"\tActivo:" + activo +
+				"\tfechaSancion:" + fechaS);
+		if(mostrarPrestamos) {
+			System.out.println("Préstamos del socio");
+			for(Prestamo p : prestamos) {
+				p.mostrar();
+			}
+		}
 	}
 	
 	public String getDni() {

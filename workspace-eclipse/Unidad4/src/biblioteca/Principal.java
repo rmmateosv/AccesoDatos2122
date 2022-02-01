@@ -210,9 +210,9 @@ private static void estadistica() {
 
 	private static void mostrarSocios() {
 		// TODO Auto-generated method stub
-		ArrayList<Socio> socios = ad.obtenerSocios();
+		List<Socio> socios = ad.obtenerSocios();
 		for (Socio s : socios) {
-			s.mostrar();
+			s.mostrar(false);
 		}
 	}
 

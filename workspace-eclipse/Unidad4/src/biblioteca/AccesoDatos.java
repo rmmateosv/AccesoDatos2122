@@ -107,4 +107,38 @@ public class AccesoDatos {
 		return resultado;
 	}
 
+	
+
+	public boolean crearSocio(Socio s) {
+		// TODO Auto-generated method stub
+		boolean resultado = false;
+		try {
+			conexion.getTransaction().begin();
+			conexion.persist(s);
+			conexion.getTransaction().commit();
+			conexion.clear();
+			resultado = true;
+			
+		}catch (Exception e) {
+			// TODO: handle exception
+			conexion.getTransaction().rollback();
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public List<Socio> obtenerSocios() {
+		// TODO Auto-generated method stub
+		List<Socio> resultado = new ArrayList<Socio>();
+		try {
+			Query consulta = conexion.createQuery("from Socio");
+			resultado = consulta.getResultList();
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
 }
