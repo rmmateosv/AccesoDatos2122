@@ -209,4 +209,65 @@ public class AccesoDatos {
 		return resultado;
 	}
 
+	public boolean devolverPrestamo(Prestamo pBuscado) {
+		// TODO Auto-generated method stub
+		boolean resultado = false;
+		try {
+			//Incrementar nº de ejemplares
+			pBuscado.getClave().getLibro().setNumEjemplares(
+					pBuscado.getClave().getLibro().getNumEjemplares()+1);
+			//Marcar el préstamo como devuelto
+			pBuscado.setDevuelto(true);
+			//Sancionar si es necesario
+			if(new Date().getTime()>=pBuscado.getFechaD().getTime()) {
+				
+				pBuscado.getClave().getSocio().setFechaSancion(
+						new Date(new Date().getTime()+(14*24*60*60*1000)));
+			}
+			
+			conexion.getTransaction().begin();
+			conexion.getTransaction().commit();
+			conexion.clear();
+			resultado = true;
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			conexion.getTransaction().rollback();
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public boolean borrarSocio(Socio s) {
+		// TODO Auto-generated method stub
+		boolean resultado = false;
+		try {
+			conexion.getTransaction().begin();
+			
+			
+			/*
+			
+			Query consulta = conexion.createQuery("delete from Socio where dni = ?1");
+			consulta.setParameter(1, s.getDni());
+			consulta.executeUpdate();
+			*/
+			
+			
+			//TOMA LA CONFIGURACIÓN DE HIBERNATE Y BORRA 
+			//EL SOCIO AUNQUE TENGA PRÉSTAMOS, POR TANTO
+			//TAMBIÉN BORRA LOS PRÉSTAMOS
+			conexion.remove(s);
+			
+			conexion.getTransaction().commit();
+			conexion.clear();
+			resultado = true;
+					
+		} catch (Exception e) {
+			// TODO: handle exception
+			conexion.getTransaction().rollback();
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
 }

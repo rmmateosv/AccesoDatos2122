@@ -108,25 +108,10 @@ private static void estadistica() {
 		String dni = t.nextLine();
 		Socio s = ad.obtenerSocio(dni);
 		if(s!=null) {
-			ArrayList<Prestamo> p = ad.obtenerPrestamos(s,false);
-			if(p.isEmpty()) {
-				if(!ad.borrarSocio(s,false)) {
-					System.out.println("Error al borrar el socio");
-				}
+			if(!ad.borrarSocio(s)) {
+				System.out.println("Error al borrar el socio");
 			}
-			else {
-				//Ver si tiene préstamos sin devolver
-				p = ad.obtenerPrestamos(s, true);
-				if(p.isEmpty()) {
-					if(!ad.borrarSocio(s,true)) {
-						System.out.println("Error al borrar el socio");
-					}
-				}
-				else {
-					System.out.println("Error, el socio tiene préstamos sin devolver");
-				}
-				
-			}
+			
 		}
 	}
 
