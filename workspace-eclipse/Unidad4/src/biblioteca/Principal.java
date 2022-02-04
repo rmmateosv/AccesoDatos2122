@@ -3,6 +3,7 @@ package biblioteca;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
@@ -33,6 +34,7 @@ public class Principal {
 				System.out.println("8-Devolver Préstamos");
 				System.out.println("9- Borrar Socio");
 				System.out.println("10- Estadística Socio");
+				System.out.println("11- Estadística Socio2");
 
 				opcion = t.nextInt();
 				t.nextLine();
@@ -74,6 +76,9 @@ public class Principal {
 				case 10:
 					estadistica();
 					break;
+				case 11:
+					estadistica2();
+					break;					
 
 				}
 
@@ -84,19 +89,48 @@ public class Principal {
 		}
 	}
 
+private static void estadistica2() {
+		// TODO Auto-generated method stub
+	List<Socio> socios = ad.obtenerSocios();
+	for(Socio s:socios) {
+		int noDevueltos=0;
+		Date maxFecha=null, minFecha=null;
+		for(Prestamo p: s.getPrestamos()) {
+			if(!p.isDevuelto()) {
+				noDevueltos++;
+				
+			}
+			if(maxFecha==null  ||
+			   p.getClave().getFechaP().getTime()>maxFecha.getTime()) {
+				maxFecha = p.getClave().getFechaP();
+			}
+			if(minFecha==null  ||
+			   p.getClave().getFechaP().getTime()<minFecha.getTime()) {
+				minFecha = p.getClave().getFechaP();
+			}
+		}
+		System.out.println("DNI:" + s.getDni()
+				+"\tSocio:"+ s.getNombre()
+				+"\tNºPréstamos:"+ s.getPrestamos().size()
+				+"\tNoDevueltos:"+  noDevueltos
+				+"\tÚltimo Préstamo:"+ maxFecha
+				+"\tPrimer Préstamo:"+ minFecha);
+	}
+}
+
 private static void estadistica() {
 		
 		// TODO Auto-generated method stub
 		//Estructura de obtener datos
 		//DNI,Nombre socio, Nº  Préstamos, Nº Prestamos sin devolver,
 		//Fecha Úlitmo Préstamo, Fecha del Primer Préstamo
-		ArrayList<Object[]> datos = ad.obtenerDatos();
+		List<Object[]> datos = ad.obtenerDatos();
 		for(Object[] o : datos) {
 			System.out.println("DNI:" +o[0] 
 			+"\tSocio:"+o[1]
 			+"\tNºPréstamos:"+o[2]
 			+"\tNoDevueltos:"+o[3]
-			+"\tÚlitmo Préstamo:"+formato.format(o[4])
+			+"\tÚltimo Préstamo:"+formato.format(o[4])
 			+"\tPrimer Préstamo:"+formato.format(o[5]));
 		}
 	}
@@ -107,11 +141,14 @@ private static void estadistica() {
 		System.out.println("Dni:");
 		String dni = t.nextLine();
 		Socio s = ad.obtenerSocio(dni);
-		if(s!=null) {
+		if(s!=null && s.getPrestamos().isEmpty()) {
 			if(!ad.borrarSocio(s)) {
 				System.out.println("Error al borrar el socio");
 			}
 			
+		}
+		else {
+			System.out.println("El socio no existe o tine préstamos");
 		}
 	}
 

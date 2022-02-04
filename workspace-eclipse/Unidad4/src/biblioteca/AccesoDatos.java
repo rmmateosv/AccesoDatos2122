@@ -242,17 +242,15 @@ public class AccesoDatos {
 		// TODO Auto-generated method stub
 		boolean resultado = false;
 		try {
-			conexion.getTransaction().begin();
-			
-			
+			conexion.getTransaction().begin();		
 			/*
-			
+			TOMA LA CONFIGURACIÓN DE MYSQL QUE RESTRINGE LOS
+			BORRADOS EN CASCADA. NO BORRA EL SOCIO
+			SI QUISIÉRAMOS BORRALO, HABRÍA QUE BORRAR PRIMERO 
+			LOS PRÉSTAMOS DE ESE SOCIO
 			Query consulta = conexion.createQuery("delete from Socio where dni = ?1");
 			consulta.setParameter(1, s.getDni());
-			consulta.executeUpdate();
-			*/
-			
-			
+			consulta.executeUpdate();*/
 			//TOMA LA CONFIGURACIÓN DE HIBERNATE Y BORRA 
 			//EL SOCIO AUNQUE TENGA PRÉSTAMOS, POR TANTO
 			//TAMBIÉN BORRA LOS PRÉSTAMOS
@@ -265,6 +263,26 @@ public class AccesoDatos {
 		} catch (Exception e) {
 			// TODO: handle exception
 			conexion.getTransaction().rollback();
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public List<Object[]> obtenerDatos() {
+		// TODO Auto-generated method stub
+		List<Object[]> resultado = new ArrayList<Object[]>();
+		try {
+			Query consulta = conexion.createQuery(
+					"select clave.socio.dni, clave.socio.nombre, count(*),"
+					+ "(select count(*) from Prestamo p2 where devuelto=false "
+					+ "and p2.clave.socio = p.clave.socio),"
+					+ "max(clave.fechaP),"
+					+ "min(clave.fechaP) "
+					+ "from Prestamo p "
+					+ "group by clave.socio");
+			resultado = consulta.getResultList();			
+		} catch (Exception e) {
+			// TODO: handle exception
 			e.printStackTrace();
 		}
 		return resultado;
