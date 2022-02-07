@@ -82,6 +82,24 @@ public class Jugador {
 	public List<Accion> getAcciones() {
 		return acciones;
 	}
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
+	}
+	public void setEquipo(Equipo equipo) {
+		this.equipo = equipo;
+	}
+	public void setDorsal(int dorsal) {
+		this.dorsal = dorsal;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public void setTipo(char tipo) {
+		this.tipo = tipo;
+	}
+	public void setAcciones(List<Accion> acciones) {
+		this.acciones = acciones;
+	}
 	
 	
 }
