@@ -1,9 +1,27 @@
 package acb;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table
 public class Accion {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int codigo;
+	@ManyToOne
+	@JoinColumn(name="partido",referencedColumnName = "codigo")
 	private Partido partido;
-	private TipoAccion tipoAccion;
+	@ManyToOne
+	@JoinColumn(name="tipo",referencedColumnName = "tipo")
+	private TipoAccion tipo;
+	@ManyToOne
+	@JoinColumn(name="jugador",referencedColumnName = "codigo")
 	private Jugador jugador;
 	private boolean anulada;
 	
@@ -11,7 +29,7 @@ public class Accion {
 		super();
 		this.codigo = codigo;
 		this.partido = partido;
-		this.tipoAccion = tipoAccion;
+		this.tipo = tipoAccion;
 		this.jugador = jugador;
 		this.anulada = anulada;
 	}
@@ -19,9 +37,11 @@ public class Accion {
 	public void mostrar() {
 		System.out.println(
 				"Codigo:" + codigo
-				+ "\tPartido:" 
-				+ "\tTipoAccion:"
-				+ "\tJugador:"
+				+ "\tPartido:" + partido.getLocal().getNombre() + 
+				  "-"+partido.getVisitante().getNombre()
+				+ "\tTipoAccion:" + tipo.getDescrip()
+				+ "\tJugador:" + jugador.getNombre() +"-" +
+				                 jugador.getDorsal()
 				+ "\tAnulada:" +  anulada);
 	}
 
@@ -46,11 +66,11 @@ public class Accion {
 	}
 
 	public TipoAccion getTipoAccion() {
-		return tipoAccion;
+		return tipo;
 	}
 
 	public void setTipoAccion(TipoAccion tipoAccion) {
-		this.tipoAccion = tipoAccion;
+		this.tipo = tipoAccion;
 	}
 
 	public Jugador getJugador() {
