@@ -27,7 +27,7 @@ public class Jugador {
 	@Column(nullable = false)
 	private String nombre;
 	@Column(nullable = false)
-	private String tipo;
+	private char tipo;
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "jugador")
 	private List<Accion> acciones = new ArrayList<>();
@@ -49,7 +49,7 @@ public class Jugador {
 		super();
 	}
 
-	public Jugador(int codigo, Equipo equipo, int dorsal, String nombre, String tipo, List<Accion> acciones) {
+	public Jugador(int codigo, Equipo equipo, int dorsal, String nombre, char tipo, List<Accion> acciones) {
 		super();
 		this.codigo = codigo;
 		this.equipo = equipo;
@@ -75,7 +75,7 @@ public class Jugador {
 		return nombre;
 	}
 
-	public String getTipo() {
+	public char getTipo() {
 		return tipo;
 	}
 
