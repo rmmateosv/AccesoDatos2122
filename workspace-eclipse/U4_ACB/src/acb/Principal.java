@@ -36,7 +36,7 @@ public class Principal {
 						break;
 					}
 					case 2: {
-						
+						registrarAcccion();
 						break;
 					}
 					case 3: {
@@ -57,9 +57,74 @@ public class Principal {
 		}
 	}
 
+	private static void registrarAcccion() {
+		// TODO Auto-generated method stub
+		if(partidoSeleccionado!=null) {
+			mostrarTipoAcciones();
+			System.out.println("Introduce tipo acción");
+			char tipo = t.next().charAt(0);
+			TipoAccion tipoAccion = ad.obtenerTipoAccion(tipo);
+			if(tipoAccion!=null) {
+				System.out.println("Jugadores Locales");
+				for(Jugador j:partidoSeleccionado.
+						      getLocal().getJugadores()) {
+					j.mostrar(false);
+				}
+				System.out.println("Jugadores Visitantes");
+				for(Jugador j:partidoSeleccionado.
+						      getVisitante().getJugadores()) {
+					j.mostrar(false);
+				}
+				System.out.println("Introduce código de jugador");
+				int codigoJ =t.nextInt();t.nextLine();
+				Jugador j = ad.obtenerJugador(
+						codigoJ,
+						partidoSeleccionado.getLocal(),
+						partidoSeleccionado.getVisitante());
+				if(j!=null) {
+					if(!ad.registrarAccion(partidoSeleccionado,j,tipoAccion)) {
+						System.out.println("Error al registrar la acción");
+					}
+					else {
+						partidoSeleccionado.mostrar(true);
+					}
+				}
+				else {
+					System.out.println(
+							"Error, jugador no existe o no juega el partdio");
+				}
+			}
+			else {
+				System.out.println("Error, no existe tipo acción");
+			}
+		}
+		else {
+			System.out.println("Error, hay que seleccionar partido");
+		}
+	}
+
+	private static void mostrarTipoAcciones() {
+		// TODO Auto-generated method stub
+		List<TipoAccion> tipos = ad.obtenerTiposAcc();
+		for(TipoAccion t : tipos) {
+			t.mostrar();
+		}
+	}
+
 	private static void seleccionarPartido() {
 		// TODO Auto-generated method stub
 		mostrarPartidos();
+		System.out.println("Introduce código de partido:");
+		int codigo = t.nextInt(); t.nextLine();
+		partidoSeleccionado = ad.obtenerPartido(codigo);
+		if(partidoSeleccionado!=null) {
+			//Mostrar partido
+			System.out.println("Partido seleccionado:");
+			partidoSeleccionado.mostrar(false);
+		}
+		else {
+			System.out.println("Error, no existe el partido con código " + codigo);
+		}
 	}
 
 	private static void mostrarPartidos() {

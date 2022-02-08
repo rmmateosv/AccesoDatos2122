@@ -48,7 +48,7 @@ public class Partido {
 		SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
 		System.out.println("Codigo:"+ codigo
 				+ "\tFecha:" + formato.format(fecha) 
-				+ "Local:"+ local.getNombre()+"-"
+				+ "\tLocal:"+ local.getNombre()+"-"
 				            +local.getLocalidad()
 				+ "\tVisitante:" + visitante.getNombre()+"-"
 				                   +visitante.getLocalidad());
