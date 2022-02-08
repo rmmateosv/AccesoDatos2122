@@ -40,7 +40,7 @@ public class Principal {
 						break;
 					}
 					case 3: {
-						
+						anularAccion();
 						break;
 					}
 					case 4: {
@@ -54,6 +54,27 @@ public class Principal {
 				}
 			} while (opcion != 0);
 			ad.cerrar();
+		}
+	}
+
+	private static void anularAccion() {
+		// TODO Auto-generated method stub
+		if(partidoSeleccionado!=null) {
+			partidoSeleccionado = ad.obtenerPartido(partidoSeleccionado.getCodigo());
+			partidoSeleccionado.mostrar(true);
+			System.out.println("Introduce código de acción a anular");
+			int codigo = t.nextInt(); t.nextLine();
+			if(!ad.anularAccion(partidoSeleccionado, codigo)) {
+				System.out.println("Error, al anular la acción");
+			}
+			else {
+				partidoSeleccionado = ad.obtenerPartido(partidoSeleccionado.getCodigo());
+				partidoSeleccionado.mostrar(true);
+			}
+						
+		}
+		else {
+			System.out.println("Error, selecciona partido primero");
 		}
 	}
 
@@ -86,6 +107,7 @@ public class Principal {
 						System.out.println("Error al registrar la acción");
 					}
 					else {
+						partidoSeleccionado = ad.obtenerPartido(partidoSeleccionado.getCodigo());
 						partidoSeleccionado.mostrar(true);
 					}
 				}

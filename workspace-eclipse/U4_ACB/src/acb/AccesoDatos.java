@@ -86,7 +86,7 @@ public class AccesoDatos {
 		// TODO Auto-generated method stub
 		TipoAccion resultado = null;
 		try {
-			resultado = conexion.find(TipoAccion.class, tipo);			
+			resultado = conexion.find(TipoAccion.class, String.valueOf(tipo));			
 			
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -101,7 +101,7 @@ public class AccesoDatos {
 		try {
 			Query consulta = conexion.createQuery(
 					"from Jugador "
-					+ "where codigo = ?1 and"
+					+ "where codigo = ?1 and "
 					+ "equipo = ?2 or equipo = ?3");	
 			consulta.setParameter(1, codigoJ);
 			consulta.setParameter(2, local);
@@ -114,6 +114,51 @@ public class AccesoDatos {
 			
 		} catch (Exception e) {
 			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public boolean registrarAccion(Partido partidoSeleccionado, Jugador j, TipoAccion tipoAccion) {
+		// TODO Auto-generated method stub
+		boolean resultado = false;
+		try {
+			Accion a = new Accion();
+			a.setTipoAccion(tipoAccion);
+			a.setPartido(partidoSeleccionado);
+			a.setJugador(j);
+			a.setAnulada(false);
+			partidoSeleccionado.getAcciones().add(a);
+			conexion.getTransaction().begin();
+			conexion.getTransaction().commit();
+			conexion.clear();
+			resultado = true;
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			conexion.getTransaction().rollback();
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public boolean anularAccion(Partido partidoSeleccionado, int codigo) {
+		// TODO Auto-generated method stub
+		boolean resultado = false;
+		try {
+			//buscamos la acción en la lista de acciones del partido
+			for(Accion a:partidoSeleccionado.getAcciones()) {
+				if(a.getCodigo() == codigo) {
+					a.setAnulada(true);
+					conexion.getTransaction().begin();
+					conexion.getTransaction().commit();
+					conexion.clear();
+					return true;					
+				}
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			conexion.getTransaction().rollback();
 			e.printStackTrace();
 		}
 		return resultado;
