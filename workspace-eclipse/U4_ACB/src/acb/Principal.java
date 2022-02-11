@@ -44,16 +44,58 @@ public class Principal {
 						break;
 					}
 					case 4: {
-						
+						borrarPartido();
 						break;
 					}
 					case 5: {
-						
+						estadistica();
 						break;
 					}
 				}
 			} while (opcion != 0);
 			ad.cerrar();
+		}
+	}
+
+	private static void estadistica() {
+		// TODO Auto-generated method stub
+		if(partidoSeleccionado!=null) {
+			List<Object[]> datos = ad.obtenerEstadistica(partidoSeleccionado);
+			for(Object[] d:datos) {
+				System.out.println("PuntosLocal:" + d[0]+
+						"\tPuntosVisitante:" + d[1] + 
+						"\tCanastas1Local:" + d[2] +
+						"\tCanastas1Visitante:" + d[3] +
+						"\tCanastas2Local:" + d[4] +
+						"\tCanastas2Visitante:" + d[5] +
+						"\tCanastas3Local:" + d[6] +
+						"\tCanastas3Visitante:" + d[7]);
+			}
+		}
+		else {
+			System.out.println("Error, selecciona partido");
+		}
+	}
+
+	private static void borrarPartido() {
+		// TODO Auto-generated method stub
+		mostrarPartidos();
+		System.out.println("Introduce código de partido a borrar");
+		int codigo = t.nextInt(); t.nextLine();
+		Partido p = ad.obtenerPartido(codigo);
+		if(p!=null) {
+			//Comprobar si tiene acciones
+			if(p.getAcciones().isEmpty()) {
+				if(!ad.borrarPartido(p)) {
+					System.out.println("Error al borrar el partido");
+				}
+			}
+			else {
+				System.out.println("Error, no se puede borrar porque hay acciones");
+			}
+		}
+		else {
+			System.out.println("Error, el partido no existe");
 		}
 	}
 
