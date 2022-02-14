@@ -9007,3 +9007,2702 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-08 12:32:27.911
 !MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 08:52:15.672
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 08:52:15.674
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 08:52:19.424
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 08:52:19.425
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 08:52:20.608
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 08:52:20.610
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 08:57:38.778
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 08:57:38.779
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 08:57:57.281
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 08:57:57.282
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:02:23.189
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:02:23.190
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:02:52.474
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:02:52.476
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:04:25.617
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:04:25.618
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:08:12.298
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:08:12.299
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:08:20.033
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:08:20.033
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:09:22.787
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:09:22.788
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:09:49.093
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:09:49.097
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:11:52.762
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:11:52.764
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:12:20.171
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:12:20.172
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:22:17.465
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:22:17.466
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.ui.workbench.texteditor 4 0 2022-02-14 09:22:44.804
+!MESSAGE 
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.ui.texteditor.ITextEditor.isDirty()" because "this.fTextEditor" is null
+	at org.eclipse.ui.texteditor.AbstractTextEditor$TextEditorSavable.isDirty(AbstractTextEditor.java:7165)
+	at org.eclipse.ui.internal.Workbench.getFilteredSaveables(Workbench.java:3447)
+	at org.eclipse.ui.internal.Workbench.saveAll(Workbench.java:3420)
+	at org.eclipse.ui.ide.IDE$1.run(IDE.java:1494)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.ide.IDE.saveAllEditors(IDE.java:1482)
+	at org.eclipse.ui.actions.CloseResourceAction.run(CloseResourceAction.java:190)
+	at org.eclipse.ui.actions.BaseSelectionListenerAction.runWithEvent(BaseSelectionListenerAction.java:171)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:580)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:414)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4209)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1043)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4026)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3626)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:654)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1462)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-02-14 09:22:46.484
+!MESSAGE Launch configuration Principal (14) references closed project ExamenTallerDani
+!STACK 1
+org.eclipse.core.runtime.CoreException: Launch configuration Principal (14) references closed project ExamenTallerDani
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1843)
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1715)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:59)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationChanged(MavenLaunchConfigurationListener.java:46)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:225)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:209)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setDirty(LaunchConfigurationWorkingCopy.java:523)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setAttribute(LaunchConfigurationWorkingCopy.java:411)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:401)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:427)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.mavenProjectChanged(MavenLaunchConfigurationListener.java:130)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:824)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:991)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.lambda$0(ProjectRegistryRefreshJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.run(ProjectRegistryRefreshJob.java:84)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.launching 4 124 2022-02-14 09:22:46.485
+!MESSAGE Launch configuration Principal (14) references closed project ExamenTallerDani
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-02-14 09:22:46.486
+!MESSAGE Launch configuration Principal (14) references closed project ExamenTallerDani
+!STACK 1
+org.eclipse.core.runtime.CoreException: Launch configuration Principal (14) references closed project ExamenTallerDani
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1843)
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1715)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:59)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationChanged(MavenLaunchConfigurationListener.java:46)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:225)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:209)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setDirty(LaunchConfigurationWorkingCopy.java:523)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setAttribute(LaunchConfigurationWorkingCopy.java:411)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:402)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:427)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.mavenProjectChanged(MavenLaunchConfigurationListener.java:130)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:824)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:991)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.lambda$0(ProjectRegistryRefreshJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.run(ProjectRegistryRefreshJob.java:84)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.launching 4 124 2022-02-14 09:22:46.486
+!MESSAGE Launch configuration Principal (14) references closed project ExamenTallerDani
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-02-14 09:22:46.493
+!MESSAGE Launch configuration Principal (14) references closed project ExamenTallerDani
+!STACK 1
+org.eclipse.core.runtime.CoreException: Launch configuration Principal (14) references closed project ExamenTallerDani
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1843)
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1715)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:59)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationChanged(MavenLaunchConfigurationListener.java:46)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:225)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:209)
+	at org.eclipse.debug.internal.core.LaunchManager.launchConfigurationChanged(LaunchManager.java:2128)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.writeNewFile(LaunchConfigurationWorkingCopy.java:376)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave0(LaunchConfigurationWorkingCopy.java:259)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave(LaunchConfigurationWorkingCopy.java:229)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave(LaunchConfigurationWorkingCopy.java:187)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:403)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:427)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.mavenProjectChanged(MavenLaunchConfigurationListener.java:130)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:824)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:991)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.lambda$0(ProjectRegistryRefreshJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.run(ProjectRegistryRefreshJob.java:84)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.launching 4 124 2022-02-14 09:22:46.493
+!MESSAGE Launch configuration Principal (14) references closed project ExamenTallerDani
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:25:20.662
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:25:20.663
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.ui.workbench.texteditor 4 0 2022-02-14 09:33:40.486
+!MESSAGE 
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.ui.texteditor.ITextEditor.isDirty()" because "this.fTextEditor" is null
+	at org.eclipse.ui.texteditor.AbstractTextEditor$TextEditorSavable.isDirty(AbstractTextEditor.java:7165)
+	at org.eclipse.ui.internal.Workbench.getFilteredSaveables(Workbench.java:3447)
+	at org.eclipse.ui.internal.Workbench.saveAll(Workbench.java:3420)
+	at org.eclipse.ui.ide.IDE$1.run(IDE.java:1494)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.ide.IDE.saveAllEditors(IDE.java:1482)
+	at org.eclipse.ui.actions.CloseResourceAction.run(CloseResourceAction.java:190)
+	at org.eclipse.ui.actions.BaseSelectionListenerAction.runWithEvent(BaseSelectionListenerAction.java:171)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:580)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:414)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4209)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1043)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4026)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3626)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:654)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1462)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-02-14 09:33:41.622
+!MESSAGE Launch configuration Principal (14) references closed project ExamenTallerDani
+!STACK 1
+org.eclipse.core.runtime.CoreException: Launch configuration Principal (14) references closed project ExamenTallerDani
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1843)
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1715)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:59)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationChanged(MavenLaunchConfigurationListener.java:46)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:225)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:209)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setDirty(LaunchConfigurationWorkingCopy.java:523)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setAttribute(LaunchConfigurationWorkingCopy.java:411)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:401)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:427)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.mavenProjectChanged(MavenLaunchConfigurationListener.java:130)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:824)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:991)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.lambda$0(ProjectRegistryRefreshJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.run(ProjectRegistryRefreshJob.java:84)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.launching 4 124 2022-02-14 09:33:41.622
+!MESSAGE Launch configuration Principal (14) references closed project ExamenTallerDani
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-02-14 09:33:41.623
+!MESSAGE Launch configuration Principal (14) references closed project ExamenTallerDani
+!STACK 1
+org.eclipse.core.runtime.CoreException: Launch configuration Principal (14) references closed project ExamenTallerDani
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1843)
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1715)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:59)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationChanged(MavenLaunchConfigurationListener.java:46)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:225)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:209)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setDirty(LaunchConfigurationWorkingCopy.java:523)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setAttribute(LaunchConfigurationWorkingCopy.java:411)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:402)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:427)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.mavenProjectChanged(MavenLaunchConfigurationListener.java:130)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:824)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:991)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.lambda$0(ProjectRegistryRefreshJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.run(ProjectRegistryRefreshJob.java:84)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.launching 4 124 2022-02-14 09:33:41.623
+!MESSAGE Launch configuration Principal (14) references closed project ExamenTallerDani
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-02-14 09:33:41.626
+!MESSAGE Launch configuration Principal (14) references closed project ExamenTallerDani
+!STACK 1
+org.eclipse.core.runtime.CoreException: Launch configuration Principal (14) references closed project ExamenTallerDani
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1843)
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1715)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:59)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationChanged(MavenLaunchConfigurationListener.java:46)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:225)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:209)
+	at org.eclipse.debug.internal.core.LaunchManager.launchConfigurationChanged(LaunchManager.java:2128)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.writeNewFile(LaunchConfigurationWorkingCopy.java:376)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave0(LaunchConfigurationWorkingCopy.java:259)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave(LaunchConfigurationWorkingCopy.java:229)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave(LaunchConfigurationWorkingCopy.java:187)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:403)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:427)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.mavenProjectChanged(MavenLaunchConfigurationListener.java:130)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:824)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:991)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.lambda$0(ProjectRegistryRefreshJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.run(ProjectRegistryRefreshJob.java:84)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.launching 4 124 2022-02-14 09:33:41.626
+!MESSAGE Launch configuration Principal (14) references closed project ExamenTallerDani
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:35:23.282
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:35:23.285
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:35:24.446
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:35:24.447
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:35:31.796
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:35:31.797
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:35:32.957
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:35:32.958
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:37:45.742
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:37:45.743
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:38:43.734
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:38:43.735
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:40:59.876
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:40:59.878
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:41:19.470
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:41:19.471
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:42:32.211
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:42:32.212
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:44:22.572
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:44:22.573
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:45:06.523
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:45:06.524
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:50:16.962
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:50:16.963
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:50:48.948
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 09:50:48.949
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 10:05:21.626
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 10:05:21.627
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 10:10:23.335
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 10:10:23.336
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 10:14:01.311
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 10:14:01.312
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 10:14:23.336
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 10:14:23.336
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 10:15:04.098
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 10:15:04.099
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-02-14 10:17:48.288
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package saneamiento;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+
+public class AccesoDatos {
+	static SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yy");
+	
+	//declaramos una variable donde almacenaremos la conexion
+	private EntityManager conexion = null;
+
+	//en el constructor de la conexion creamos la conexion con la unidad de persistencia
+	public AccesoDatos() {
+		try {
+			conexion = Persistence.createEntityManagerFactory("UP_SANEAMIENTOS").createEntityManager();
+		} catch (Exception e) {
+			e.printStackTrace();
+			// TODO: handle exception
+		}
+	}
+
+	public void cerrar() {
+		try {
+			conexion.close();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+	public EntityManager getConexion() {
+		return conexion;
+	}
+
+	public void setConexion(EntityManager conexion) {
+		this.conexion = conexion;
+	}
+
+	public List<Veterinario> obtenerVeterinarios() {
+		List<Veterinario> resultado = new ArrayList<>();
+		
+		try {
+			Query consulta = conexion.createQuery("from Veterinario"); //nombre de la clase, no de la tabla
+			resultado = consulta.getResultList();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		return resultado;
+	}
+
+	public Veterinario obtenerVeterinario(int numColegiado) {
+		Veterinario resultado = null;
+		try {
+			resultado = conexion.find(Veterinario.class, numColegiado);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public boolean crearSaneamiento(Veterinario v, Date fecha, String codigo) {
+		boolean resultado = false;
+		try {
+			Saneamiento s = new Saneamiento(codigo,fecha,v);
+			
+			conexion.getTransaction().begin();
+			conexion.persist(s);
+			
+			
+			List<Animal> listaAnimales = obtenerAnimales(); 
+			
+			
+				for(Animal a:listaAnimales) {
+					ResultadoSaneamiento rs=new ResultadoSaneamiento();
+					SaneamientoAnimal sa=new SaneamientoAnimal(s,a);
+					rs.setSaneamientoAnimal(sa);
+					rs.setTuberculosis(false);
+					rs.setBrucelosis(false);
+					rs.setFechaResultado(null);
+					s.getResultados().add(rs);
+					
+				}
+			
+			conexion.getTransaction().commit();
+			conexion.clear();
+			resultado = true;
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+			conexion.getTransaction().rollback();
+		}
+		return resultado;
+	}
+
+	public boolean insertarRegistrosAnimales(String codigo) {
+		boolean resultado = false;
+		Saneamiento s = obtenerSaneamiento(codigo);
+		List<Animal> listaAnimales = obtenerAnimales(); 
+		
+		try {
+			for(Animal a:listaAnimales) {
+				ResultadoSaneamiento rs=new ResultadoSaneamiento();
+				SaneamientoAnimal sa=new SaneamientoAnimal(s,a);
+				rs.setSaneamientoAnimal(sa);
+				rs.setTuberculosis(false);
+				rs.setBrucelosis(false);
+				rs.setFechaResultado(null);
+				
+				conexion.getTransaction().begin();
+				conexion.persist(rs);
+				conexion.getTransaction().commit();
+				conexion.clear();
+			}
+			resultado=true;
+ 		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	private List<Animal> obtenerAnimales() {
+		List<Animal> resultado = new ArrayList<>();
+		try {
+			Query consulta = conexion.createQuery("from Animal"); //nombre de la clase, no de la tabla
+			resultado = consulta.getResultList();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public Saneamiento obtenerSaneamiento(String codigo) {
+		Saneamiento resultado = null;
+		try {
+			resultado = conexion.find(Saneamiento.class, codigo);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+	
+	public List<Object[]> obtenerEstadistica(){
+		
+		
+		
+			return datosPorCadaAnimal();
+		
+	}
+	
+	public List<Animal> animalesDeUnSaneamiento(Saneamiento s){
+		List<Animal> resultado = null;
+		try {
+			Query consulta = conexion.createQuery("select rs.saneamientoAnimal.animal from ResultadoSaneamiento as rs where rs.saneamientoAnimal.saneamiento.id=?1");
+			consulta.setParameter(1, s.getId());
+			resultado  = consulta.getResultList();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+	
+	private List<Object[]> datosPorCadaAnimal() {
+		List<Object[]> resultado = null;
+		try {
+			//Al hacer un inner join y haber campos de varias tablas, será necesario poner la dirección de memoria completa al campo
+			//Query consulta = conexion.createQuery(""
+					+ "select rs.saneamientoAnimal.animal.codigo, "
+					+ "count(id), "
+					+ "max(s.fecha), "
+					+ "min(s.fecha) from ResultadoSaneamiento as rs "
+					+ "inner join Saneamiento as s "
+					+ "on rs.saneamientoAnimal.saneamiento=s.id "
+					+ "group by rs.saneamientoAnimal.animal.codigo");
+			//consulta.setParameter(1, a.getCodigo());
+			resultado = consulta.getResultList();
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public List<Saneamiento> obtenerSaneamientos() {
+		List<Saneamiento> resultado = new ArrayList<>();
+		try {
+			Query consulta = conexion.createQuery("from Saneamiento"); //nombre de la clase, no de la tabla
+			resultado = consulta.getResultList();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public boolean registrarAnalisis(Saneamiento s, Animal a, boolean tuberculosis, boolean brucelosis, Date date) {
+		boolean resultado=false;
+		try {
+			ResultadoSaneamiento rs = obtenerResultadoSaneamiento(s,a);
+			
+			rs.setTuberculosis(tuberculosis);
+			rs.setBrucelosis(brucelosis);
+			rs.setFechaResultado(date);
+			
+			conexion.getTransaction().begin();
+			conexion.getTransaction().commit();
+			conexion.clear();
+			resultado = true;
+		}catch(Exception e) {
+			e.printStackTrace();
+			conexion.getTransaction().rollback();
+		}
+		return resultado;
+	}
+
+	private ResultadoSaneamiento obtenerResultadoSaneamiento(Saneamiento s, Animal a) {
+		ResultadoSaneamiento resultado = null;
+		SaneamientoAnimal sa=new SaneamientoAnimal(s,a);
+		try {
+			resultado = conexion.find(ResultadoSaneamiento.class, sa);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public boolean bloquearAnimal(Animal a) {
+		boolean resultado=false;
+		try {
+			//es necesario volver a obtener el objeto ya que el parámetro está desactualizado y
+			//no corresponde con los valores de la base de datos
+			Animal an=obtenerAnimal(a.getCodigo()); 
+			an.setBloqueado(true);
+			
+			conexion.getTransaction().begin();
+			conexion.getTransaction().commit();
+			conexion.clear();
+			resultado = true;
+		}catch(Exception e) {
+			e.printStackTrace();
+			conexion.getTransaction().rollback();
+		}
+		return resultado;
+	}
+
+	private Animal obtenerAnimal(int codigo) {
+		Animal resultado = null;
+		try {
+			resultado = conexion.find(Animal.class, codigo);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public List<Object[]> obtenerDatosAnalisis(Saneamiento s) {
+		List<Object[]> resultado = null;
+		try {
+			//Al hacer un inner join y haber campos de varias tablas, será necesario poner la dirección de memoria completa al campo
+			Query consulta = conexion.createQuery("select a.codigo, a.nombre, a.fechaN, a.raza, a.bloqueado, rs.tuberculosis, rs.brucelosis from Animal as a "
+					+ "inner join ResultadoSaneamiento as rs on rs.saneamientoAnimal.animal=a.codigo where rs.saneamientoAnimal.saneamiento.id=?1");
+			consulta.setParameter(1, s.getId());
+			resultado = consulta.getResultList();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public boolean borrarSaneamiento(Saneamiento s) {
+		boolean resultado=false;
+		try {
+			conexion.getTransaction().begin();
+			borrarResultadoSaneamiento(s); //es necesario hacer el borrado manual del registro en las dos tablas??
+			Query consulta = conexion.createQuery("delete from Saneamiento where id=?1");
+			consulta.setParameter(1, s.getId());
+			consulta.executeUpdate();
+			conexion.getTransaction().commit();
+			conexion.clear();
+			resultado = true;
+		}catch(Exception e) {
+			e.printStackTrace();
+			conexion.getTransaction().rollback();
+		}
+		return resultado;
+	}
+
+	private void borrarResultadoSaneamiento(Saneamiento s) {
+		try {
+			Query consulta = conexion.createQuery("delete from ResultadoSaneamiento where saneamientoAnimal.saneamiento.id=?1");
+			consulta.setParameter(1, s.getId());
+			consulta.executeUpdate();
+		}catch(Exception e) {
+			e.printStackTrace();
+			conexion.getTransaction().rollback();
+		}
+	}
+
+	public Object[] mostrarEstadisticaVeterinario(Veterinario v) {
+		Object[] resultado = null;
+		try {
+			//Al hacer un inner join y haber campos de varias tablas, será necesario poner la dirección de memoria completa al campo
+			Query consulta = conexion.createQuery("select ve.nombre, count(sa.id), "
+					+ "(select count(*) from ResultadoSaneamiento as rs "
+					+ "inner join Saneamiento as s on rs.saneamientoAnimal.saneamiento=s.id "
+					+ "inner join Veterinario as v on s.veterinario=v.colegiado "
+					+ "where tuberculosis=true and colegiado=?1"
+					+ "), "
+					+ "(select count(*) from ResultadoSaneamiento as rs "
+					+ "inner join Saneamiento as s on rs.saneamientoAnimal.saneamiento=s.id "
+					+ "inner join Veterinario as v on s.veterinario=v.colegiado "
+					+ "where brucelosis=true and colegiado=?1"
+					+ ") from Saneamiento as sa inner join Veterinario as ve on sa.veterinario=ve.colegiado "
+					+ "where colegiado=?1");
+			consulta.setParameter(1, v.getColegiado());
+			List<Object[]> tmp=consulta.getResultList();
+			if(tmp.size()>0) {
+				resultado = tmp.get(0);
+			}
+			conexion.clear();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return resultado;
+		
+	}
+
+
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2031)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3795)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1943)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1974)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3052)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3235)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3012)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3347)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1524)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:494)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:113)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2022-02-14 10:17:48.290
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2031)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3795)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1943)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1974)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3052)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3235)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3012)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3347)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1524)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:494)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:113)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2022-02-14 10:17:48.292
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2031)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3795)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1943)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1974)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3052)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3235)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3012)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3347)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1524)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:494)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:113)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-02-14 10:17:48.303
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package saneamiento;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+
+public class AccesoDatos {
+	static SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yy");
+	
+	//declaramos una variable donde almacenaremos la conexion
+	private EntityManager conexion = null;
+
+	//en el constructor de la conexion creamos la conexion con la unidad de persistencia
+	public AccesoDatos() {
+		try {
+			conexion = Persistence.createEntityManagerFactory("UP_SANEAMIENTOS").createEntityManager();
+		} catch (Exception e) {
+			e.printStackTrace();
+			// TODO: handle exception
+		}
+	}
+
+	public void cerrar() {
+		try {
+			conexion.close();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+	public EntityManager getConexion() {
+		return conexion;
+	}
+
+	public void setConexion(EntityManager conexion) {
+		this.conexion = conexion;
+	}
+
+	public List<Veterinario> obtenerVeterinarios() {
+		List<Veterinario> resultado = new ArrayList<>();
+		
+		try {
+			Query consulta = conexion.createQuery("from Veterinario"); //nombre de la clase, no de la tabla
+			resultado = consulta.getResultList();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		return resultado;
+	}
+
+	public Veterinario obtenerVeterinario(int numColegiado) {
+		Veterinario resultado = null;
+		try {
+			resultado = conexion.find(Veterinario.class, numColegiado);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public boolean crearSaneamiento(Veterinario v, Date fecha, String codigo) {
+		boolean resultado = false;
+		try {
+			Saneamiento s = new Saneamiento(codigo,fecha,v);
+			
+			conexion.getTransaction().begin();
+			conexion.persist(s);
+			
+			
+			List<Animal> listaAnimales = obtenerAnimales(); 
+			
+			
+				for(Animal a:listaAnimales) {
+					ResultadoSaneamiento rs=new ResultadoSaneamiento();
+					SaneamientoAnimal sa=new SaneamientoAnimal(s,a);
+					rs.setSaneamientoAnimal(sa);
+					rs.setTuberculosis(false);
+					rs.setBrucelosis(false);
+					rs.setFechaResultado(null);
+					s.getResultados().add(rs);
+					
+				}
+			
+			conexion.getTransaction().commit();
+			conexion.clear();
+			resultado = true;
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+			conexion.getTransaction().rollback();
+		}
+		return resultado;
+	}
+
+	public boolean insertarRegistrosAnimales(String codigo) {
+		boolean resultado = false;
+		Saneamiento s = obtenerSaneamiento(codigo);
+		List<Animal> listaAnimales = obtenerAnimales(); 
+		
+		try {
+			for(Animal a:listaAnimales) {
+				ResultadoSaneamiento rs=new ResultadoSaneamiento();
+				SaneamientoAnimal sa=new SaneamientoAnimal(s,a);
+				rs.setSaneamientoAnimal(sa);
+				rs.setTuberculosis(false);
+				rs.setBrucelosis(false);
+				rs.setFechaResultado(null);
+				
+				conexion.getTransaction().begin();
+				conexion.persist(rs);
+				conexion.getTransaction().commit();
+				conexion.clear();
+			}
+			resultado=true;
+ 		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	private List<Animal> obtenerAnimales() {
+		List<Animal> resultado = new ArrayList<>();
+		try {
+			Query consulta = conexion.createQuery("from Animal"); //nombre de la clase, no de la tabla
+			resultado = consulta.getResultList();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public Saneamiento obtenerSaneamiento(String codigo) {
+		Saneamiento resultado = null;
+		try {
+			resultado = conexion.find(Saneamiento.class, codigo);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+	
+	public List<Object[]> obtenerEstadistica(){
+		
+		
+		
+			return datosPorCadaAnimal();
+		
+	}
+	
+	public List<Animal> animalesDeUnSaneamiento(Saneamiento s){
+		List<Animal> resultado = null;
+		try {
+			Query consulta = conexion.createQuery("select rs.saneamientoAnimal.animal from ResultadoSaneamiento as rs where rs.saneamientoAnimal.saneamiento.id=?1");
+			consulta.setParameter(1, s.getId());
+			resultado  = consulta.getResultList();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+	
+	private List<Object[]> datosPorCadaAnimal() {
+		List<Object[]> resultado = null;
+		try {
+			//Al hacer un inner join y haber campos de varias tablas, será necesario poner la dirección de memoria completa al campo
+			//Query consulta = conexion.createQuery(""
+					+ "select rs.saneamientoAnimal.animal.codigo, "
+					+ "count(id), "
+					+ "max(s.fecha), "
+					+ "min(s.fecha) from ResultadoSaneamiento as rs "
+					+ "inner join Saneamiento as s "
+					+ "on rs.saneamientoAnimal.saneamiento=s.id "
+					+ "group by rs.saneamientoAnimal.animal.codigo");
+			//consulta.setParameter(1, a.getCodigo());
+			resultado = consulta.getResultList();
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public List<Saneamiento> obtenerSaneamientos() {
+		List<Saneamiento> resultado = new ArrayList<>();
+		try {
+			Query consulta = conexion.createQuery("from Saneamiento"); //nombre de la clase, no de la tabla
+			resultado = consulta.getResultList();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public boolean registrarAnalisis(Saneamiento s, Animal a, boolean tuberculosis, boolean brucelosis, Date date) {
+		boolean resultado=false;
+		try {
+			ResultadoSaneamiento rs = obtenerResultadoSaneamiento(s,a);
+			
+			rs.setTuberculosis(tuberculosis);
+			rs.setBrucelosis(brucelosis);
+			rs.setFechaResultado(date);
+			
+			conexion.getTransaction().begin();
+			conexion.getTransaction().commit();
+			conexion.clear();
+			resultado = true;
+		}catch(Exception e) {
+			e.printStackTrace();
+			conexion.getTransaction().rollback();
+		}
+		return resultado;
+	}
+
+	private ResultadoSaneamiento obtenerResultadoSaneamiento(Saneamiento s, Animal a) {
+		ResultadoSaneamiento resultado = null;
+		SaneamientoAnimal sa=new SaneamientoAnimal(s,a);
+		try {
+			resultado = conexion.find(ResultadoSaneamiento.class, sa);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public boolean bloquearAnimal(Animal a) {
+		boolean resultado=false;
+		try {
+			//es necesario volver a obtener el objeto ya que el parámetro está desactualizado y
+			//no corresponde con los valores de la base de datos
+			Animal an=obtenerAnimal(a.getCodigo()); 
+			an.setBloqueado(true);
+			
+			conexion.getTransaction().begin();
+			conexion.getTransaction().commit();
+			conexion.clear();
+			resultado = true;
+		}catch(Exception e) {
+			e.printStackTrace();
+			conexion.getTransaction().rollback();
+		}
+		return resultado;
+	}
+
+	private Animal obtenerAnimal(int codigo) {
+		Animal resultado = null;
+		try {
+			resultado = conexion.find(Animal.class, codigo);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public List<Object[]> obtenerDatosAnalisis(Saneamiento s) {
+		List<Object[]> resultado = null;
+		try {
+			//Al hacer un inner join y haber campos de varias tablas, será necesario poner la dirección de memoria completa al campo
+			Query consulta = conexion.createQuery("select a.codigo, a.nombre, a.fechaN, a.raza, a.bloqueado, rs.tuberculosis, rs.brucelosis from Animal as a "
+					+ "inner join ResultadoSaneamiento as rs on rs.saneamientoAnimal.animal=a.codigo where rs.saneamientoAnimal.saneamiento.id=?1");
+			consulta.setParameter(1, s.getId());
+			resultado = consulta.getResultList();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public boolean borrarSaneamiento(Saneamiento s) {
+		boolean resultado=false;
+		try {
+			conexion.getTransaction().begin();
+			borrarResultadoSaneamiento(s); //es necesario hacer el borrado manual del registro en las dos tablas??
+			Query consulta = conexion.createQuery("delete from Saneamiento where id=?1");
+			consulta.setParameter(1, s.getId());
+			consulta.executeUpdate();
+			conexion.getTransaction().commit();
+			conexion.clear();
+			resultado = true;
+		}catch(Exception e) {
+			e.printStackTrace();
+			conexion.getTransaction().rollback();
+		}
+		return resultado;
+	}
+
+	private void borrarResultadoSaneamiento(Saneamiento s) {
+		try {
+			Query consulta = conexion.createQuery("delete from ResultadoSaneamiento where saneamientoAnimal.saneamiento.id=?1");
+			consulta.setParameter(1, s.getId());
+			consulta.executeUpdate();
+		}catch(Exception e) {
+			e.printStackTrace();
+			conexion.getTransaction().rollback();
+		}
+	}
+
+	public Object[] mostrarEstadisticaVeterinario(Veterinario v) {
+		Object[] resultado = null;
+		try {
+			//Al hacer un inner join y haber campos de varias tablas, será necesario poner la dirección de memoria completa al campo
+			Query consulta = conexion.createQuery("select ve.nombre, count(sa.id), "
+					+ "(select count(*) from ResultadoSaneamiento as rs "
+					+ "inner join Saneamiento as s on rs.saneamientoAnimal.saneamiento=s.id "
+					+ "inner join Veterinario as v on s.veterinario=v.colegiado "
+					+ "where tuberculosis=true and colegiado=?1"
+					+ "), "
+					+ "(select count(*) from ResultadoSaneamiento as rs "
+					+ "inner join Saneamiento as s on rs.saneamientoAnimal.saneamiento=s.id "
+					+ "inner join Veterinario as v on s.veterinario=v.colegiado "
+					+ "where brucelosis=true and colegiado=?1"
+					+ ") from Saneamiento as sa inner join Veterinario as ve on sa.veterinario=ve.colegiado "
+					+ "where colegiado=?1");
+			consulta.setParameter(1, v.getColegiado());
+			List<Object[]> tmp=consulta.getResultList();
+			if(tmp.size()>0) {
+				resultado = tmp.get(0);
+			}
+			conexion.clear();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return resultado;
+		
+	}
+
+
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2031)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3795)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1943)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1974)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3052)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3235)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3012)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3347)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1524)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1231)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:820)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:272)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:264)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:197)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:187)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 2 2022-02-14 10:17:48.304
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.core.manipulation".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2031)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3795)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1943)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1974)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3052)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3235)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3012)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3347)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1524)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1231)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:820)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:272)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:264)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:197)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:187)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 0 2022-02-14 10:17:48.304
+!MESSAGE Error in JDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2031)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3795)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1943)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1974)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3052)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3235)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3012)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3347)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1524)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1231)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:820)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:272)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:264)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:197)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:187)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-02-14 10:17:50.815
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package saneamiento;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+
+public class AccesoDatos {
+	static SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yy");
+	
+	//declaramos una variable donde almacenaremos la conexion
+	private EntityManager conexion = null;
+
+	//en el constructor de la conexion creamos la conexion con la unidad de persistencia
+	public AccesoDatos() {
+		try {
+			conexion = Persistence.createEntityManagerFactory("UP_SANEAMIENTOS").createEntityManager();
+		} catch (Exception e) {
+			e.printStackTrace();
+			// TODO: handle exception
+		}
+	}
+
+	public void cerrar() {
+		try {
+			conexion.close();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+	public EntityManager getConexion() {
+		return conexion;
+	}
+
+	public void setConexion(EntityManager conexion) {
+		this.conexion = conexion;
+	}
+
+	public List<Veterinario> obtenerVeterinarios() {
+		List<Veterinario> resultado = new ArrayList<>();
+		
+		try {
+			Query consulta = conexion.createQuery("from Veterinario"); //nombre de la clase, no de la tabla
+			resultado = consulta.getResultList();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		return resultado;
+	}
+
+	public Veterinario obtenerVeterinario(int numColegiado) {
+		Veterinario resultado = null;
+		try {
+			resultado = conexion.find(Veterinario.class, numColegiado);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public boolean crearSaneamiento(Veterinario v, Date fecha, String codigo) {
+		boolean resultado = false;
+		try {
+			Saneamiento s = new Saneamiento(codigo,fecha,v);
+			
+			conexion.getTransaction().begin();
+			conexion.persist(s);
+			
+			
+			List<Animal> listaAnimales = obtenerAnimales(); 
+			
+			
+				for(Animal a:listaAnimales) {
+					ResultadoSaneamiento rs=new ResultadoSaneamiento();
+					SaneamientoAnimal sa=new SaneamientoAnimal(s,a);
+					rs.setSaneamientoAnimal(sa);
+					rs.setTuberculosis(false);
+					rs.setBrucelosis(false);
+					rs.setFechaResultado(null);
+					s.getResultados().add(rs);
+					
+				}
+			
+			conexion.getTransaction().commit();
+			conexion.clear();
+			resultado = true;
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+			conexion.getTransaction().rollback();
+		}
+		return resultado;
+	}
+
+	public boolean insertarRegistrosAnimales(String codigo) {
+		boolean resultado = false;
+		Saneamiento s = obtenerSaneamiento(codigo);
+		List<Animal> listaAnimales = obtenerAnimales(); 
+		
+		try {
+			for(Animal a:listaAnimales) {
+				ResultadoSaneamiento rs=new ResultadoSaneamiento();
+				SaneamientoAnimal sa=new SaneamientoAnimal(s,a);
+				rs.setSaneamientoAnimal(sa);
+				rs.setTuberculosis(false);
+				rs.setBrucelosis(false);
+				rs.setFechaResultado(null);
+				
+				conexion.getTransaction().begin();
+				conexion.persist(rs);
+				conexion.getTransaction().commit();
+				conexion.clear();
+			}
+			resultado=true;
+ 		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	private List<Animal> obtenerAnimales() {
+		List<Animal> resultado = new ArrayList<>();
+		try {
+			Query consulta = conexion.createQuery("from Animal"); //nombre de la clase, no de la tabla
+			resultado = consulta.getResultList();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public Saneamiento obtenerSaneamiento(String codigo) {
+		Saneamiento resultado = null;
+		try {
+			resultado = conexion.find(Saneamiento.class, codigo);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+	
+	public List<Object[]> obtenerEstadistica(){
+		
+		
+		
+			return datosPorCadaAnimal();
+		
+	}
+	
+	public List<Animal> animalesDeUnSaneamiento(Saneamiento s){
+		List<Animal> resultado = null;
+		try {
+			Query consulta = conexion.createQuery("select rs.saneamientoAnimal.animal from ResultadoSaneamiento as rs where rs.saneamientoAnimal.saneamiento.id=?1");
+			consulta.setParameter(1, s.getId());
+			resultado  = consulta.getResultList();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+	
+	private List<Object[]> datosPorCadaAnimal() {
+		List<Object[]> resultado = null;
+		try {
+			//Al hacer un inner join y haber campos de varias tablas, será necesario poner la dirección de memoria completa al campo
+			//Query consulta = conexion.createQuery(""
+					+ "select rs.saneamientoAnimal.animal.codigo, "
+					+ "count(id), "
+					+ "max(s.fecha), "
+					+ "min(s.fecha) from ResultadoSaneamiento as rs "
+					+ "inner join Saneamiento as s "
+					+ "on rs.saneamientoAnimal.saneamiento=s.id "
+					+ "group by rs.saneamientoAnimal.animal.codigo");
+			//consulta.setParameter(1, a.getCodigo());
+			resultado = consulta.getResultList();
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public List<Saneamiento> obtenerSaneamientos() {
+		List<Saneamiento> resultado = new ArrayList<>();
+		try {
+			Query consulta = conexion.createQuery("from Saneamiento"); //nombre de la clase, no de la tabla
+			resultado = consulta.getResultList();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public boolean registrarAnalisis(Saneamiento s, Animal a, boolean tuberculosis, boolean brucelosis, Date date) {
+		boolean resultado=false;
+		try {
+			ResultadoSaneamiento rs = obtenerResultadoSaneamiento(s,a);
+			
+			rs.setTuberculosis(tuberculosis);
+			rs.setBrucelosis(brucelosis);
+			rs.setFechaResultado(date);
+			
+			conexion.getTransaction().begin();
+			conexion.getTransaction().commit();
+			conexion.clear();
+			resultado = true;
+		}catch(Exception e) {
+			e.printStackTrace();
+			conexion.getTransaction().rollback();
+		}
+		return resultado;
+	}
+
+	private ResultadoSaneamiento obtenerResultadoSaneamiento(Saneamiento s, Animal a) {
+		ResultadoSaneamiento resultado = null;
+		SaneamientoAnimal sa=new SaneamientoAnimal(s,a);
+		try {
+			resultado = conexion.find(ResultadoSaneamiento.class, sa);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public boolean bloquearAnimal(Animal a) {
+		boolean resultado=false;
+		try {
+			//es necesario volver a obtener el objeto ya que el parámetro está desactualizado y
+			//no corresponde con los valores de la base de datos
+			Animal an=obtenerAnimal(a.getCodigo()); 
+			an.setBloqueado(true);
+			
+			conexion.getTransaction().begin();
+			conexion.getTransaction().commit();
+			conexion.clear();
+			resultado = true;
+		}catch(Exception e) {
+			e.printStackTrace();
+			conexion.getTransaction().rollback();
+		}
+		return resultado;
+	}
+
+	private Animal obtenerAnimal(int codigo) {
+		Animal resultado = null;
+		try {
+			resultado = conexion.find(Animal.class, codigo);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public List<Object[]> obtenerDatosAnalisis(Saneamiento s) {
+		List<Object[]> resultado = null;
+		try {
+			//Al hacer un inner join y haber campos de varias tablas, será necesario poner la dirección de memoria completa al campo
+			Query consulta = conexion.createQuery("select a.codigo, a.nombre, a.fechaN, a.raza, a.bloqueado, rs.tuberculosis, rs.brucelosis from Animal as a "
+					+ "inner join ResultadoSaneamiento as rs on rs.saneamientoAnimal.animal=a.codigo where rs.saneamientoAnimal.saneamiento.id=?1");
+			consulta.setParameter(1, s.getId());
+			resultado = consulta.getResultList();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public boolean borrarSaneamiento(Saneamiento s) {
+		boolean resultado=false;
+		try {
+			conexion.getTransaction().begin();
+			borrarResultadoSaneamiento(s); //es necesario hacer el borrado manual del registro en las dos tablas??
+			Query consulta = conexion.createQuery("delete from Saneamiento where id=?1");
+			consulta.setParameter(1, s.getId());
+			consulta.executeUpdate();
+			conexion.getTransaction().commit();
+			conexion.clear();
+			resultado = true;
+		}catch(Exception e) {
+			e.printStackTrace();
+			conexion.getTransaction().rollback();
+		}
+		return resultado;
+	}
+
+	private void borrarResultadoSaneamiento(Saneamiento s) {
+		try {
+			Query consulta = conexion.createQuery("delete from ResultadoSaneamiento where saneamientoAnimal.saneamiento.id=?1");
+			consulta.setParameter(1, s.getId());
+			consulta.executeUpdate();
+		}catch(Exception e) {
+			e.printStackTrace();
+			conexion.getTransaction().rollback();
+		}
+	}
+
+	public Object[] mostrarEstadisticaVeterinario(Veterinario v) {
+		Object[] resultado = null;
+		try {
+			//Al hacer un inner join y haber campos de varias tablas, será necesario poner la dirección de memoria completa al campo
+			Query consulta = conexion.createQuery("select ve.nombre, count(sa.id), "
+					+ "(select count(*) from ResultadoSaneamiento as rs "
+					+ "inner join Saneamiento as s on rs.saneamientoAnimal.saneamiento=s.id "
+					+ "inner join Veterinario as v on s.veterinario=v.colegiado "
+					+ "where tuberculosis=true and colegiado=?1"
+					+ "), "
+					+ "(select count(*) from ResultadoSaneamiento as rs "
+					+ "inner join Saneamiento as s on rs.saneamientoAnimal.saneamiento=s.id "
+					+ "inner join Veterinario as v on s.veterinario=v.colegiado "
+					+ "where brucelosis=true and colegiado=?1"
+					+ ") from Saneamiento as sa inner join Veterinario as ve on sa.veterinario=ve.colegiado "
+					+ "where colegiado=?1");
+			consulta.setParameter(1, v.getColegiado());
+			List<Object[]> tmp=consulta.getResultList();
+			if(tmp.size()>0) {
+				resultado = tmp.get(0);
+			}
+			conexion.clear();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return resultado;
+		
+	}
+
+
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2031)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3795)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1943)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1974)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3052)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3235)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3012)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3347)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1524)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:494)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:113)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2022-02-14 10:17:50.815
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2031)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3795)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1943)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1974)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3052)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3235)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3012)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3347)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1524)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:494)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:113)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2022-02-14 10:17:50.816
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2031)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3795)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1943)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1974)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3052)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3235)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3012)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3347)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1524)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:494)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:113)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-02-14 10:17:51.168
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package saneamiento;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+
+public class AccesoDatos {
+	static SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yy");
+	
+	//declaramos una variable donde almacenaremos la conexion
+	private EntityManager conexion = null;
+
+	//en el constructor de la conexion creamos la conexion con la unidad de persistencia
+	public AccesoDatos() {
+		try {
+			conexion = Persistence.createEntityManagerFactory("UP_SANEAMIENTOS").createEntityManager();
+		} catch (Exception e) {
+			e.printStackTrace();
+			// TODO: handle exception
+		}
+	}
+
+	public void cerrar() {
+		try {
+			conexion.close();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+	public EntityManager getConexion() {
+		return conexion;
+	}
+
+	public void setConexion(EntityManager conexion) {
+		this.conexion = conexion;
+	}
+
+	public List<Veterinario> obtenerVeterinarios() {
+		List<Veterinario> resultado = new ArrayList<>();
+		
+		try {
+			Query consulta = conexion.createQuery("from Veterinario"); //nombre de la clase, no de la tabla
+			resultado = consulta.getResultList();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		return resultado;
+	}
+
+	public Veterinario obtenerVeterinario(int numColegiado) {
+		Veterinario resultado = null;
+		try {
+			resultado = conexion.find(Veterinario.class, numColegiado);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public boolean crearSaneamiento(Veterinario v, Date fecha, String codigo) {
+		boolean resultado = false;
+		try {
+			Saneamiento s = new Saneamiento(codigo,fecha,v);
+			
+			conexion.getTransaction().begin();
+			conexion.persist(s);
+			
+			
+			List<Animal> listaAnimales = obtenerAnimales(); 
+			
+			
+				for(Animal a:listaAnimales) {
+					ResultadoSaneamiento rs=new ResultadoSaneamiento();
+					SaneamientoAnimal sa=new SaneamientoAnimal(s,a);
+					rs.setSaneamientoAnimal(sa);
+					rs.setTuberculosis(false);
+					rs.setBrucelosis(false);
+					rs.setFechaResultado(null);
+					s.getResultados().add(rs);
+					
+				}
+			
+			conexion.getTransaction().commit();
+			conexion.clear();
+			resultado = true;
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+			conexion.getTransaction().rollback();
+		}
+		return resultado;
+	}
+
+	public boolean insertarRegistrosAnimales(String codigo) {
+		boolean resultado = false;
+		Saneamiento s = obtenerSaneamiento(codigo);
+		List<Animal> listaAnimales = obtenerAnimales(); 
+		
+		try {
+			for(Animal a:listaAnimales) {
+				ResultadoSaneamiento rs=new ResultadoSaneamiento();
+				SaneamientoAnimal sa=new SaneamientoAnimal(s,a);
+				rs.setSaneamientoAnimal(sa);
+				rs.setTuberculosis(false);
+				rs.setBrucelosis(false);
+				rs.setFechaResultado(null);
+				
+				conexion.getTransaction().begin();
+				conexion.persist(rs);
+				conexion.getTransaction().commit();
+				conexion.clear();
+			}
+			resultado=true;
+ 		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	private List<Animal> obtenerAnimales() {
+		List<Animal> resultado = new ArrayList<>();
+		try {
+			Query consulta = conexion.createQuery("from Animal"); //nombre de la clase, no de la tabla
+			resultado = consulta.getResultList();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public Saneamiento obtenerSaneamiento(String codigo) {
+		Saneamiento resultado = null;
+		try {
+			resultado = conexion.find(Saneamiento.class, codigo);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+	
+	public List<Object[]> obtenerEstadistica(){
+		
+		
+		
+			return datosPorCadaAnimal();
+		
+	}
+	
+	public List<Animal> animalesDeUnSaneamiento(Saneamiento s){
+		List<Animal> resultado = null;
+		try {
+			Query consulta = conexion.createQuery("select rs.saneamientoAnimal.animal from ResultadoSaneamiento as rs where rs.saneamientoAnimal.saneamiento.id=?1");
+			consulta.setParameter(1, s.getId());
+			resultado  = consulta.getResultList();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+	
+	private List<Object[]> datosPorCadaAnimal() {
+		List<Object[]> resultado = null;
+		try {
+			//Al hacer un inner join y haber campos de varias tablas, será necesario poner la dirección de memoria completa al campo
+			//Query consulta = conexion.createQuery(""
+					+ "select rs.saneamientoAnimal.animal.codigo, "
+					+ "count(id), "
+					+ "max(s.fecha), "
+					+ "min(s.fecha) from ResultadoSaneamiento as rs "
+					+ "inner join Saneamiento as s "
+					+ "on rs.saneamientoAnimal.saneamiento=s.id "
+					+ "group by rs.saneamientoAnimal.animal.codigo");
+			//consulta.setParameter(1, a.getCodigo());
+			resultado = consulta.getResultList();
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public List<Saneamiento> obtenerSaneamientos() {
+		List<Saneamiento> resultado = new ArrayList<>();
+		try {
+			Query consulta = conexion.createQuery("from Saneamiento"); //nombre de la clase, no de la tabla
+			resultado = consulta.getResultList();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public boolean registrarAnalisis(Saneamiento s, Animal a, boolean tuberculosis, boolean brucelosis, Date date) {
+		boolean resultado=false;
+		try {
+			ResultadoSaneamiento rs = obtenerResultadoSaneamiento(s,a);
+			
+			rs.setTuberculosis(tuberculosis);
+			rs.setBrucelosis(brucelosis);
+			rs.setFechaResultado(date);
+			
+			conexion.getTransaction().begin();
+			conexion.getTransaction().commit();
+			conexion.clear();
+			resultado = true;
+		}catch(Exception e) {
+			e.printStackTrace();
+			conexion.getTransaction().rollback();
+		}
+		return resultado;
+	}
+
+	private ResultadoSaneamiento obtenerResultadoSaneamiento(Saneamiento s, Animal a) {
+		ResultadoSaneamiento resultado = null;
+		SaneamientoAnimal sa=new SaneamientoAnimal(s,a);
+		try {
+			resultado = conexion.find(ResultadoSaneamiento.class, sa);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public boolean bloquearAnimal(Animal a) {
+		boolean resultado=false;
+		try {
+			//es necesario volver a obtener el objeto ya que el parámetro está desactualizado y
+			//no corresponde con los valores de la base de datos
+			Animal an=obtenerAnimal(a.getCodigo()); 
+			an.setBloqueado(true);
+			
+			conexion.getTransaction().begin();
+			conexion.getTransaction().commit();
+			conexion.clear();
+			resultado = true;
+		}catch(Exception e) {
+			e.printStackTrace();
+			conexion.getTransaction().rollback();
+		}
+		return resultado;
+	}
+
+	private Animal obtenerAnimal(int codigo) {
+		Animal resultado = null;
+		try {
+			resultado = conexion.find(Animal.class, codigo);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public List<Object[]> obtenerDatosAnalisis(Saneamiento s) {
+		List<Object[]> resultado = null;
+		try {
+			//Al hacer un inner join y haber campos de varias tablas, será necesario poner la dirección de memoria completa al campo
+			Query consulta = conexion.createQuery("select a.codigo, a.nombre, a.fechaN, a.raza, a.bloqueado, rs.tuberculosis, rs.brucelosis from Animal as a "
+					+ "inner join ResultadoSaneamiento as rs on rs.saneamientoAnimal.animal=a.codigo where rs.saneamientoAnimal.saneamiento.id=?1");
+			consulta.setParameter(1, s.getId());
+			resultado = consulta.getResultList();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public boolean borrarSaneamiento(Saneamiento s) {
+		boolean resultado=false;
+		try {
+			conexion.getTransaction().begin();
+			borrarResultadoSaneamiento(s); //es necesario hacer el borrado manual del registro en las dos tablas??
+			Query consulta = conexion.createQuery("delete from Saneamiento where id=?1");
+			consulta.setParameter(1, s.getId());
+			consulta.executeUpdate();
+			conexion.getTransaction().commit();
+			conexion.clear();
+			resultado = true;
+		}catch(Exception e) {
+			e.printStackTrace();
+			conexion.getTransaction().rollback();
+		}
+		return resultado;
+	}
+
+	private void borrarResultadoSaneamiento(Saneamiento s) {
+		try {
+			Query consulta = conexion.createQuery("delete from ResultadoSaneamiento where saneamientoAnimal.saneamiento.id=?1");
+			consulta.setParameter(1, s.getId());
+			consulta.executeUpdate();
+		}catch(Exception e) {
+			e.printStackTrace();
+			conexion.getTransaction().rollback();
+		}
+	}
+
+	public Object[] mostrarEstadisticaVeterinario(Veterinario v) {
+		Object[] resultado = null;
+		try {
+			//Al hacer un inner join y haber campos de varias tablas, será necesario poner la dirección de memoria completa al campo
+			Query consulta = conexion.createQuery("select ve.nombre, count(sa.id), "
+					+ "(select count(*) from ResultadoSaneamiento as rs "
+					+ "inner join Saneamiento as s on rs.saneamientoAnimal.saneamiento=s.id "
+					+ "inner join Veterinario as v on s.veterinario=v.colegiado "
+					+ "where tuberculosis=true and colegiado=?1"
+					+ "), "
+					+ "(select count(*) from ResultadoSaneamiento as rs "
+					+ "inner join Saneamiento as s on rs.saneamientoAnimal.saneamiento=s.id "
+					+ "inner join Veterinario as v on s.veterinario=v.colegiado "
+					+ "where brucelosis=true and colegiado=?1"
+					+ ") from Saneamiento as sa inner join Veterinario as ve on sa.veterinario=ve.colegiado "
+					+ "where colegiado=?1");
+			consulta.setParameter(1, v.getColegiado());
+			List<Object[]> tmp=consulta.getResultList();
+			if(tmp.size()>0) {
+				resultado = tmp.get(0);
+			}
+			conexion.clear();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return resultado;
+		
+	}
+
+
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2031)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3795)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1943)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1974)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3052)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3235)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3012)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3347)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1524)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1231)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:820)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:272)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:264)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:197)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 2 2022-02-14 10:17:51.168
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.core.manipulation".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2031)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3795)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1943)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1974)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3052)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3235)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3012)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3347)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1524)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1231)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:820)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:272)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:264)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:197)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 0 2022-02-14 10:17:51.169
+!MESSAGE Error in JDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2031)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3795)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1943)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1974)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3052)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3235)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3012)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3347)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1524)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1231)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:820)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:272)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:264)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:197)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-02-14 10:17:52.039
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package saneamiento;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+
+public class AccesoDatos {
+	static SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yy");
+	
+	//declaramos una variable donde almacenaremos la conexion
+	private EntityManager conexion = null;
+
+	//en el constructor de la conexion creamos la conexion con la unidad de persistencia
+	public AccesoDatos() {
+		try {
+			conexion = Persistence.createEntityManagerFactory("UP_SANEAMIENTOS").createEntityManager();
+		} catch (Exception e) {
+			e.printStackTrace();
+			// TODO: handle exception
+		}
+	}
+
+	public void cerrar() {
+		try {
+			conexion.close();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+	public EntityManager getConexion() {
+		return conexion;
+	}
+
+	public void setConexion(EntityManager conexion) {
+		this.conexion = conexion;
+	}
+
+	public List<Veterinario> obtenerVeterinarios() {
+		List<Veterinario> resultado = new ArrayList<>();
+		
+		try {
+			Query consulta = conexion.createQuery("from Veterinario"); //nombre de la clase, no de la tabla
+			resultado = consulta.getResultList();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		return resultado;
+	}
+
+	public Veterinario obtenerVeterinario(int numColegiado) {
+		Veterinario resultado = null;
+		try {
+			resultado = conexion.find(Veterinario.class, numColegiado);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public boolean crearSaneamiento(Veterinario v, Date fecha, String codigo) {
+		boolean resultado = false;
+		try {
+			Saneamiento s = new Saneamiento(codigo,fecha,v);
+			
+			conexion.getTransaction().begin();
+			conexion.persist(s);
+			
+			
+			List<Animal> listaAnimales = obtenerAnimales(); 
+			
+			
+				for(Animal a:listaAnimales) {
+					ResultadoSaneamiento rs=new ResultadoSaneamiento();
+					SaneamientoAnimal sa=new SaneamientoAnimal(s,a);
+					rs.setSaneamientoAnimal(sa);
+					rs.setTuberculosis(false);
+					rs.setBrucelosis(false);
+					rs.setFechaResultado(null);
+					s.getResultados().add(rs);
+					
+				}
+			
+			conexion.getTransaction().commit();
+			conexion.clear();
+			resultado = true;
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+			conexion.getTransaction().rollback();
+		}
+		return resultado;
+	}
+
+	public boolean insertarRegistrosAnimales(String codigo) {
+		boolean resultado = false;
+		Saneamiento s = obtenerSaneamiento(codigo);
+		List<Animal> listaAnimales = obtenerAnimales(); 
+		
+		try {
+			for(Animal a:listaAnimales) {
+				ResultadoSaneamiento rs=new ResultadoSaneamiento();
+				SaneamientoAnimal sa=new SaneamientoAnimal(s,a);
+				rs.setSaneamientoAnimal(sa);
+				rs.setTuberculosis(false);
+				rs.setBrucelosis(false);
+				rs.setFechaResultado(null);
+				
+				conexion.getTransaction().begin();
+				conexion.persist(rs);
+				conexion.getTransaction().commit();
+				conexion.clear();
+			}
+			resultado=true;
+ 		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	private List<Animal> obtenerAnimales() {
+		List<Animal> resultado = new ArrayList<>();
+		try {
+			Query consulta = conexion.createQuery("from Animal"); //nombre de la clase, no de la tabla
+			resultado = consulta.getResultList();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public Saneamiento obtenerSaneamiento(String codigo) {
+		Saneamiento resultado = null;
+		try {
+			resultado = conexion.find(Saneamiento.class, codigo);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+	
+	public List<Object[]> obtenerEstadistica(){
+		
+		
+		
+			return datosPorCadaAnimal();
+		
+	}
+	
+	public List<Animal> animalesDeUnSaneamiento(Saneamiento s){
+		List<Animal> resultado = null;
+		try {
+			Query consulta = conexion.createQuery("select rs.saneamientoAnimal.animal from ResultadoSaneamiento as rs where rs.saneamientoAnimal.saneamiento.id=?1");
+			consulta.setParameter(1, s.getId());
+			resultado  = consulta.getResultList();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+	
+	private List<Object[]> datosPorCadaAnimal() {
+		List<Object[]> resultado = null;
+		try {
+			//Al hacer un inner join y haber campos de varias tablas, será necesario poner la dirección de memoria completa al campo
+			//Query consulta = conexion.createQuery(""
+					+ "select rs.saneamientoAnimal.animal.codigo, "
+					+ "count(id), "
+					+ "max(s.fecha), "
+					+ "min(s.fecha) from ResultadoSaneamiento as rs "
+					+ "inner join Saneamiento as s "
+					+ "on rs.saneamientoAnimal.saneamiento=s.id "
+					+ "group by rs.saneamientoAnimal.animal.codigo");
+			//consulta.setParameter(1, a.getCodigo());
+			resultado = consulta.getResultList();
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public List<Saneamiento> obtenerSaneamientos() {
+		List<Saneamiento> resultado = new ArrayList<>();
+		try {
+			Query consulta = conexion.createQuery("from Saneamiento"); //nombre de la clase, no de la tabla
+			resultado = consulta.getResultList();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public boolean registrarAnalisis(Saneamiento s, Animal a, boolean tuberculosis, boolean brucelosis, Date date) {
+		boolean resultado=false;
+		try {
+			ResultadoSaneamiento rs = obtenerResultadoSaneamiento(s,a);
+			
+			rs.setTuberculosis(tuberculosis);
+			rs.setBrucelosis(brucelosis);
+			rs.setFechaResultado(date);
+			
+			conexion.getTransaction().begin();
+			conexion.getTransaction().commit();
+			conexion.clear();
+			resultado = true;
+		}catch(Exception e) {
+			e.printStackTrace();
+			conexion.getTransaction().rollback();
+		}
+		return resultado;
+	}
+
+	private ResultadoSaneamiento obtenerResultadoSaneamiento(Saneamiento s, Animal a) {
+		ResultadoSaneamiento resultado = null;
+		SaneamientoAnimal sa=new SaneamientoAnimal(s,a);
+		try {
+			resultado = conexion.find(ResultadoSaneamiento.class, sa);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public boolean bloquearAnimal(Animal a) {
+		boolean resultado=false;
+		try {
+			//es necesario volver a obtener el objeto ya que el parámetro está desactualizado y
+			//no corresponde con los valores de la base de datos
+			Animal an=obtenerAnimal(a.getCodigo()); 
+			an.setBloqueado(true);
+			
+			conexion.getTransaction().begin();
+			conexion.getTransaction().commit();
+			conexion.clear();
+			resultado = true;
+		}catch(Exception e) {
+			e.printStackTrace();
+			conexion.getTransaction().rollback();
+		}
+		return resultado;
+	}
+
+	private Animal obtenerAnimal(int codigo) {
+		Animal resultado = null;
+		try {
+			resultado = conexion.find(Animal.class, codigo);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public List<Object[]> obtenerDatosAnalisis(Saneamiento s) {
+		List<Object[]> resultado = null;
+		try {
+			//Al hacer un inner join y haber campos de varias tablas, será necesario poner la dirección de memoria completa al campo
+			Query consulta = conexion.createQuery("select a.codigo, a.nombre, a.fechaN, a.raza, a.bloqueado, rs.tuberculosis, rs.brucelosis from Animal as a "
+					+ "inner join ResultadoSaneamiento as rs on rs.saneamientoAnimal.animal=a.codigo where rs.saneamientoAnimal.saneamiento.id=?1");
+			consulta.setParameter(1, s.getId());
+			resultado = consulta.getResultList();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public boolean borrarSaneamiento(Saneamiento s) {
+		boolean resultado=false;
+		try {
+			conexion.getTransaction().begin();
+			borrarResultadoSaneamiento(s); //es necesario hacer el borrado manual del registro en las dos tablas??
+			Query consulta = conexion.createQuery("delete from Saneamiento where id=?1");
+			consulta.setParameter(1, s.getId());
+			consulta.executeUpdate();
+			conexion.getTransaction().commit();
+			conexion.clear();
+			resultado = true;
+		}catch(Exception e) {
+			e.printStackTrace();
+			conexion.getTransaction().rollback();
+		}
+		return resultado;
+	}
+
+	private void borrarResultadoSaneamiento(Saneamiento s) {
+		try {
+			Query consulta = conexion.createQuery("delete from ResultadoSaneamiento where saneamientoAnimal.saneamiento.id=?1");
+			consulta.setParameter(1, s.getId());
+			consulta.executeUpdate();
+		}catch(Exception e) {
+			e.printStackTrace();
+			conexion.getTransaction().rollback();
+		}
+	}
+
+	public Object[] mostrarEstadisticaVeterinario(Veterinario v) {
+		Object[] resultado = null;
+		try {
+			//Al hacer un inner join y haber campos de varias tablas, será necesario poner la dirección de memoria completa al campo
+			Query consulta = conexion.createQuery("select ve.nombre, count(sa.id), "
+					+ "(select count(*) from ResultadoSaneamiento as rs "
+					+ "inner join Saneamiento as s on rs.saneamientoAnimal.saneamiento=s.id "
+					+ "inner join Veterinario as v on s.veterinario=v.colegiado "
+					+ "where tuberculosis=true and colegiado=?1"
+					+ "), "
+					+ "(select count(*) from ResultadoSaneamiento as rs "
+					+ "inner join Saneamiento as s on rs.saneamientoAnimal.saneamiento=s.id "
+					+ "inner join Veterinario as v on s.veterinario=v.colegiado "
+					+ "where brucelosis=true and colegiado=?1"
+					+ ") from Saneamiento as sa inner join Veterinario as ve on sa.veterinario=ve.colegiado "
+					+ "where colegiado=?1");
+			consulta.setParameter(1, v.getColegiado());
+			List<Object[]> tmp=consulta.getResultList();
+			if(tmp.size()>0) {
+				resultado = tmp.get(0);
+			}
+			conexion.clear();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return resultado;
+		
+	}
+
+
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2031)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3795)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1943)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1974)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3052)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3235)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3012)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3347)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1524)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1231)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:820)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:272)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:264)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:197)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 2 2022-02-14 10:17:52.040
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.core.manipulation".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2031)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3795)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1943)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1974)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3052)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3235)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3012)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3347)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1524)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1231)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:820)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:272)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:264)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:197)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 0 2022-02-14 10:17:52.041
+!MESSAGE Error in JDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2031)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3795)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1943)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1974)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3052)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3235)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3012)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3347)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1524)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1231)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:820)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:272)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:264)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:197)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 10:19:20.451
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 10:19:20.453
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 10:20:26.427
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-02-14 10:20:26.428
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
