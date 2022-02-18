@@ -20,7 +20,7 @@ public class Principal {
 				System.out.println("0-Salir");
 				System.out.println("1-Crear Socio");
 				System.out.println("2-Mostrar Socios");
-				System.out.println("3-Crear Libro");
+				System.out.println("3-Crear Revista");
 				System.out.println("4-Mostrar Libros");				
 				System.out.println("5-Prestar Libro");
 				System.out.println("6-Mostrar Préstamos");
@@ -40,9 +40,43 @@ public class Principal {
 					mostrarsocio();
 					break;
 				}
+				case 3:
+					crearRevsita();
+					break;
 				}
 			} while (opcion != 0);
 			ad.cerrar();
+		}
+	}
+
+	private static void crearRevsita() {
+		// TODO Auto-generated method stub
+		try {			
+			System.out.println("Introduce ISBN:");
+			String isbn = t.nextLine();
+			
+			if(!ad.existePublicacion(isbn)) {
+				Revista r=new Revista();
+				r.setIsbn(isbn);
+				System.out.println("Introduce Título:");
+				r.setTitulo(t.nextLine());
+				System.out.println("Introduce Nº Ejemplares:");
+				r.setNumEjem(t.nextInt()); t.nextLine();
+				System.out.println("Introduce Género:");
+				r.setGenero(t.nextLine());
+				System.out.println("Introduce Fecha Publicación:");
+			
+				r.setFechaP(formato.parse(t.nextLine()));
+				if(!ad.crearRevista(r)) {
+					System.out.println("Error al crear la revista");
+				}
+			}
+			else {
+				System.out.println("Error, ya existe una publicación con ese isbn");
+			}
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			System.out.println("Error: Fecha incorrecta");
 		}
 	}
 
