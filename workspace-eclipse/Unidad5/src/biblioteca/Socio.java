@@ -6,15 +6,16 @@ import java.util.Date;
 public class Socio {
 	private int id;
 	private String  nombre;
-	private Direccion direccion;
+	private Direccion direccion=  new Direccion();
 	private Date fechaNac;
 	
 	
 	public Socio() {
-		super();
+		 
 	}
 	public Socio(int id, String nombre, Direccion direccion, Date fechaNac) {
-		super();
+		
+		
 		this.id = id;
 		this.nombre = nombre;
 		this.direccion = direccion;
@@ -24,7 +25,8 @@ public class Socio {
 		SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
 		System.out.println("Socio:" + id +
 				"\tNombre:"+nombre+
-				"\tDirección:" + 
+				"\tDirección:" + direccion.getCalle() + " Nº:" + direccion.getNumero() + 
+				  " CP:" + direccion.getCp() +
 				"\tFechaN:"+formato.format(fechaNac));
 	}
 	
