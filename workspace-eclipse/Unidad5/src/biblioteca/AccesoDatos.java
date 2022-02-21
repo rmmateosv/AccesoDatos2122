@@ -1,5 +1,7 @@
 package biblioteca;
 
+
+import java.sql.Array;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.DriverManager;
@@ -114,4 +116,90 @@ public class AccesoDatos {
 			}
 		return resultado;
 	}
+
+	public boolean crearRevista(Revista r) {
+		// TODO Auto-generated method stub
+		boolean resultado = true;
+		try {
+			PreparedStatement consulta = conexion.prepareStatement("insert into revista "
+					+ "values (?,?,?,null,?,?)");
+			consulta.setString(1, r.getIsbn());
+			consulta.setString(2, r.getTitulo());
+			consulta.setInt(3, r.getNumEjem());
+			consulta.setString(4, r.getGenero());
+			consulta.setDate(5, new Date(r.getFechaP().getTime()));
+			int filas = consulta.executeUpdate();
+			if(filas==1) {
+				resultado=true;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public ArrayList<Libro> obtenerLibros() {
+		// TODO Auto-generated method stub
+		ArrayList<Libro> resultado = new ArrayList<>();
+		
+		try {
+			Statement consulta = conexion.createStatement();
+			ResultSet r = consulta.executeQuery("select * from libro");
+			while(r.next()) {
+				Libro l = new Libro();
+				l.setIsbn(r.getString(1));
+				l.setTitulo(r.getString(2));
+				l.setNumEjem(r.getInt(3));
+				
+				Array datosPrestamos = r.getArray(4);
+				//Comprobar si hay préstamos
+				if(datosPrestamos != null) {
+					l.setPrestamos( (ArrayList<String[]>) datosPrestamos.getArray());
+				}
+				
+				
+				resultado.add(l);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return resultado;
+	}
+
+	public boolean existeSocio(int id) {
+		// TODO Auto-generated method stub
+		boolean resultado=false;
+		PreparedStatement consulta;
+		try {
+			consulta = conexion.prepareStatement("select * from socio where id = ?");
+			consulta.setInt(1, id);
+			ResultSet r = consulta.executeQuery();
+			if(r.next()) {
+				resultado = true;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return resultado;
+	}
+
+	public boolean registrarPrestamo(String isbn, int id) {
+		// TODO Auto-generated method stub
+		boolean resultado =false;
+		PreparedStatement consulta
+		return resultado;
+	}
 }
+
+
+
+
+
+
+
+
