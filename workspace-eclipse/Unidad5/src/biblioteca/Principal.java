@@ -23,8 +23,7 @@ public class Principal {
 				System.out.println("3-Crear Revista");
 				System.out.println("4-Mostrar Libros");
 				System.out.println("5-Prestar Libro");
-				System.out.println("6-Mostrar Préstamos");
-				System.out.println("8-Devolver Préstamos");
+				System.out.println("6-Devolver Préstamos");
 
 				opcion = t.nextInt();
 				t.nextLine();
@@ -49,11 +48,28 @@ public class Principal {
 				case 5:
 					prestarLibro();
 					break;
+				case 6:
+					devolverLibro();
+					break;
 
 				}
 			} while (opcion != 0);
 			ad.cerrar();
 
+		}
+	}
+
+	private static void devolverLibro() {
+		// TODO Auto-generated method stub
+		mostrarLibros();
+		System.out.println("Isbn:");
+		String isbn = t.nextLine();
+		if(ad.existePublicacion(isbn)) {
+			System.out.println("Id socio:");
+			int id = t.nextInt(); t.nextLine();
+			if(!ad.borrarPrestamo(isbn,id)) {
+				System.out.println("Error al borrar el préstamo");
+			}
 		}
 	}
 

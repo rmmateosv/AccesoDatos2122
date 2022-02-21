@@ -47,6 +47,7 @@ public class Libro {
 				"\tEjemplares:"+numEjem
 				);
 		if(mostrarPrestamos) {
+			System.out.println("Préstamos:-------");
 			for(String [] l:prestamos) {
 				System.out.println("FechaP:"+l[0]+
 						"\tFechaD:"+l[1]+

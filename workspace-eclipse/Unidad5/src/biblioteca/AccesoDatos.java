@@ -9,6 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 public class AccesoDatos {
@@ -155,7 +156,11 @@ public class AccesoDatos {
 				Array datosPrestamos = r.getArray(4);
 				//Comprobar si hay préstamos
 				if(datosPrestamos != null) {
-					l.setPrestamos( (ArrayList<String[]>) datosPrestamos.getArray());
+					String[][] filas = ( (String[][]) datosPrestamos.getArray());
+					//Pasamos filas a los préstamos del libro
+					for(String[] fila: filas) {
+						l.getPrestamos().add(fila);
+					}
 				}
 				
 				
@@ -191,7 +196,78 @@ public class AccesoDatos {
 	public boolean registrarPrestamo(String isbn, int id) {
 		// TODO Auto-generated method stub
 		boolean resultado =false;
-		PreparedStatement consulta
+		SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+		try {
+			//Recuperamos el libro para saber si hay o no préstamos
+			PreparedStatement consulta = conexion.prepareStatement("select * from libro "
+					+ "where isbn = ?");
+			consulta.setString(1, isbn);
+			ResultSet r  = consulta.executeQuery();
+			if(r.next()) {
+				//Obtenemos préstamos
+				Array p = r.getArray(4);
+				if(p==null) {
+					//Creamos un nuevo array en el campo préstamos de libro
+					consulta = conexion.prepareStatement("update libro "
+							+ "set prestamos = array[array[?,?,?]],"
+							+ "numEjemplares = numEjemplares -1 " 
+							+ "where isbn = ?");
+					
+				}
+				else {
+					//Concatenamos una nueva línea al array en el campo préstamos de libro
+					consulta = conexion.prepareStatement("update libro "
+							+ "set prestamos = array_cat(prestamos,array[?,?,?]::text[][]),"
+							+ " numEjemplares = numEjemplares -1 "
+							+ " where isbn = ?");
+					
+				}
+				java.util.Date fechaP= new java.util.Date();
+				//Sumamos a la fecha de préstamos 7 días
+				java.util.Date fechaD = new java.util.Date(fechaP.getTime()+7*24*60*60*1000);
+				consulta.setString(1, formato.format(fechaP));
+				consulta.setString(2, formato.format(fechaD));
+				consulta.setString(3, String.valueOf(id));
+				consulta.setString(4, isbn);
+				int filas = consulta.executeUpdate();
+				if(filas == 1) {
+					resultado = true;
+				}
+				
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+	public boolean borrarPrestamo(String isbn, int id) {
+		// TODO Auto-generated method stub
+		boolean resultado = false;
+		
+		//Recuperamos el libro para saber los préstamos
+		//Recuperamos el libro para saber si hay o no préstamos
+		PreparedStatement consulta;
+		try {
+			consulta = conexion.prepareStatement("select * from libro "
+					+ "where isbn = ?");
+			consulta.setString(1, isbn);
+			ResultSet r  = consulta.executeQuery();
+			if(r.next()) {
+				//Obtenemos préstamos
+				Array p = r.getArray(4);
+				if(p!=null) {
+				
+				}
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	
 		return resultado;
 	}
 }
