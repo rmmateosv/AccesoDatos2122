@@ -67,7 +67,7 @@ public class Principal {
 		if(ad.existePublicacion(isbn)) {
 			System.out.println("Id socio:");
 			int id = t.nextInt(); t.nextLine();
-			if(!ad.borrarPrestamo(isbn,id)) {
+			if(!ad.borrarPrestamo2(isbn,id)) {
 				System.out.println("Error al borrar el préstamo");
 			}
 		}
