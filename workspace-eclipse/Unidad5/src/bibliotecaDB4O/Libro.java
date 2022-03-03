@@ -15,21 +15,11 @@ public class Libro implements Serializable{
 	
 	private static final long serialVersionUID = 2077981661327561318L;
 	
-
-	private int id;
-	
-
+	private int id;	
 	private String isbn;	
-
 	private String titulo;
-
-	private String autor;
-
-	private Date fechaLanzamiento;
-
 	private int numEjemplares;
 	
-
 	private List<Prestamo> prestamos = new ArrayList<>();
 	
 	public List<Prestamo> getPrestamos() {
@@ -47,23 +37,21 @@ public class Libro implements Serializable{
 	}
 
 	
-	public Libro(int id, String isbn, String titulo, String autor, Date fechaLanzamiento, int numEjemplares) {
+	public Libro(int id, String isbn, String titulo,  int numEjemplares) {
 		super();
 		this.id = id;
 		this.isbn = isbn;
 		this.titulo = titulo;
-		this.autor = autor;
-		this.fechaLanzamiento = fechaLanzamiento;
+	
 		this.numEjemplares = numEjemplares;
 	}
 
 
-	public Libro(String isbn, String titulo, String autor, Date fechaLanzamiento, int numEjemplares) {
+	public Libro(String isbn, String titulo,  int numEjemplares) {
 		
 		this.isbn = isbn;
 		this.titulo = titulo;
-		this.autor = autor;
-		this.fechaLanzamiento = fechaLanzamiento;
+
 		this.numEjemplares = numEjemplares;
 	}
 	
@@ -72,8 +60,6 @@ public class Libro implements Serializable{
 	
 		System.out.println("ISBN:" + isbn + 
 				"\tTitulo:" + titulo + 
-				"\tAutor:" + autor +
-				"\tFecha:" + formato.format(fechaLanzamiento) +
 				"\tEjemplares:" + numEjemplares);
 		if(mostrarPrestamos) {
 			System.out.println("Préstamos del libro:");
@@ -109,22 +95,6 @@ public class Libro implements Serializable{
 
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
-	}
-
-	public String getAutor() {
-		return autor;
-	}
-
-	public void setAutor(String autor) {
-		this.autor = autor;
-	}
-
-	public Date getFechaLanzamiento() {
-		return fechaLanzamiento;
-	}
-
-	public void setFechaLanzamiento(Date fechaLanzamiento) {
-		this.fechaLanzamiento = fechaLanzamiento;
 	}
 
 	public int getNumEjemplares() {
