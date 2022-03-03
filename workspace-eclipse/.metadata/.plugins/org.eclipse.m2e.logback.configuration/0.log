@@ -7866,3 +7866,66 @@ org.eclipse.core.runtime.CoreException: Launch configuration Principal (16) refe
 2022-03-03 13:58:29,171 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad5\src\main\resources
 2022-03-03 13:58:29,171 [Worker-33: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2022-03-03 13:58:29,174 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad5\src\test\resources
+2022-03-03 14:04:58,498 [Worker-41: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-03 14:04:58,498 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad5\src\main\resources
+2022-03-03 14:04:58,499 [Worker-41: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-03 14:04:58,500 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad5\src\test\resources
+2022-03-03 14:04:59,507 [Worker-41: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-03 14:04:59,507 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad5\src\main\resources
+2022-03-03 14:04:59,508 [Worker-41: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-03 14:04:59,508 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad5\src\test\resources
+2022-03-03 14:10:28,224 [Worker-39: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-03 14:10:28,225 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad5\src\main\resources
+2022-03-03 14:10:28,226 [Worker-39: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-03 14:10:28,227 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad5\src\test\resources
+2022-03-03 14:10:38,915 [Worker-37: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-03 14:10:38,916 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad5\src\main\resources
+2022-03-03 14:10:38,918 [Worker-37: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-03 14:10:38,918 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad5\src\test\resources
+2022-03-03 14:11:10,157 [Worker-39: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-03 14:11:10,157 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad5\src\main\resources
+2022-03-03 14:11:10,158 [Worker-39: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-03 14:11:10,159 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad5\src\test\resources
+2022-03-03 14:12:06,440 [Worker-40: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-03 14:12:06,440 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad5\src\main\resources
+2022-03-03 14:12:06,441 [Worker-40: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-03 14:12:06,441 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad5\src\test\resources
+2022-03-03 14:17:02,920 [Worker-39: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-03 14:17:02,921 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad5\src\main\resources
+2022-03-03 14:17:02,922 [Worker-39: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-03 14:17:02,922 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad5\src\test\resources
+2022-03-03 14:17:26,180 [Worker-39: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-03 14:17:26,182 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad5\src\main\resources
+2022-03-03 14:17:26,183 [Worker-39: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-03 14:17:26,184 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad5\src\test\resources
+2022-03-03 14:17:49,619 [Worker-42: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-03 14:17:49,619 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad5\src\main\resources
+2022-03-03 14:17:49,622 [Worker-42: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-03 14:17:49,623 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad5\src\test\resources
+2022-03-03 14:17:50,680 [Worker-37: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-03 14:17:50,680 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad5\src\main\resources
+2022-03-03 14:17:50,681 [Worker-37: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-03 14:17:50,681 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad5\src\test\resources
+2022-03-03 14:18:22,629 [Worker-41: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-03 14:18:22,631 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad5\src\main\resources
+2022-03-03 14:18:22,632 [Worker-41: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-03 14:18:22,633 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad5\src\test\resources
+2022-03-03 14:18:23,641 [Worker-39: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-03 14:18:23,641 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad5\src\main\resources
+2022-03-03 14:18:23,642 [Worker-39: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-03 14:18:23,642 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad5\src\test\resources
+2022-03-03 14:25:12,653 [Worker-44: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-03 14:25:12,654 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad5\src\main\resources
+2022-03-03 14:25:12,655 [Worker-44: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-03 14:25:12,657 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad5\src\test\resources
+2022-03-03 14:25:13,713 [Worker-45: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-03 14:25:13,714 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad5\src\main\resources
+2022-03-03 14:25:13,715 [Worker-45: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-03 14:25:13,716 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad5\src\test\resources
+2022-03-03 14:26:00,890 [Worker-46: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-03 14:26:00,892 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad5\src\main\resources
+2022-03-03 14:26:00,893 [Worker-46: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-03 14:26:00,893 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad5\src\test\resources
+2022-03-03 14:27:26,444 [Worker-45: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-03 14:27:26,445 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\usuario\AccesoDatos2122\workspace-eclipse\Unidad5\src\main\resources
+2022-03-03 14:27:26,446 [Worker-45: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!

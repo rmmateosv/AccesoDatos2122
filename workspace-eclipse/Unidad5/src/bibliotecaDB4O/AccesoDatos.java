@@ -95,5 +95,64 @@ public class AccesoDatos {
 		return resultado;
 	}
 
+
+
+	public boolean crearSocio(Socio s) {
+		// TODO Auto-generated method stub
+		boolean resultado = false;
+		try {
+			conexion.store(s);
+			resultado =  true;
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+
+
+	public Socio obtenerSocio(String dni) {
+		// TODO Auto-generated method stub
+		Socio resultado  = null;
+		try {
+			Socio s = new Socio();
+			s.setDni(dni);
+			
+			ObjectSet<Socio> socios = conexion.queryByExample(s);
+			if(socios.hasNext()) {
+				resultado = socios.next();
+			}
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		
+		
+		return resultado;
+	}
+
+
+
+	public ArrayList<Socio> obtenerSocios() {
+		// TODO Auto-generated method stub
+		ArrayList<Socio> resultado  = new ArrayList<Socio>();
+		try {
+			ObjectSet<Socio> socios = conexion.queryByExample(new Socio());
+			while(socios.hasNext()) {
+				resultado.add(socios.next());
+			}
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		
+		
+		return resultado;
+	}
+
 	
 }
