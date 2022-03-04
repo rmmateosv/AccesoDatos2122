@@ -58,7 +58,8 @@ public class Libro implements Serializable{
 	public void mostrar(boolean mostrarPrestamos) {
 		SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
 	
-		System.out.println("ISBN:" + isbn + 
+		System.out.println("ID:"+id
+				+ "\tISBN:" + isbn + 
 				"\tTitulo:" + titulo + 
 				"\tEjemplares:" + numEjemplares);
 		if(mostrarPrestamos) {

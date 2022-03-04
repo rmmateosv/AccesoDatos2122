@@ -21,6 +21,8 @@ public class AccesoDatos {
 	
 	public AccesoDatos() {
 		EmbeddedConfiguration config = Db4oEmbedded.newConfiguration();	
+		config.common().objectClass(Socio.class).cascadeOnDelete(true);
+		
 		conexion = Db4oEmbedded.openFile(config,"biblioteca.obj");
 	}
 
@@ -154,5 +156,142 @@ public class AccesoDatos {
 		return resultado;
 	}
 
-	
+
+
+	public ArrayList<Libro> obtenerLibros() {
+		// TODO Auto-generated method stub
+		ArrayList<Libro> resultado = new ArrayList<Libro>();
+		try {
+			ObjectSet<Libro> libros = conexion.queryByExample(new Libro());
+			while(libros.hasNext()) {
+				resultado.add(libros.next());
+			}
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+
+
+	public Libro obtenerLibro(int idLibro) {
+		// TODO Auto-generated method stub
+		Libro resultado = null;
+		try {
+			Libro l = new Libro();
+			l.setId(idLibro);
+			ObjectSet<Libro> libros = conexion.queryByExample(l);
+			
+			if(libros.hasNext()) {
+				resultado=libros.next();
+			}
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+
+
+	public boolean crearPrestamo(Socio s, Libro l) {
+		// TODO Auto-generated method stub
+		boolean resultado = false;
+		try {
+			Prestamo p = new Prestamo();
+			p.setClave(new PrestamoClave(s, l, new Date()));
+			p.setDevuelto(false);
+			p.setFechaD(new Date(new Date().getTime()+10*24*60*60*1000));
+			conexion.store(p);
+			//Modificar el nº de ejemplares
+			l.setNumEjemplares(l.getNumEjemplares()-1);
+			conexion.store(l);
+			resultado = true;
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+
+
+	public ArrayList<Prestamo> obtenerPrestamos(Socio s) {
+		// TODO Auto-generated method stub
+		ArrayList<Prestamo> resultado = new ArrayList<Prestamo>();
+		try {
+			Prestamo p = new Prestamo();
+			p.setClave(new PrestamoClave(s, null, null));
+			ObjectSet<Prestamo> prestamos = conexion.queryByExample(p);
+			while(prestamos.hasNext()) {
+				resultado.add(prestamos.next());
+			}
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+
+
+	public ArrayList<Prestamo> obtenerPrestamos(Socio s, Libro l) {
+		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub
+				ArrayList<Prestamo> resultado = new ArrayList<Prestamo>();
+				try {
+					Prestamo p = new Prestamo();
+					p.setClave(new PrestamoClave(s, l, null));
+					ObjectSet<Prestamo> prestamos = conexion.queryByExample(p);
+					while(prestamos.hasNext()) {
+						resultado.add(prestamos.next());
+					}
+					
+				} catch (Exception e) {
+					// TODO: handle exception
+					e.printStackTrace();
+				}
+				return resultado;
+	}
+
+	public boolean devolverPrestamo(Prestamo p) {
+		// TODO Auto-generated method stub
+		boolean resultado=false;
+		try {
+			p.setDevuelto(true);
+			//Sancionar al socio si devuelve después ......
+			//Aumentamos nº de ejemplares del libro
+			p.getClave().getLibro().setNumEjemplares(
+					p.getClave().getLibro().getNumEjemplares()+1);
+			//conexion.store(p);
+			conexion.delete(p);
+			resultado = true;
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
+
+
+	public boolean borrarSocio(Socio s) {
+		// TODO Auto-generated method stub
+		boolean resultado=false;
+		try {
+			conexion.delete(s);
+			resultado = true;
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+
 }
