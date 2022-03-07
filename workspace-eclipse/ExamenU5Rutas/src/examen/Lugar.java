@@ -31,6 +31,13 @@ public class Lugar {
 	public void setInfo(Localizacion info) {
 		this.info = info;
 	}
+	public void mostrar() {
+		// TODO Auto-generated method stub
+		System.out.println("Lugar:" + codigo + 
+				"\tNombre:"  + nombre +
+				"\tLatitud:"+ info.getLatitud()+
+				"\tLongitud:" + info.getLongitud());
+	}
 	
 	
 	
